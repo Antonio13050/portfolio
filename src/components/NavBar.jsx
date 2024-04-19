@@ -61,6 +61,12 @@ export default function NavBar() {
                         Portfólio
                     </Link>
                     <Link
+                        to="skills"
+                        className="font-semibold leading-6 hover:text-gray-300 hover:scale-125 duration-200 cursor-pointer"
+                    >
+                        Skills
+                    </Link>
+                    <Link
                         href="#"
                         className="font-semibold leading-6 hover:text-gray-300 hover:scale-125 duration-200 cursor-pointer"
                     >
@@ -122,6 +128,13 @@ export default function NavBar() {
                                     onClick={() => setMobileMenuOpen(false)}
                                 >
                                     Portfólio
+                                </Link>
+                                <Link
+                                    to="skills"
+                                    className="-mx-3 block rounded-lg px-3 py-2  text-base font-semibold leading-7 hover:text-gray-300 duration-200 cursor-pointer"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                >
+                                    Skills
                                 </Link>
                                 <a
                                     href="#"

@@ -10,10 +10,10 @@ export default function Home1() {
     return (
         <div
             name="home"
-            className="h-screen w-screen bg-gradient-to-b from-black via-black to-gray-800"
+            className="h-screen w-screen bg-gradient-to-b from-black via-black to-gray-800 border-none"
         >
             <div className="container mx-auto h-full flex flex-col items-center justify-around lg:flex-row w-full pt-20">
-                <div className="flex basis-1/5 flex-col lg:items-start items-center justify-center pl-10">
+                <div className="flex basis-1/5 flex-col lg:items-start items-center justify-center">
                     <span className="group text-white w-fit px-3 py-3 my-1 flex items-center rounded-md bg-gradient-to-r from-gray-800 to-gray-600">
                         👋🏾 Saudações!
                     </span>
@@ -55,10 +55,10 @@ export default function Home1() {
                             <span className="mr-2 ">Baixar CV</span>
                             <RiDownloadLine />
                         </a>
-                        <span className="group text-gray-500 w-fit px-3 py-3 my-1 flex items-center border-2 border-gray-500 rounded-md">
-                            <FaWhatsapp className="text-gray-500" /> Saudações!
-                            Saud
-                        </span>
+                        <buton className="group text-gray-500 w-fit px-3 py-3 my-1 flex items-center border-2 border-gray-500 rounded-xl">
+                            <FaWhatsapp className="text-gray-500 mr-2 text-2xl" />
+                            Vamos conversar!
+                        </buton>
                     </div>
                 </div>
             </div>
