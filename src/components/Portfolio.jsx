@@ -34,6 +34,20 @@ export default function Portfolio() {
                         </button>
                     </div>
                 </div>
+                <div className="flex flex-row overflow-y-auto gap-6 sm:flex-wrap sm:justify-center justify-start">
+                    <div className="border-2 border-gray-500 min-w-80 max-w-80 min-h-96">
+                        1
+                    </div>
+                    <div className="border-2 border-gray-500 min-w-80 max-w-80 min-h-96">
+                        1
+                    </div>
+                    <div className="border-2 border-gray-500 min-w-80 max-w-80 min-h-96">
+                        1
+                    </div>
+                    <div className="border-2 border-gray-500 min-w-80 max-w-80 min-h-96">
+                        1
+                    </div>
+                </div>
             </div>
         </div>
     );

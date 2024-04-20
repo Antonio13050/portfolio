@@ -40,7 +40,7 @@ export default function Skills() {
                     </h2>
                 </div>
                 <div className="">
-                    <h2 className="md:text-3xl lg:text-4xl text-2xl font-bold text-white py-3 text-center">
+                    <h2 className="md:text-3xl lg:text-4xl text-2xl font-bold text-white pt-3 pb-10 text-center">
                         Techs que já usei em projetos
                     </h2>
                     <div className="flex items-center justify-center gap-x-4">
@@ -114,7 +114,7 @@ export default function Skills() {
                     </div>
                 </div>
                 <div className="">
-                    <h2 className="md:text-3xl lg:text-4xl text-2xl font-bold text-white py-3 text-center">
+                    <h2 className="md:text-3xl lg:text-4xl text-2xl font-bold text-white pt-3 pb-10  text-center">
                         Outras techs que já estudei em cursos
                     </h2>
                     <div className="flex items-center justify-center gap-x-4">
