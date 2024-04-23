@@ -1,0 +1,177 @@
+{
+    "links": [
+        {
+            "id": 1,
+            "title": "Home",
+            "path": "home"
+        },
+        {
+            "id": 2,
+            "title": "Sobre",
+            "path": "about"
+        },
+        {
+            "id": 3,
+            "title": "Portfólio",
+            "path": "portfolio"
+        },
+        {
+            "id": 4,
+            "title": "Skills",
+            "path": "skills"
+        },
+        {
+            "id": 5,
+            "title": "Carreira",
+            "path": "career"
+        }
+    ],
+    "career": [
+        {
+            "id": 1,
+            "title": "Estagiário na Softplan",
+            "description": "Iniciei minha jornada profissional na área da tecnologia como estagiário na Softplan em 2021.",
+            "dates": "maio/2021 - outubro/2021",
+            "details": [
+                "No estágio, participei de um onboarding completo na empresa, que incluiu uma introdução abrangente sobre a Softplan e uma imersão no sistema judicial brasileiro. Além disso, tivemos aulas voltadas para o desenvolvimento de soft skills, habilidades fundamentais para o ambiente profissional. Durante esse período, também tive a oportunidade de aprender sobre uma das principais ferramentas utilizadas pela empresa, enriquecendo minha bagagem técnica e prática."
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Análista de Serviços de TI na Softplan",
+            "description": "Atualmente trabalho como análista de Serviços de TI na Softplan.",
+            "dates": "outubro/2021 - atualmente",
+            "details": [
+                "Na minha equipe sou responsável pelo software utilizado pela Jurisdicción Especial para la Paz (JEP) na Colômbia, desempenho o papel de Analista de Serviços de TI N2, concentrando-me na análise de erros, configuração de parâmetros, abertura de defeitos e PMLs, participação em reuniões com o cliente e empresas terceiras que possuem algum tipo de integração com o sistema.",
+                "Principais responsabilidades e atividades:",
+                "- Gerenciamento de versões de usuários através do Keycloak.",
+                "- Análise de logs no Kibana para identificar os erros que ocorreram no sistema.",
+                "- Consultas e criação de scripts na base de dados.",
+                "- Utilização de ferramentas como Postman e Insomnia para testar integrações do sistema.",
+                "- Realização da análise detalhada de chamados técnicos, identificando e diagnosticando problemas relatados pelos usuários.",
+                "- Abertura de defeitos no sistema, documentando de forma precisa e completa as questões encontradas para facilitar o processo de resolução.",
+                "- Configuração do sistema de acordo com os requisitos específicos do cliente, garantindo sua adequação e funcionamento adequado.",
+                "- Criação e manutenção de perfis de usuários, garantindo o acesso apropriado e a segurança da informação."
+            ]
+        }
+    ],
+
+    "education": [
+        {
+            "id": 1,
+            "title": "Superior, Análise e Desenvolvimento de Sistemas",
+            "description": "Recém graduado pela Estácio no curso de Análise e Desenvolvimento de Sistemas.",
+            "dates": "fevereiro/2021 - dezembro/2023",
+            "details": [
+                "Em 2023, concluí minha formação em Análise e Desenvolvimento de Sistemas pela Estácio. Aprendi sobre as principais tecnologias e ferramentas de desenvolvimento web.",
+                "Essa é a lista de disciplinas cursadas:",
+                "• Introdução A Segurança Da Informação",
+                "• Fundamentos De Redes De Computadores",
+                "• Introdução A Programação Estruturada Em C",
+                "• Introdução A Segurança Da Informação",
+                "• Organização E Arquitetura De Computadores",
+                "• Planejamento De Carreira E Sucesso Profissional",
+                "• Banco De Dados",
+                "• Computação Em Nuvem E Web Services Em Linux",
+                "• Desenvolvimento Web Em Html5, Css, Javascript E Php",
+                "• Pensamento Computacional",
+                "• Engenharia De Software",
+                "• Estrutura De Dados Em C",
+                "• Programação Cliente Servidor",
+                "• Web Design",
+                "• Complexidade De Algoritmos",
+                "• Matemática E Lógica",
+                "• Modelagem De Sistemas Com UML",
+                "• Programação Orientada A Objetos Em Java",
+                "• Sistemas Distribuídos E Computação Paralela",
+                "• Padrões De Projeto De Software Com Java",
+                "• Programação Para Dispositivos Móveis Em Android",
+                "• Tópicos De Big Data Em Python",
+                "• Tópicos De Cloud, IoT E Indústria 4.0 Em Python"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "DEVinHouse - SENAI",
+            "description": "Recentemente conclui o curso de Desenvolvimento Full Stack utilizando React, Spring e PostgreSQL, no SENAI.",
+            "dates": "maio/2023 - abril/2024",
+            "details": [
+                "Em abril de 2024, completei o curso DEVinHouse oferecido pelo Senai, um curso com o objetivo de formar desenvolvedores fullstack. Entre as tecnologias utilizadas destacam-se o Postgres, Spring e React.",
+                "O curso foi estruturado em três módulos distintos, cada um focado em aspectos específicos do desenvolvimento fullstack.",
+                "Módulo 1: Frontend",
+                " - Fundamentos da programação web: HTML, CSS, JavaScript",
+                " - Framework Bootstrap",
+                " - React (básico e avançado)",
+                " - Componentização em React",
+                " - Manipulação do DOM",
+                " - Gerenciamento de estado com useState, useContext, useReducer",
+                " - Estilização com CSS Modules e Styled Components",
+                "Módulo 2: Backend",
+                " - Linguagem de programação Java (básico, intermediário e avançado)",
+                " - Spring Framework (Spring Boot, Spring MVC, Spring Data)",
+                " - Banco de dados PostgreSQL",
+                " - API RESTful",
+                " - Segurança com Spring Security e JWT",
+                "Módulo 3: DevOps e Metodologias Ageis",
+                " - Metodologias ágeis (SCRUM)",
+                " - Clean Code e Design Patterns",
+                " - Testes unitários",
+                " - Documentação de código",
+                " - DevOps (CI/CD, automação)",
+                " - Projetos práticos de desenvolvimento de aplicações web completas",
+                "Cada módulo culmina em um projeto prático que permite aos alunos aplicarem os conhecimentos adquiridos em situações reais de desenvolvimento de software. Esses projetos demonstram as habilidades e competências dos alunos e podem servir como portfólio para oportunidades profissionais futuras.",
+                "Link do projeto do modulo 1: https://github.com/Antonio13050/devinhouse-projeto-modulo-1",
+                "Link do projeto do modulo 2: https://github.com/Antonio13050/devinhouse-projeto-modulo-2"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Técnico, Informática",
+            "description": "Em 2018 me formei em técnico de Informática pela IFSC Instituto Federal de Santa Catarina.",
+            "dates": "julho/2017 - dezembro/2018",
+            "details": [
+                "O curso de Técnico em Informática no IFSC (Instituto Federal de Santa Catarina) foi uma jornada de 1 ano e meio dividida em três módulos, focada no desenvolvimento de sistemas.",
+                "Módulo 1: Suporte em Tecnologia da Informação",
+                "Módulo 2: Desenvolvimento de Sistemas I",
+                "Módulo 3: Desenvolvimento de Sistemas II"
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Espanhol, Avançado",
+            "description": "Recentemente conclui um curso de espanhol pela Vaivén Hispano.",
+            "dates": "julho/2022 - dezembro/2023",
+            "details": [
+                "Recentemente, finalizei um curso de espanhol avançado na Vaivén Hispano, totalizando 308 horas de estudo. O curso foi estruturado em seis módulos, cada um com a duração de um trimestre. Ao longo do programa, foram abordados os níveis A1, A2, B1, B2, C1 e C2 do Quadro Europeu Comum de Referência para Línguas (CEFR), permitindo-me alcançar um domínio avançado do idioma espanhol. Durante o curso, desenvolvi habilidades em compreensão auditiva, leitura, escrita e comunicação oral, preparando-me para interações eficazes em contextos profissionais e pessoais."
+            ]
+        },
+        {
+            "id": 5,
+            "title": "Superior, Direito",
+            "description": "Conclui 3 semestres do curso de Direito pela Unisul.",
+            "dates": "março/2010 - agosto/2011 - Não concluido",
+            "details": [
+                "Concluí três semestres do curso de Direito pela Unisul, onde obtive uma base sólida em áreas fundamentais do direito. Durante esse período, estudei disciplinas que abrangiam diferentes campos do conhecimento jurídico, incluindo teoria geral do direito, direito civil, direito penal, direito constitucional, entre outros. Embora não tenha concluído o curso, os conhecimentos adquiridos durante esse período contribuíram significativamente para minha compreensão do sistema jurídico e minha formação acadêmica."
+            ]
+        },
+        {
+            "id": 6,
+            "title": "Programador de Sistemas - Delphi 7 - SENAI",
+            "description": "Conclui em 2014 o curso de Programador de Sistemas no Senai.",
+            "dates": "janeiro/2014 - julho/2014",
+            "details": [
+                "Em 2014 conclui o curso de Programador de Sistemas no Senai, com foco em Delphi 7"
+            ]
+        },
+        {
+            "id": 7,
+            "title": "Desenvolvedor de Jogos Eletrônicos - SENAI",
+            "description": "Conclui em 2014 o curso de Desenvolvimento de Jogos Eletrônicos no Senai.",
+            "dates": "agosto/2014 - dezembro/2014",
+            "details": [
+                "Em 2014 conclui o curso de Desenvolvedor de Jogos Eletrônicos no Senai, durante o curso, exploramos engines de criação de jogos, como Unity e Corona SDK.",
+                "As linguagens estudadas no curso foram Lua e Java"
+            ]
+        }
+    ]
+}

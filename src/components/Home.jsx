@@ -24,12 +24,20 @@ export default function Home1() {
                         Full stack developer
                     </p>
                     <div className="max-w-md">
-                        <a href="" className="mr-4">
+                        <a
+                            href="https://www.linkedin.com/in/antonio13050/"
+                            target="_blank"
+                            className="mr-4"
+                        >
                             <div className="rounded-full bg-gray-500 p-2 inline-block hover:scale-125 duration-200">
                                 <FaLinkedinIn className="text-gray-900" />
                             </div>
                         </a>
-                        <a href="" className="mr-4">
+                        <a
+                            href="https://github.com/Antonio13050/"
+                            target="_blank"
+                            className="mr-4"
+                        >
                             <div className="rounded-full bg-gray-500 p-2 inline-block hover:scale-125 duration-200">
                                 <TbBrandGithubFilled className="text-gray-900" />
                             </div>
@@ -45,7 +53,7 @@ export default function Home1() {
                     />
                 </div>
 
-                <div className="flex basis-1/5 flex-col h-fit items-center justify-center w-full pr-10">
+                <div className="flex basis-1/5 flex-col h-fit items-center justify-center w-full">
                     <div className="max-w-md flex lg:flex-col flex-row lg:items-end justify-around md:gap-x-16 gap-x-3 gap-y-3">
                         <a
                             href="/caminho/para/o/seu/arquivo.pdf"
@@ -55,10 +63,16 @@ export default function Home1() {
                             <span className="mr-2 ">Baixar CV</span>
                             <RiDownloadLine />
                         </a>
-                        <buton className="group text-gray-500 w-fit px-3 py-3 my-1 flex items-center border-2 border-gray-500 rounded-xl">
-                            <FaWhatsapp className="text-gray-500 mr-2 text-2xl" />
-                            Vamos conversar!
-                        </buton>
+                        <button>
+                            <a
+                                href="https://wa.me/5548996458616"
+                                target="_blank"
+                                className="group text-gray-500 w-fit px-3 py-3 my-1 flex items-center border-2 border-gray-500 rounded-xl"
+                            >
+                                <FaWhatsapp className="text-gray-500 mr-2 text-2xl" />
+                                Vamos conversar!
+                            </a>
+                        </button>
                     </div>
                 </div>
             </div>

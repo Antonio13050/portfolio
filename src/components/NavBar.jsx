@@ -2,6 +2,9 @@ import { Fragment, useState } from "react";
 import { Dialog, Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-scroll";
+import data from "../data/data.json";
+
+const { links } = data;
 
 export default function NavBar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -42,42 +45,15 @@ export default function NavBar() {
                         ></Transition>
                     </Popover>
 
-                    <Link
-                        to="home"
-                        className="font-semibold leading-6 hover:text-gray-300 hover:scale-125 duration-200 cursor-pointer"
-                    >
-                        Home
-                    </Link>
-                    <Link
-                        to="about"
-                        className="font-semibold leading-6 hover:text-gray-300 hover:scale-125 duration-200 cursor-pointer"
-                    >
-                        Sobre
-                    </Link>
-                    <Link
-                        to="portfolio"
-                        className="font-semibold leading-6 hover:text-gray-300 hover:scale-125 duration-200 cursor-pointer"
-                    >
-                        Portfólio
-                    </Link>
-                    <Link
-                        to="skills"
-                        className="font-semibold leading-6 hover:text-gray-300 hover:scale-125 duration-200 cursor-pointer"
-                    >
-                        Skills
-                    </Link>
-                    <Link
-                        to="career"
-                        className="font-semibold leading-6 hover:text-gray-300 hover:scale-125 duration-200 cursor-pointer"
-                    >
-                        Carreira
-                    </Link>
-                    <Link
-                        href="#"
-                        className="font-semibold leading-6 hover:text-gray-300 hover:scale-125 duration-200 cursor-pointer"
-                    >
-                        Contato
-                    </Link>
+                    {links.map((item) => (
+                        <Link
+                            key={item.id}
+                            to={item.path}
+                            className="font-semibold leading-6 hover:text-gray-300 hover:scale-125 duration-200 cursor-pointer"
+                        >
+                            {item.title}
+                        </Link>
+                    ))}
                 </Popover.Group>
             </nav>
             <Dialog
@@ -114,48 +90,16 @@ export default function NavBar() {
                     <div className="mt-6 flow-root">
                         <div className="-my-6 divide-y divide-gray-500/10">
                             <div className="space-y-2 py-6">
-                                <Link
-                                    to="home"
-                                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:text-gray-300 duration-200 cursor-pointer"
-                                    onClick={() => setMobileMenuOpen(false)}
-                                >
-                                    Home
-                                </Link>
-                                <Link
-                                    to="about"
-                                    className="-mx-3 block rounded-lg px-3 py-2  text-base font-semibold leading-7 hover:text-gray-300 duration-200 cursor-pointer"
-                                    onClick={() => setMobileMenuOpen(false)}
-                                >
-                                    Sobre
-                                </Link>
-                                <Link
-                                    to="portfolio"
-                                    className="-mx-3 block rounded-lg px-3 py-2  text-base font-semibold leading-7 hover:text-gray-300 duration-200 cursor-pointer"
-                                    onClick={() => setMobileMenuOpen(false)}
-                                >
-                                    Portfólio
-                                </Link>
-                                <Link
-                                    to="skills"
-                                    className="-mx-3 block rounded-lg px-3 py-2  text-base font-semibold leading-7 hover:text-gray-300 duration-200 cursor-pointer"
-                                    onClick={() => setMobileMenuOpen(false)}
-                                >
-                                    Skills
-                                </Link>
-                                <Link
-                                    to="career"
-                                    className="-mx-3 block rounded-lg px-3 py-2  text-base font-semibold leading-7 hover:text-gray-300 duration-200 cursor-pointer"
-                                    onClick={() => setMobileMenuOpen(false)}
-                                >
-                                    Carreira
-                                </Link>
-                                <a
-                                    href="#"
-                                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:text-gray-300 duration-200 cursor-pointer"
-                                    onClick={() => setMobileMenuOpen(false)}
-                                >
-                                    Contato
-                                </a>
+                                {links.map((item) => (
+                                    <Link
+                                        key={item.id}
+                                        to={item.path}
+                                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:text-gray-300 duration-200 cursor-pointer"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                    >
+                                        {item.title}
+                                    </Link>
+                                ))}
                             </div>
                         </div>
                     </div>

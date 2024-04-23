@@ -45,71 +45,71 @@ export default function Skills() {
                     </h2>
                     <div className="flex items-center justify-center gap-x-4">
                         <div className="flex items-center justify-center">
-                            <FaHtml5 className="text-gray-500 md:text-7xl sm:text-5xl text-4xl" />
+                            <FaHtml5 className="text-gray-500 md:text-7xl sm:text-5xl text-4xl hover:text-[#E65100]" />
                         </div>
                         <div className="flex items-center justify-center">
-                            <FaCss3Alt className="text-gray-500 md:text-7xl sm:text-5xl text-4xl" />
+                            <FaCss3Alt className="text-gray-500 md:text-7xl sm:text-5xl text-4xl hover:text-[#2965F1]" />
                         </div>
                         <div className="flex items-center justify-center">
-                            <IoLogoJavascript className="text-gray-500 rounded-3xl md:text-7xl sm:text-5xl text-4xl" />
+                            <IoLogoJavascript className="text-gray-500 rounded-3xl md:text-7xl sm:text-5xl text-4xl hover:text-[#F0DB4F]" />
                         </div>
                         <div className="flex items-center justify-center">
-                            <FaReact className="text-gray-500 md:text-7xl sm:text-5xl text-4xl" />
+                            <FaReact className="text-gray-500 md:text-7xl sm:text-5xl text-4xl hover:text-[#61DBFB]" />
                         </div>
                         <div className="flex items-center justify-center">
-                            <FaBootstrap className="text-gray-500 md:text-7xl sm:text-5xl text-4xl" />
+                            <FaBootstrap className="text-gray-500 md:text-7xl sm:text-5xl text-4xl hover:text-[#7952B3]" />
                         </div>
                         <div className="flex items-center justify-center">
-                            <SiTailwindcss className="text-gray-500 md:text-7xl sm:text-5xl text-4xl" />
+                            <SiTailwindcss className="text-gray-500 md:text-7xl sm:text-5xl text-4xl hover:text-[#38BDF8]" />
                         </div>
                         <div className="flex items-center justify-center">
-                            <SiMui className="text-gray-500 md:text-7xl sm:text-5xl text-4xl" />
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-center gap-x-4">
-                        <div className="flex items-center justify-center">
-                            <FaJava className="text-gray-500 md:text-7xl sm:text-5xl text-4xl" />
-                        </div>
-                        <div className="flex items-center justify-center">
-                            <SiSpring className="text-gray-500 md:text-7xl sm:text-5xl text-4xl" />
-                        </div>
-                        <div className="flex items-center justify-center">
-                            <SiSpringboot className="text-gray-500 md:text-7xl sm:text-5xl text-4xl" />
-                        </div>
-                        <div className="flex items-center justify-center">
-                            <SiSpringsecurity className="text-gray-500 md:text-7xl sm:text-5xl text-4xl" />
-                        </div>
-                        <div className="flex items-center justify-center">
-                            <SiApachemaven className="text-gray-500 md:text-7xl sm:text-5xl text-4xl" />
-                        </div>
-                        <div className="flex items-center justify-center">
-                            <SiGradle className="text-gray-500 md:text-7xl sm:text-5xl text-4xl" />
-                        </div>
-                        <div className="flex items-center justify-center">
-                            <SiRedis className="text-gray-500 md:text-7xl sm:text-5xl text-4xl" />
+                            <SiMui className="text-gray-500 md:text-7xl sm:text-5xl text-4xl hover:text-[#007FFF]" />
                         </div>
                     </div>
                     <div className="flex items-center justify-center gap-x-4">
                         <div className="flex items-center justify-center">
-                            <FaGitAlt className="text-gray-500 md:text-7xl sm:text-5xl text-4xl" />
+                            <FaJava className="text-gray-500 md:text-7xl sm:text-5xl text-4xl hover:text-[#F89820]" />
                         </div>
                         <div className="flex items-center justify-center">
-                            <FaGithub className="text-gray-500 md:text-7xl sm:text-5xl text-4xl" />
+                            <SiSpring className="text-gray-500 md:text-7xl sm:text-5xl text-4xl hover:text-[#6cb52d]" />
                         </div>
                         <div className="flex items-center justify-center">
-                            <FaDocker className="text-gray-500 md:text-7xl sm:text-5xl text-4xl" />
+                            <SiSpringboot className="text-gray-500 md:text-7xl sm:text-5xl text-4xl hover:text-[#6cb52d]" />
                         </div>
                         <div className="flex items-center justify-center">
-                            <SiPostgresql className="text-gray-500  md:text-7xl sm:text-5xl text-4xl" />
+                            <SiSpringsecurity className="text-gray-500 md:text-7xl sm:text-5xl text-4xl hover:text-[#6cb52d]" />
                         </div>
                         <div className="flex items-center justify-center">
-                            <SiMysql className="text-gray-500  md:text-7xl sm:text-5xl text-4xl" />
+                            <SiApachemaven className="text-gray-500 md:text-7xl sm:text-5xl text-4xl hover:text-[#e77627]" />
                         </div>
                         <div className="flex items-center justify-center">
-                            <SiDbeaver className="text-gray-500  md:text-7xl sm:text-5xl text-4xl" />
+                            <SiGradle className="text-gray-500 md:text-7xl sm:text-5xl text-4xl hover:text-[#02303a]" />
                         </div>
                         <div className="flex items-center justify-center">
-                            <SiPostman className="text-gray-500  md:text-7xl sm:text-5xl text-4xl" />
+                            <SiRedis className="text-gray-500 md:text-7xl sm:text-5xl text-4xl hover:text-[#d82c20]" />
+                        </div>
+                    </div>
+                    <div className="flex items-center justify-center gap-x-4">
+                        <div className="flex items-center justify-center">
+                            <FaGitAlt className="text-gray-500 md:text-7xl sm:text-5xl text-4xl hover:text-[#F05032]" />
+                        </div>
+                        <div className="flex items-center justify-center">
+                            <FaGithub className="text-gray-500 md:text-7xl sm:text-5xl text-4xl hover:text-[#24292e]" />
+                        </div>
+                        <div className="flex items-center justify-center">
+                            <FaDocker className="text-gray-500 md:text-7xl sm:text-5xl text-4xl hover:text-[#0db7ed]" />
+                        </div>
+                        <div className="flex items-center justify-center">
+                            <SiPostgresql className="text-gray-500  md:text-7xl sm:text-5xl text-4xl hover:text-[#336791]" />
+                        </div>
+                        <div className="flex items-center justify-center">
+                            <SiMysql className="text-gray-500  md:text-7xl sm:text-5xl text-4xl hover:text-[#4479a1]" />
+                        </div>
+                        <div className="flex items-center justify-center">
+                            <SiDbeaver className="text-gray-500  md:text-7xl sm:text-5xl text-4xl hover:text-[#0052cc]" />
+                        </div>
+                        <div className="flex items-center justify-center">
+                            <SiPostman className="text-gray-500  md:text-7xl sm:text-5xl text-4xl hover:text-[#ff6c37]" />
                         </div>
                     </div>
                 </div>
@@ -119,10 +119,13 @@ export default function Skills() {
                     </h2>
                     <div className="flex items-center justify-center gap-x-4">
                         <div className="flex items-center justify-center">
-                            <SiLua className="text-gray-500  md:text-7xl sm:text-5xl text-4xl" />
+                            <SiLua
+                                aria-label="JavaScript"
+                                className="text-gray-500  md:text-7xl sm:text-5xl text-4xl hover:text-[#00017d]"
+                            />
                         </div>
                         <div className="flex items-center justify-center">
-                            <SiDelphi className="text-gray-500  md:text-7xl sm:text-5xl text-4xl" />
+                            <SiDelphi className="text-gray-500  md:text-7xl sm:text-5xl text-4xl hover:text-[#c3192d]" />
                         </div>
                     </div>
                 </div>

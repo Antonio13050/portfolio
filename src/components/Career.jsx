@@ -1,6 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
+import data from "../data/data.json";
+import Modal from "./Modal";
+import CareerCard from "./CareerCard";
+
+const { career, education } = data;
 
 export default function Career() {
+    const [showModal, setShowModal] = useState(false);
+    const [infoModal, setInfoModal] = useState({
+        title: "",
+        description: "",
+    });
+    const handleShowModal = (item) => {
+        setShowModal(true);
+        setInfoModal(item);
+    };
     return (
         <div
             name="career"
@@ -23,73 +37,40 @@ export default function Career() {
                 <div className="flex xl:flex-row flex-col">
                     <div className="pb-10 w-full">
                         <h2 className="md:text-3xl lg:text-4xl text-2xl font-bold text-white pb-10 text-center">
-                            Profissional
+                            Acadêmica
                         </h2>
-                        <div className="flex flex-row overflow-y-auto gap-6 xl:flex-wrap xl:justify-center justify-start">
-                            <div className="min-w-[500px] max-w-[500px] p-6 border border-gray-400 rounded-lg ">
-                                <h5 class="mb-2 text-2xl font-bold  text-white ">
-                                    Estagiário na Softplan
-                                </h5>
-                                <p class="font-normal text-white  pb-8">
-                                    Here are the biggest enterprise technology
-                                    acquisitions of 2021 so far, in reverse
-                                    chronological order.
-                                </p>
-                                <p class="font-normal text-gray-400">
-                                    Abril/2021 - Outubro/2021
-                                </p>
-                            </div>
-
-                            <div className="min-w-[500px] max-w-[500px] p-6 border border-gray-400 rounded-lg ">
-                                <h5 class="mb-2 text-2xl font-bold  text-white ">
-                                    Análista de Serviços de TI na Softplan
-                                </h5>
-                                <p class="font-normal text-white  pb-8">
-                                    Here are the biggest enterprise technology
-                                    acquisitions of 2021 so far, in reverse
-                                    chronological order.
-                                </p>
-                                <p class="font-normal text-gray-400">
-                                    Outubro/2021 - Atualmente
-                                </p>
-                            </div>
+                        <div className="card-container flex flex-row overflow-y-auto gap-6 xl:flex-wrap xl:justify-center justify-start">
+                            {education.map((item) => (
+                                <CareerCard
+                                    key={item.id}
+                                    item={item}
+                                    handleShowModal={handleShowModal}
+                                />
+                            ))}
                         </div>
                     </div>
                     <div className="w-full">
                         <h2 className="md:text-3xl lg:text-4xl text-2xl font-bold text-white pb-10 text-center">
-                            Acadêmica
+                            Profissional
                         </h2>
-                        <div className="flex flex-row overflow-y-auto gap-6 xl:flex-wrap xl:justify-center justify-start">
-                            <div className="min-w-[500px] max-w-[500px] p-6 border border-gray-400 rounded-lg ">
-                                <h5 class="mb-2 text-2xl font-bold  text-white ">
-                                    Análista de Serviços de TI na Softplan
-                                </h5>
-                                <p class="font-normal text-white  pb-8">
-                                    Here are the biggest enterprise technology
-                                    acquisitions of 2021 so far, in reverse
-                                    chronological order.
-                                </p>
-                                <p class="font-normal text-gray-400">
-                                    Outubro/2021 - Atualmente
-                                </p>
-                            </div>
-                            <div className="min-w-[500px] max-w-[500px] p-6 border border-gray-400 rounded-lg ">
-                                <h5 class="mb-2 text-2xl font-bold  text-white ">
-                                    Análista de Serviços de TI na Softplan
-                                </h5>
-                                <p class="font-normal text-white  pb-8">
-                                    Here are the biggest enterprise technology
-                                    acquisitions of 2021 so far, in reverse
-                                    chronological order.
-                                </p>
-                                <p class="font-normal text-gray-400">
-                                    Outubro/2021 - Atualmente
-                                </p>
-                            </div>
+                        <div className="card-container flex flex-row overflow-y-auto gap-6 xl:flex-wrap xl:justify-center justify-start">
+                            {career.map((item) => (
+                                <CareerCard
+                                    key={item.id}
+                                    item={item}
+                                    handleShowModal={handleShowModal}
+                                />
+                            ))}
                         </div>
                     </div>
                 </div>
             </div>
+            <Modal
+                showModal={showModal}
+                setShowModal={setShowModal}
+                title={infoModal.title}
+                details={infoModal.details}
+            />
         </div>
     );
 }
