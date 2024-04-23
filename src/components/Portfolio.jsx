@@ -5,10 +5,7 @@ import { TbDeviceDesktop } from "react-icons/tb";
 
 export default function Portfolio() {
     return (
-        <div
-            name="portfolio"
-            className="h-max w-screen bg-gradient-to-b from-black to-gray-800"
-        >
+        <div name="portfolio" className="h-max w-screen ">
             <div className="container mx-auto h-full md:w-10/12 w-11/12 pt-20 gap-x-2">
                 <span className="mb-5 group text-white w-fit px-3 py-3 mr-2 flex items-center rounded-md bg-gradient-to-r from-gray-800 to-gray-600">
                     🔗 Portfólio

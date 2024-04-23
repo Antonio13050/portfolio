@@ -26,10 +26,7 @@ import { SiDelphi } from "react-icons/si";
 
 export default function Skills() {
     return (
-        <div
-            name="skills"
-            className="h-screen w-screen bg-gradient-to-b from-gray-800 to-black  text-white pt-10"
-        >
+        <div name="skills" className="h-screen w-screen  text-white pt-10">
             <div className="container mx-auto h-full flex items-center justify-center flex-col w-full gap-y-6">
                 <div>
                     <span className="group text-white w-fit px-3 py-3 my-1 flex items-center mx-auto justify-center rounded-md bg-gradient-to-r from-gray-800 to-gray-600">
@@ -39,7 +36,7 @@ export default function Skills() {
                         Tecnologias e habilidades
                     </h2>
                 </div>
-                <div className="">
+                <div className=" z-10">
                     <h2 className="md:text-3xl lg:text-4xl text-2xl font-bold text-white pt-3 pb-10 text-center">
                         Techs que já usei em projetos
                     </h2>
@@ -113,7 +110,7 @@ export default function Skills() {
                         </div>
                     </div>
                 </div>
-                <div className="">
+                <div className=" z-10">
                     <h2 className="md:text-3xl lg:text-4xl text-2xl font-bold text-white pt-3 pb-10  text-center">
                         Outras techs que já estudei em cursos
                     </h2>

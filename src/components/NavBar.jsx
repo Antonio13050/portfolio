@@ -3,6 +3,7 @@ import { Dialog, Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-scroll";
 import data from "../data/data.json";
+import StarBackground from "./Background";
 
 const { links } = data;
 
@@ -10,7 +11,7 @@ export default function NavBar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
-        <header className="fixed top-0 bg-black text-gray-500 w-full">
+        <header className="fixed top-0 bg-black bg-opacity-50 text-gray-500 w-full z-20">
             <nav
                 className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8 "
                 aria-label="Global"
@@ -62,8 +63,9 @@ export default function NavBar() {
                 open={mobileMenuOpen}
                 onClose={setMobileMenuOpen}
             >
-                <div className="fixed inset-0 z-10" />
-                <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gradient-to-b from-black to-gray-800 text-gray-500 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                <div className="fixed inset-0 z-30" />
+
+                <Dialog.Panel className="fixed inset-y-0 right-0 z-30 w-full overflow-y-auto bg-gradient-to-b from-black to-gray-800 text-gray-500 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
                         <a href="#" className="-m-1.5 p-1.5">
                             <span className="sr-only">Your Company</span>
@@ -88,7 +90,7 @@ export default function NavBar() {
                         )}
                     </div>
                     <div className="mt-6 flow-root">
-                        <div className="-my-6 divide-y divide-gray-500/10">
+                        <div className="-my-6 divide-y divide-gray-500/10 ">
                             <div className="space-y-2 py-6">
                                 {links.map((item) => (
                                     <Link

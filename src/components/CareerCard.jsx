@@ -7,21 +7,23 @@ export default function CareerCard({ item, handleShowModal }) {
             className="card min-w-[500px] max-w-[500px] min-h-[224px] p-6 border border-gray-400 rounded-lg flex flex-col"
         >
             <div className="h-full">
-                <h5 class="mb-2 text-2xl font-bold min-h-[64px] text-white ">
+                <h5 className="mb-2 text-2xl font-bold min-h-[64px] text-white ">
                     {item.title}
                 </h5>
-                <p class="font-normal text-white pb-8">{item.description}</p>
+                <p className="font-normal text-white pb-8">
+                    {item.description}
+                </p>
             </div>
 
-            <div class="flex flex-col items-start gap-y-2">
-                <span class="font-normal text-gray-400">{item.dates}</span>
+            <div className="flex flex-col items-start gap-y-2">
+                <span className="font-normal text-gray-400">{item.dates}</span>
                 <button
                     onClick={() => handleShowModal(item)}
                     className="inline-flex items-center font-medium text-white hover:text-gray-200 hover:underline"
                 >
                     Mais detalhes
                     <svg
-                        class=" w-2.5 h-2.5 ms-2 rtl:rotate-180"
+                        className=" w-2.5 h-2.5 ms-2 rtl:rotate-180"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"

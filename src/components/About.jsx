@@ -3,10 +3,7 @@ import HeroImage from "../assets/heroImage.png";
 
 export default function About() {
     return (
-        <div
-            name="about"
-            className="h-fit w-screen bg-gradient-to-b from-gray-800 to-black text-white"
-        >
+        <div name="about" className="h-fit w-screen  text-white">
             <div className="container mx-auto h-full flex flex-col items-center justify-around xl:flex-row md:w-full w-11/12">
                 <div className="flex basis-1/3 items-center justify-center">
                     <div className="">

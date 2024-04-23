@@ -16,10 +16,7 @@ export default function Career() {
         setInfoModal(item);
     };
     return (
-        <div
-            name="career"
-            className="h-max w-screen bg-gradient-to-b from-black to-gray-800"
-        >
+        <div name="career" className="h-max w-screen ">
             <div className="container mx-auto h-full md:w-10/12 w-11/12 gap-x-2">
                 <div className="flex flex-col items-center justify-center gap-y-4 pb-10">
                     <span className="group text-white w-fit px-3 py-3 my-1 flex items-center rounded-md bg-gradient-to-r from-gray-800 to-gray-600">
@@ -35,7 +32,7 @@ export default function Career() {
                 </div>
 
                 <div className="flex xl:flex-row flex-col">
-                    <div className="pb-10 w-full">
+                    <div className="pb-10 w-full z-10">
                         <h2 className="md:text-3xl lg:text-4xl text-2xl font-bold text-white pb-10 text-center">
                             Acadêmica
                         </h2>
@@ -49,7 +46,7 @@ export default function Career() {
                             ))}
                         </div>
                     </div>
-                    <div className="w-full">
+                    <div className="w-full z-10">
                         <h2 className="md:text-3xl lg:text-4xl text-2xl font-bold text-white pb-10 text-center">
                             Profissional
                         </h2>

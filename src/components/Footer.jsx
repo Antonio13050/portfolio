@@ -4,13 +4,10 @@ import { TbBrandGithubFilled } from "react-icons/tb";
 
 export default function Footer() {
     return (
-        <div
-            name="home"
-            className="h-fit w-screen bg-gradient-to-b from-gray-800 to-black text-white"
-        >
+        <div name="home" className="h-fit w-screen text-white">
             <div className="container mx-auto h-full flex flex-row items-center justify-between w-full px-4 py-4">
                 <div>Copyright © Antonio · 2024</div>
-                <div>
+                <div className=" z-10">
                     <a
                         href="https://www.linkedin.com/in/antonio13050/"
                         target="_blank"
