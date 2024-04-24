@@ -177,18 +177,39 @@
     "projects": [
         {
             "id": 1,
+            "title": "DEVinPharmacy",
+            "link": "https://github.com/Antonio13050/devinhouse-projeto-modulo-1",
+            "description": "Projeto realizado no final do Modulo 1 do curso DEVinHouse - Senai. O projeto consiste no frontend de uma aplicação web para gerenciamento de farmácias, medicamentos e controle de estoque.",
+            "tags": [
+                "React",
+                "React-Hook-Form",
+                "React-Router-Dom",
+                "React-Leaflet",
+                "Boostrap",
+                "Zod",
+                "JavaScript",
+                "HTML",
+                "CSS",
+                "Frontend"
+            ],
+            "img": []
+        },
+        {
+            "id": 2,
             "title": "Medication Management",
             "link": "https://github.com/Antonio13050/devinhouse-projeto-modulo-2",
-            "description": "Projeto realizado no final do Modulo 2 do curso DEVinHouse - Senai. O projeto consiste em uma aplicação web para gerenciamento de farmácias, medicamentos e controle de estoque.",
-            "techs": [
-                "#Spring Boot",
-                "#JPA",
-                "#API RESTful",
-                "#Maven",
-                "#Bean Validation",
-                "#PostgreSQL"
+            "description": "Projeto realizado no final do Modulo 2 do curso DEVinHouse - Senai. O projeto consiste no backend de uma aplicação web para gerenciamento de farmácias, medicamentos e controle de estoque.",
+            "tags": [
+                "Spring-Boot",
+                "JPA",
+                "API-RESTfull",
+                "Maven",
+                "Bean-Validation",
+                "PostgreSQL",
+                "Swagger",
+                "Backend"
             ],
-            "img": "https://i.imgur.com/7i5z1Wq.jpg"
+            "img": []
         }
     ]
 }
