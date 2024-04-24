@@ -40,7 +40,7 @@ export default function Skills() {
                     <h2 className="md:text-3xl lg:text-4xl text-2xl font-bold text-white pt-3 pb-10 text-center">
                         Techs que já usei em projetos
                     </h2>
-                    <div className="flex items-center justify-center gap-x-4">
+                    <div className="flex items-center justify-center gap-x-4 pb-2">
                         <div className="flex items-center justify-center">
                             <FaHtml5 className="text-gray-500 md:text-7xl sm:text-5xl text-4xl hover:text-[#E65100]" />
                         </div>
@@ -63,7 +63,7 @@ export default function Skills() {
                             <SiMui className="text-gray-500 md:text-7xl sm:text-5xl text-4xl hover:text-[#007FFF]" />
                         </div>
                     </div>
-                    <div className="flex items-center justify-center gap-x-4">
+                    <div className="flex items-center justify-center gap-x-4 pb-2">
                         <div className="flex items-center justify-center">
                             <FaJava className="text-gray-500 md:text-7xl sm:text-5xl text-4xl hover:text-[#F89820]" />
                         </div>
@@ -86,7 +86,7 @@ export default function Skills() {
                             <SiRedis className="text-gray-500 md:text-7xl sm:text-5xl text-4xl hover:text-[#d82c20]" />
                         </div>
                     </div>
-                    <div className="flex items-center justify-center gap-x-4">
+                    <div className="flex items-center justify-center gap-x-4 ">
                         <div className="flex items-center justify-center">
                             <FaGitAlt className="text-gray-500 md:text-7xl sm:text-5xl text-4xl hover:text-[#F05032]" />
                         </div>
@@ -105,13 +105,13 @@ export default function Skills() {
                         <div className="flex items-center justify-center">
                             <SiDbeaver className="text-gray-500  md:text-7xl sm:text-5xl text-4xl hover:text-[#0052cc]" />
                         </div>
-                        <div className="flex items-center justify-center">
+                        <div className="flex items-center justify-center ">
                             <SiPostman className="text-gray-500  md:text-7xl sm:text-5xl text-4xl hover:text-[#ff6c37]" />
                         </div>
                     </div>
                 </div>
                 <div className=" z-10">
-                    <h2 className="md:text-3xl lg:text-4xl text-2xl font-bold text-white pt-3 pb-10  text-center">
+                    <h2 className="md:text-3xl lg:text-4xl text-2xl font-bold text-white pt-3 pb-10 text-center">
                         Outras techs que já estudei em cursos
                     </h2>
                     <div className="flex items-center justify-center gap-x-4">

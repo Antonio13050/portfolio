@@ -1,5 +1,6 @@
 import React from "react";
 import HeroImage from "../assets/heroImage.png";
+import Avatar from "../assets/avatar.png";
 
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa6";
@@ -42,9 +43,9 @@ export default function Home1() {
                     </div>
                 </div>
 
-                <div className="flex basis-2/4 items-center justify-center p-4">
+                <div className="flex basis-2/4 items-center justify-center p-4 hover:scale-110 duration-300 z-10">
                     <img
-                        src={HeroImage}
+                        src={Avatar}
                         alt="my profile"
                         className="rounded-2xl mx-auto lg:w-10/12 w-5/12 block"
                     />
