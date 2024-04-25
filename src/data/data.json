@@ -192,7 +192,8 @@
                 "CSS",
                 "Frontend"
             ],
-            "img": []
+            "img": [],
+            "online": "https://devinhouse-projeto-modulo-1.vercel.app/"
         },
         {
             "id": 2,
@@ -208,6 +209,26 @@
                 "PostgreSQL",
                 "Swagger",
                 "Backend"
+            ],
+            "img": []
+        },
+        {
+            "id": 3,
+            "title": "API Padrao Builder",
+            "link": "https://github.com/Antonio13050/api-padrao-builder",
+            "description": "Este projeto é uma API para cadastro de usuários que aplica o padrão de projeto Builder. A API é dockerizada, o que significa que pode ser facilmente executada em qualquer ambiente compatível com Docker.",
+            "tags": [
+                "Spring-Boot",
+                "JPA",
+                "API-RESTfull",
+                "Maven",
+                "Bean-Validation",
+                "PostgreSQL",
+                "Docker",
+                "Backend",
+                "Builder",
+                "Design Patterns",
+                "Swagger"
             ],
             "img": []
         }
