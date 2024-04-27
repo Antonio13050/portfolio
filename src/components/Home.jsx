@@ -1,11 +1,12 @@
 import React from "react";
-import HeroImage from "../assets/heroImage.png";
 import Avatar from "../assets/avatar.png";
 
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa6";
 import { TbBrandGithubFilled } from "react-icons/tb";
 import { RiDownloadLine } from "react-icons/ri";
+
+import Curriculo from "../assets/curriculo.pdf";
 
 export default function Home1() {
     return (
@@ -54,7 +55,7 @@ export default function Home1() {
                 <div className="flex basis-1/5 flex-col h-fit items-center justify-center w-full z-10">
                     <div className="max-w-md flex lg:flex-col flex-row lg:items-end justify-around md:gap-x-16 gap-x-3 gap-y-3">
                         <a
-                            href="/caminho/para/o/seu/arquivo.pdf"
+                            href={Curriculo}
                             download
                             className="flex items-center text-gray-500 hover:text-gray-300 max"
                         >

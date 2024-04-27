@@ -16,7 +16,28 @@ import ProBuilderImg1 from "../assets/pro-builder/img-1.png";
 import ProBuilderImg2 from "../assets/pro-builder/img-2.png";
 import ProBuilderImg3 from "../assets/pro-builder/img-3.png";
 
+import BibImg1 from "../assets/bibliotech/img-1.png";
+import BibImg2 from "../assets/bibliotech/img-2.png";
+import BibImg3 from "../assets/bibliotech/img-3.png";
+import BibImg4 from "../assets/bibliotech/img-4.png";
+import BibImg5 from "../assets/bibliotech/img-5.png";
+import BibImg6 from "../assets/bibliotech/img-6.png";
+import BibImg8 from "../assets/bibliotech/img-8.png";
+import BibImg9 from "../assets/bibliotech/img-9.png";
+import BibImg10 from "../assets/bibliotech/img-10.png";
+
 let slides = [
+    [
+        BibImg1,
+        BibImg2,
+        BibImg3,
+        BibImg4,
+        BibImg5,
+        BibImg6,
+        BibImg8,
+        BibImg9,
+        BibImg10,
+    ],
     [Pro1Img1, Pro1Img2, Pro1Img3, Pro1Img4, Pro1Img5],
     [Pro2Img1, Pro2Img2, Pro2Img3],
     [ProBuilderImg, ProBuilderImg1, ProBuilderImg2, ProBuilderImg3],
@@ -58,7 +79,7 @@ export default function ProjectCard({ item }) {
                                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#4AE290] opacity-75"></span>
                                 <span class="relative inline-flex rounded-full h-3 w-3 bg-[#4AE290]"></span>
                             </span>
-                            online
+                            Online
                         </a>
                     )}
                     {item.tags.map((tags, index) => (

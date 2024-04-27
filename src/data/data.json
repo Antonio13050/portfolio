@@ -177,6 +177,28 @@
     "projects": [
         {
             "id": 1,
+            "title": "Bibliotech",
+            "link": "https://github.com/Antonio13050/bibliotech",
+            "description": "Criei este projeto para praticar o uso de tecnologias populares. Atualmente ele conta com as funcionalidades de autenticação e autorização de usuários com JWT. O próximo passo é o envio de e-mail para o serviço de esqueci minha senha.",
+            "tags": [
+                "Spring",
+                "Spring-Security",
+                "Oauth2",
+                "JWT",
+                "Docker",
+                "PostgreSQL",
+                "React",
+                "React-Hook-Form",
+                "React-Router-Dom",
+                "Tailwind",
+                "Shadcn",
+                "Zod",
+                "FullStack"
+            ],
+            "img": []
+        },
+        {
+            "id": 2,
             "title": "DEVinPharmacy",
             "link": "https://github.com/Antonio13050/devinhouse-projeto-modulo-1",
             "description": "Projeto realizado no final do Modulo 1 do curso DEVinHouse - Senai. O projeto consiste no frontend de uma aplicação web para gerenciamento de farmácias, medicamentos e controle de estoque.",
@@ -196,7 +218,7 @@
             "online": "https://devinhouse-projeto-modulo-1.vercel.app/"
         },
         {
-            "id": 2,
+            "id": 3,
             "title": "Medication Management",
             "link": "https://github.com/Antonio13050/devinhouse-projeto-modulo-2",
             "description": "Projeto realizado no final do Modulo 2 do curso DEVinHouse - Senai. O projeto consiste no backend de uma aplicação web para gerenciamento de farmácias, medicamentos e controle de estoque.",
@@ -213,7 +235,7 @@
             "img": []
         },
         {
-            "id": 3,
+            "id": 4,
             "title": "API Padrao Builder",
             "link": "https://github.com/Antonio13050/api-padrao-builder",
             "description": "Este projeto é uma API para cadastro de usuários que aplica o padrão de projeto Builder. A API é dockerizada, o que significa que pode ser facilmente executada em qualquer ambiente compatível com Docker.",
