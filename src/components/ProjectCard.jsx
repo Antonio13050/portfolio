@@ -84,7 +84,7 @@ export default function ProjectCard({ item }) {
                     )}
                     {item.tags.map((tags, index) => (
                         <span
-                            className="text-white mr-2 text-white w-fit px-1 py-1 my-1 rounded-md bg-gray-800"
+                            className="text-white mr-2 w-fit px-1 py-1 my-1 rounded-md bg-gray-800"
                             key={index}
                         >
                             {tags}
