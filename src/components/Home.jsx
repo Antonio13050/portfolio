@@ -20,7 +20,7 @@ export default function Home1() {
                         Antonio
                     </h2>
                     <p className="text-2xl text-gray-500 py-4 max-w-md">
-                        Full stack developer
+                        Full-Stack Developer
                     </p>
                     <div className="max-w-md z-10">
                         <a

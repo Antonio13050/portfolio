@@ -73,7 +73,7 @@ export default function ProjectCard({ item }) {
                         <a
                             href={item.online}
                             target="_blank"
-                            className="group gap-x-2 w-fit flex px-1 py-1 items-center cursor-pointer bg-green-800 text-white rounded-md"
+                            className="group gap-x-2 w-fit flex px-1 py-1 items-center cursor-pointer bg-green-800 text-white rounded-md mr-2"
                         >
                             <span class="relative flex">
                                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#4AE290] opacity-75"></span>
