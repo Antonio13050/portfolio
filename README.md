@@ -2,7 +2,7 @@
 
 Portfólio pessoal de **Antonio Carlos Virissimo**, desenvolvedor de software na Softplan, com foco em IA Generativa e sistemas multi-agentes, Java 21 / Spring Boot e Next.js / React.
 
-O site é uma single page com as seções **Home**, **Sobre**, **Portfólio**, **Skills** e **Trajetória**, disponível em **português, inglês e espanhol**.
+O site é uma single page com as seções **Início**, **Projetos**, **Experiência e formação**, **Competências** e **Contato**, disponível em **português, inglês e espanhol**.
 
 ## Stack
 
@@ -29,7 +29,7 @@ npm run preview   # serve o build localmente
 
 ```
 public/
-  curriculo.pdf          # CV baixado pelo botão "Baixar CV"
+  curriculo.pdf          # currículo baixado pelos botões "Baixar currículo"
 src/
   components/            # uma seção ou componente por arquivo
   context/
@@ -37,6 +37,7 @@ src/
   data/
     translations.js      # textos fixos da interface (pt, en, es)
     data.json            # carreira, formação e projetos
+    links.js             # links de contato (GitHub, LinkedIn, WhatsApp, currículo)
   assets/
     covers/              # capas dos cards de projeto (.webp)
 ```
@@ -61,6 +62,10 @@ Ficam em `src/data/data.json`. Qualquer campo de texto pode ser uma string únic
 
 Os componentes resolvem esses campos com `localize()`, do `LanguageContext`. Se faltar a tradução, o texto em português é usado.
 
+### Carreira e formação
+
+Os itens de `career` e `education` aparecem juntos na linha do tempo, agrupados pelo ano de `start` (`"AAAA-MM"`, também usado na ordenação). Cada item tem `title`, `description`, `dates` (texto exibido) e `details` (parágrafos do modal). O cargo atual é o de `id` 1 em `career` (`CURRENT_ROLE_ID` em `Career.jsx`).
+
 ### Adicionando um projeto
 
 Acrescente um item em `projects` no `data.json`:
@@ -68,14 +73,15 @@ Acrescente um item em `projects` no `data.json`:
 | Campo | Obrigatório | Descrição |
 | --- | --- | --- |
 | `id` | sim | número único |
-| `title`, `description` | sim | texto ou objeto `{ pt, en, es }` |
-| `category` | sim | `IA`, `Backend`, `Fullstack` ou `Frontend` (usado no filtro) |
+| `title`, `description` | sim | texto ou objeto `{ pt, en, es }`; no título, o que vem depois de ` — ` vira o subtítulo do card |
+| `category` | sim | `IA`, `Backend`, `Fullstack` ou `Frontend`; `Backend` deixa o fluxo do card em azul |
 | `tags` | sim | lista de tecnologias |
-| `badgeType` | não | `Enterprise`, `OpenSource` ou `LiveDemo` (define a cor do selo) |
-| `badgeText` | não | texto do selo |
-| `highlights` | não | lista (ou objeto `{ pt, en, es }` de listas) com os destaques |
+| `badgeType` | não | `Enterprise` mostra "Repositório corporativo" no lugar do link; `OpenSource` e `LiveDemo` são informativos |
+| `badgeText` | não | rótulo exibido acima do fluxo, nos cards sem capa |
+| `highlights` | não | lista (ou objeto `{ pt, en, es }` de listas) com os destaques; não aparece no layout atual |
 | `link` | não | URL do repositório no GitHub |
 | `online` | não | URL da demo |
 | `cover` | não | nome de um arquivo em `src/assets/covers/` |
+| `flow` | não | fluxo da arquitetura exibido no lugar da capa (ex.: `EJE → CDC → SIE-PJ`) |
 
-Para a capa, use um print em `.webp` com cerca de 800 px de largura.
+Para a capa, use um print em `.webp` com cerca de 800 px de largura. Sem `cover`, o card mostra `badgeText` e `flow`.

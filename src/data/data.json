@@ -17,6 +17,7 @@
                 "en": "Aug 2024 - Present",
                 "es": "agosto/2024 - actualidad"
             },
+            "start": "2024-08",
             "details": {
                 "pt": [
                     "• Insights AI: Arquitetura e desenvolvimento de um BI Conversacional Jurídico com sistemas multi-agentes (LangGraph + Google Gemini), streaming de dados em tempo real (SSE) com FastAPI (Python 3.12) e Next.js 16 / React 19, e geração dinâmica de consultas estatísticas e gráficos interativos com Recharts.",
@@ -55,6 +56,7 @@
                 "en": "Oct 2021 - Aug 2024",
                 "es": "octubre/2021 - agosto/2024"
             },
+            "start": "2021-10",
             "details": {
                 "pt": [
                     "Na minha equipe fui responsável pelo software utilizado pela Jurisdicción Especial para la Paz (JEP) na Colômbia, atuando como Analista de Serviços de TI N2, concentrando-me na análise de erros, configuração de parâmetros, abertura de defeitos e PMLs, e alinhamento técnico com o cliente e integrações terceiras.",
@@ -102,6 +104,7 @@
                 "en": "May 2021 - Oct 2021",
                 "es": "mayo/2021 - octubre/2021"
             },
+            "start": "2021-05",
             "details": {
                 "pt": [
                     "No estágio, participei de onboarding corporativo completo, com imersão técnica nos sistemas judiciais e regras de negócio da Softplan. Desenvolvimento de soft skills, suporte a rotinas técnicas de TI e primeiros passos em ferramentas de arquitetura corporativa."
@@ -133,6 +136,7 @@
                 "en": "Feb 2021 - Dec 2023",
                 "es": "febrero/2021 - diciembre/2023"
             },
+            "start": "2021-02",
             "details": {
                 "pt": [
                     "Formação superior com foco em engenharia de software, sistemas distribuídos, bancos de dados relacionais, segurança da informação e computação em nuvem.",
@@ -176,6 +180,7 @@
                 "en": "May 2023 - Apr 2024",
                 "es": "mayo/2023 - abril/2024"
             },
+            "start": "2023-05",
             "details": {
                 "pt": [
                     "Programa de formação profissional prática em desenvolvimento Full Stack estruturado em módulos:",
@@ -214,6 +219,7 @@
                 "en": "Jul 2017 - Dec 2018",
                 "es": "julio/2017 - diciembre/2018"
             },
+            "start": "2017-07",
             "details": {
                 "pt": [
                     "Formação técnica com ênfase em fundamentos de computação, suporte em TI, arquitetura de computadores, redes e desenvolvimento inicial de sistemas."
@@ -243,6 +249,7 @@
                 "en": "Jul 2022 - Dec 2023",
                 "es": "julio/2022 - diciembre/2023"
             },
+            "start": "2022-07",
             "details": {
                 "pt": [
                     "Curso estruturado com foco em fluência oral, escrita técnica e comunicação corporativa, permitindo a condução direta de projetos internacionais na América Latina (Poder Judicial del Perú e JEP Colômbia)."
@@ -272,6 +279,7 @@
                 "en": "Aug 2014 - Dec 2014",
                 "es": "agosto/2014 - diciembre/2014"
             },
+            "start": "2014-08",
             "details": {
                 "pt": [
                     "Estudo de engines, simulações interativas e linguagens como Lua e Java."
@@ -301,6 +309,7 @@
                 "en": "Jan 2014 - Jul 2014",
                 "es": "enero/2014 - julio/2014"
             },
+            "start": "2014-01",
             "details": {
                 "pt": [
                     "Primeiros passos em lógica de programação estruturada e desenvolvimento orientado a objetos."
@@ -329,6 +338,7 @@
                 "en": "Softplan Enterprise",
                 "es": "Corporativo Softplan"
             },
+            "flow": "Guardian → Router → Specialists",
             "description": {
                 "pt": "Plataforma corporativa de BI Conversacional para tribunais que traduz perguntas em linguagem natural em consultas analíticas e indicadores do CNJ em tempo real. Arquitetura multi-agente construída com LangGraph e Gemini, streaming SSE com Next.js 16 e FastAPI, geração automática de insights estatísticos e dashboards dinâmicos persistíveis.",
                 "en": "Enterprise conversational BI platform for courts that translates natural-language questions into analytical queries and CNJ indicators in real time. Multi-agent architecture built with LangGraph and Gemini, SSE streaming with Next.js 16 and FastAPI, automatic generation of statistical insights and persistable dynamic dashboards.",
@@ -379,6 +389,7 @@
             "category": "IA",
             "badgeType": "OpenSource",
             "badgeText": "Open Source",
+            "flow": "WhatsApp → LangGraph → pgvector",
             "link": "https://github.com/Antonio13050/imob-ai",
             "description": {
                 "pt": "Agente autônomo de IA integrado à API do WhatsApp (Meta) e ao CRM Apresenta.me para qualificação de leads e recomendação de imóveis via busca vetorial (pgvector). Arquitetura orientada a eventos com FastAPI, LangGraph, fila distribuída no PostgreSQL (FOR UPDATE SKIP LOCKED), observabilidade completa com Prometheus/Jaeger e painel de handoff em Next.js 16.",
@@ -433,6 +444,7 @@
                 "en": "International",
                 "es": "Internacional"
             },
+            "flow": "EJE → CDC → SIE-PJ",
             "description": {
                 "pt": "Sistema de missão crítica desenvolvido para o Poder Judicial del Perú que integra o sistema processual EJE ao sistema estatístico nacional (SIE-PJ). Arquitetura de alta performance com Java 21, Spring Boot 3.5 e Spring JDBC puro (5 pools Hikari), captura de mudanças via CDC/PL-pgSQL, garantia exactly-once, cache Caffeine, observabilidade com Elastic APM e painel de controle em Next.js 16.",
                 "en": "Mission-critical system developed for the Poder Judicial del Perú that integrates the EJE case management system with the national statistical system (SIE-PJ). High-performance architecture with Java 21, Spring Boot 3.5 and plain Spring JDBC (5 Hikari pools), change capture via CDC/PL-pgSQL, exactly-once guarantees, Caffeine caching, observability with Elastic APM and a control panel in Next.js 16.",

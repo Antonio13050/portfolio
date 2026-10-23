@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,8 +6,11 @@
 
 @layer base {
     html {
-        font-family: "Plus Jakarta Sans", sans-serif;
         scroll-behavior: smooth;
+    }
+
+    body {
+        background: #060914;
     }
 
     /* Custom Scrollbar */
@@ -16,35 +19,54 @@
         height: 8px;
     }
     ::-webkit-scrollbar-track {
-        background: #09090b;
+        background: #060914;
     }
     ::-webkit-scrollbar-thumb {
-        background: #27272a;
+        background: #1e2640;
         border-radius: 4px;
     }
     ::-webkit-scrollbar-thumb:hover {
-        background: #3f3f46;
+        background: #2a3452;
     }
 }
 
-.glass-panel {
-    background: rgba(18, 18, 23, 0.7);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+/* Órbitas do topo: o anel gira e cada tecnologia gira ao contrário para ficar sempre na horizontal */
+@keyframes orbit-spin {
+    to {
+        transform: rotate(360deg);
+    }
 }
 
-.glass-panel:hover {
-    border-color: rgba(255, 255, 255, 0.16);
+@keyframes orbit-spin-reverse {
+    to {
+        transform: rotate(-360deg);
+    }
 }
 
-.glass-nav {
-    background: rgba(9, 9, 11, 0.8);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+.orbit-ring {
+    animation: orbit-spin var(--orbit-duration) linear infinite;
 }
 
-.glow-gradient {
-    background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.15), transparent 70%);
+.orbit-ring--reverse {
+    animation-name: orbit-spin-reverse;
+}
+
+.orbit-chip {
+    animation: orbit-spin-reverse var(--orbit-duration) linear infinite;
+}
+
+.orbit-ring--reverse .orbit-chip {
+    animation-name: orbit-spin;
+}
+
+.orbit:hover .orbit-ring,
+.orbit:hover .orbit-chip {
+    animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .orbit-ring,
+    .orbit-chip {
+        animation: none;
+    }
 }

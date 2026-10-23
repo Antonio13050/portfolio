@@ -1,16 +1,29 @@
 import { useState } from "react";
 import data from "../data/data.json";
 import Modal from "./Modal";
-import CareerCard from "./CareerCard";
-import { HiOutlineBriefcase, HiOutlineAcademicCap, HiOutlineSparkles } from "react-icons/hi2";
+import SectionHeader from "./SectionHeader";
 import { useLanguage } from "../context/LanguageContext";
 
-const { career, education } = data;
+// id do cargo atual em data.career
+const CURRENT_ROLE_ID = 1;
+
+// Carreira e formação numa única linha do tempo, agrupada pelo ano de início
+const entries = [
+    ...data.career.map((item) => ({ ...item, key: `career-${item.id}`, isCareer: true })),
+    ...data.education.map((item) => ({ ...item, key: `education-${item.id}`, isCareer: false })),
+].sort((a, b) => a.start.localeCompare(b.start));
+
+const timeline = entries.reduce((groups, item) => {
+    const year = item.start.slice(0, 4);
+    const group = groups.find((g) => g.year === year);
+    if (group) group.items.push(item);
+    else groups.push({ year, items: [item] });
+    return groups;
+}, []);
 
 export default function Career() {
     const [showModal, setShowModal] = useState(false);
     const [selectedItem, setSelectedItem] = useState(null);
-    const [activeTab, setActiveTab] = useState("all");
     const { t, localize } = useLanguage();
 
     const handleShowModal = (item) => {
@@ -19,105 +32,46 @@ export default function Career() {
     };
 
     return (
-        <section name="career" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full z-20 relative">
-            {/* Section Header */}
-            <div className="flex flex-col items-center text-center mb-12">
-                <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel text-xs font-semibold text-indigo-300 border border-indigo-500/20 mb-4">
-                    <HiOutlineSparkles className="text-indigo-400" />
-                    {t.career.badge}
-                </span>
-                <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-                    {t.career.title}
-                </h2>
-                <p className="text-zinc-400 mt-4 max-w-2xl text-sm sm:text-base">
-                    {t.career.subtitle}
-                </p>
-            </div>
+        <section name="experience" className="relative z-20 mx-auto w-full max-w-[1200px] px-4 py-20 sm:px-6">
+            <SectionHeader eyebrow={t.experience.eyebrow} title={t.experience.title} />
 
-            {/* Tab Selector */}
-            <div className="flex items-center justify-center gap-3 mb-12">
-                <button
-                    onClick={() => setActiveTab("all")}
-                    className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
-                        activeTab === "all"
-                            ? "bg-indigo-600 text-white shadow-lg shadow-indigo-600/30"
-                            : "glass-panel text-zinc-400 hover:text-white"
-                    }`}
-                >
-                    {t.career.tabs.all}
-                </button>
-                <button
-                    onClick={() => setActiveTab("career")}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
-                        activeTab === "career"
-                            ? "bg-emerald-600 text-white shadow-lg shadow-emerald-600/30"
-                            : "glass-panel text-zinc-400 hover:text-white"
-                    }`}
-                >
-                    <HiOutlineBriefcase className="text-base" />
-                    {t.career.tabs.career}
-                </button>
-                <button
-                    onClick={() => setActiveTab("education")}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
-                        activeTab === "education"
-                            ? "bg-purple-600 text-white shadow-lg shadow-purple-600/30"
-                            : "glass-panel text-zinc-400 hover:text-white"
-                    }`}
-                >
-                    <HiOutlineAcademicCap className="text-base" />
-                    {t.career.tabs.education}
-                </button>
-            </div>
+            <ol className="grid grid-cols-[repeat(auto-fit,minmax(170px,1fr))] gap-y-10">
+                {timeline.map(({ year, items }) => {
+                    const isCurrent = items.some((item) => item.isCareer && item.id === CURRENT_ROLE_ID);
+                    const hasCareer = items.some((item) => item.isCareer);
+                    const dot = isCurrent ? "bg-accent" : hasCareer ? "bg-accent-blue" : "bg-night-edge";
 
-            {/* Timeline Sections */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                {/* Professional Column */}
-                {(activeTab === "all" || activeTab === "career") && (
-                    <div className="space-y-6">
-                        <div className="flex items-center gap-3 mb-6 pb-3 border-b border-zinc-800">
-                            <div className="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                                <HiOutlineBriefcase className="text-xl" />
-                            </div>
-                            <h3 className="text-xl font-bold text-white">{t.career.secCareer}</h3>
-                        </div>
-
-                        <div className="space-y-4">
-                            {career.map((item) => (
-                                <CareerCard
-                                    key={item.id}
-                                    item={item}
-                                    handleShowModal={handleShowModal}
-                                    type="career"
-                                />
-                            ))}
-                        </div>
-                    </div>
-                )}
-
-                {/* Academic Column */}
-                {(activeTab === "all" || activeTab === "education") && (
-                    <div className="space-y-6">
-                        <div className="flex items-center gap-3 mb-6 pb-3 border-b border-zinc-800">
-                            <div className="p-2.5 rounded-xl bg-purple-500/10 text-purple-400 border border-purple-500/20">
-                                <HiOutlineAcademicCap className="text-xl" />
-                            </div>
-                            <h3 className="text-xl font-bold text-white">{t.career.secEdu}</h3>
-                        </div>
-
-                        <div className="space-y-4">
-                            {education.map((item) => (
-                                <CareerCard
-                                    key={item.id}
-                                    item={item}
-                                    handleShowModal={handleShowModal}
-                                    type="education"
-                                />
-                            ))}
-                        </div>
-                    </div>
-                )}
-            </div>
+                    return (
+                        <li
+                            key={year}
+                            className={`relative border-t pr-5 pt-7 ${isCurrent ? "border-accent" : "border-night-edge"}`}
+                        >
+                            <span className={`absolute -top-[6px] left-0 h-[11px] w-[11px] rounded-full ${dot}`} />
+                            <p
+                                className={`font-display text-[22px] font-bold ${
+                                    isCurrent ? "text-accent" : hasCareer ? "text-mist-bright" : "text-mist-dim"
+                                }`}
+                            >
+                                {isCurrent ? `${year} — ${t.experience.current}` : year}
+                            </p>
+                            <ul className="mt-3 space-y-3">
+                                {items.map((item) => (
+                                    <li key={item.key}>
+                                        <button
+                                            type="button"
+                                            onClick={() => handleShowModal(item)}
+                                            className="text-left text-sm leading-snug text-mist underline-offset-4 transition-colors hover:text-mist-bright hover:underline"
+                                        >
+                                            {localize(item.title)}
+                                        </button>
+                                        <p className="mt-1 text-xs text-mist-dim">{localize(item.dates)}</p>
+                                    </li>
+                                ))}
+                            </ul>
+                        </li>
+                    );
+                })}
+            </ol>
 
             <Modal
                 showModal={showModal}

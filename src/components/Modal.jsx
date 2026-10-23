@@ -1,7 +1,6 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import { HiOutlineSparkles } from "react-icons/hi2";
 import { useLanguage } from "../context/LanguageContext";
 
 export default function Modal({ showModal, setShowModal, title, details }) {
@@ -19,11 +18,11 @@ export default function Modal({ showModal, setShowModal, title, details }) {
                     leaveFrom="opacity-100"
                     leaveTo="opacity-0"
                 >
-                    <div className="fixed inset-0 bg-black/80 backdrop-blur-md" />
+                    <div className="fixed inset-0 bg-night/80 backdrop-blur-md" />
                 </Transition.Child>
 
                 <div className="fixed inset-0 overflow-y-auto">
-                    <div className="flex min-h-full items-center justify-center p-4 text-center">
+                    <div className="flex min-h-full items-center justify-center p-4">
                         <Transition.Child
                             as={Fragment}
                             enter="ease-out duration-300"
@@ -33,50 +32,36 @@ export default function Modal({ showModal, setShowModal, title, details }) {
                             leaveFrom="opacity-100 scale-100"
                             leaveTo="opacity-0 scale-95"
                         >
-                            <Dialog.Panel className="w-full max-w-2xl transform overflow-hidden rounded-3xl glass-panel p-6 sm:p-8 text-left align-middle shadow-2xl transition-all border border-zinc-700/80 bg-zinc-950">
-                                <div className="flex items-center justify-between pb-4 border-b border-zinc-800">
-                                    <div className="flex items-center gap-2">
-                                        <HiOutlineSparkles className="text-indigo-400 text-lg" />
-                                        <Dialog.Title
-                                            as="h3"
-                                            className="text-lg sm:text-xl font-bold leading-6 text-white"
-                                        >
-                                            {title}
-                                        </Dialog.Title>
-                                    </div>
+                            <Dialog.Panel className="w-full max-w-2xl rounded-3xl border border-night-edge bg-night-card p-6 text-left shadow-2xl sm:p-8">
+                                <div className="flex items-start justify-between gap-4 border-b border-night-line pb-4">
+                                    <Dialog.Title as="h3" className="font-display text-xl font-bold text-mist-bright">
+                                        {title}
+                                    </Dialog.Title>
                                     <button
                                         type="button"
-                                        className="rounded-xl p-2 text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors"
+                                        className="rounded-xl p-2 text-mist-dim transition-colors hover:bg-night-chip hover:text-mist-bright"
                                         onClick={() => setShowModal(false)}
                                     >
+                                        <span className="sr-only">{t.experience.close}</span>
                                         <XMarkIcon className="h-5 w-5" aria-hidden="true" />
                                     </button>
                                 </div>
 
-                                <div className="mt-6 space-y-3 max-h-[60vh] overflow-y-auto pr-2">
-                                    {Array.isArray(details) ? (
-                                        details.map((paragraph, index) => (
-                                            <p
-                                                key={index}
-                                                className="text-sm text-zinc-300 leading-relaxed font-normal"
-                                            >
-                                                {paragraph}
-                                            </p>
-                                        ))
-                                    ) : (
-                                        <p className="text-sm text-zinc-300 leading-relaxed font-normal">
-                                            {details}
+                                <div className="mt-6 max-h-[60vh] space-y-3 overflow-y-auto pr-2">
+                                    {(Array.isArray(details) ? details : [details]).map((paragraph, index) => (
+                                        <p key={index} className="text-sm leading-relaxed text-mist">
+                                            {paragraph}
                                         </p>
-                                    )}
+                                    ))}
                                 </div>
 
-                                <div className="mt-8 pt-4 border-t border-zinc-800 flex justify-end">
+                                <div className="mt-8 flex justify-end border-t border-night-line pt-4">
                                     <button
                                         type="button"
-                                        className="px-5 py-2.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-semibold transition-colors"
+                                        className="rounded-full bg-night-chip px-5 py-2.5 text-sm font-semibold text-mist-bright transition-colors hover:bg-night-edge"
                                         onClick={() => setShowModal(false)}
                                     >
-                                        {t.career.closeModal}
+                                        {t.experience.close}
                                     </button>
                                 </div>
                             </Dialog.Panel>
