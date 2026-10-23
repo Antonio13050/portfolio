@@ -1,258 +1,577 @@
 {
-    "links": [
-        {
-            "id": 1,
-            "title": "Home",
-            "path": "home"
-        },
-        {
-            "id": 2,
-            "title": "Sobre",
-            "path": "about"
-        },
-        {
-            "id": 3,
-            "title": "Portfólio",
-            "path": "portfolio"
-        },
-        {
-            "id": 4,
-            "title": "Skills",
-            "path": "skills"
-        },
-        {
-            "id": 5,
-            "title": "Carreira",
-            "path": "career"
-        }
-    ],
     "career": [
         {
             "id": 1,
-            "title": "Estagiário na Softplan",
-            "description": "Iniciei minha jornada profissional na área da tecnologia como estagiário na Softplan em 2021.",
-            "dates": "maio/2021 - outubro/2021",
-            "details": [
-                "No estágio, participei de um onboarding completo na empresa, que incluiu uma introdução abrangente sobre a Softplan e uma imersão no sistema judicial brasileiro. Além disso, tivemos aulas voltadas para o desenvolvimento de soft skills, habilidades fundamentais para o ambiente profissional. Durante esse período, também tive a oportunidade de aprender sobre uma das principais ferramentas utilizadas pela empresa, enriquecendo minha bagagem técnica e prática."
-            ]
+            "title": {
+                "pt": "Desenvolvedor de Software na Softplan",
+                "en": "Software Developer at Softplan",
+                "es": "Desarrollador de Software en Softplan"
+            },
+            "description": {
+                "pt": "Atuação no desenvolvimento e arquitetura de sistemas corporativos de missão crítica, pipelines de dados de alta vazão e soluções avançadas de Inteligência Artificial Generativa e Sistemas Multi-Agente.",
+                "en": "Development and architecture of mission-critical enterprise systems, high-throughput data pipelines and advanced Generative AI and Multi-Agent System solutions.",
+                "es": "Desarrollo y arquitectura de sistemas corporativos de misión crítica, pipelines de datos de alto rendimiento y soluciones avanzadas de Inteligencia Artificial Generativa y Sistemas Multiagente."
+            },
+            "dates": {
+                "pt": "agosto/2024 - atualmente",
+                "en": "Aug 2024 - Present",
+                "es": "agosto/2024 - actualidad"
+            },
+            "details": {
+                "pt": [
+                    "• Insights AI: Arquitetura e desenvolvimento de um BI Conversacional Jurídico com sistemas multi-agentes (LangGraph + Google Gemini), streaming de dados em tempo real (SSE) com FastAPI (Python 3.12) e Next.js 16 / React 19, e geração dinâmica de consultas estatísticas e gráficos interativos com Recharts.",
+                    "• SIES (Poder Judicial del Perú): Desenvolvimento de pipeline de integração estatística em lote de alta vazão para o judiciário peruano, utilizando Java 21, Spring Boot 3.5, Spring JDBC puro com 5 pools Hikari segregados, Change Data Capture (CDC via PL/pgSQL), garantia exactly-once e observabilidade com Elastic APM.",
+                    "• Desenvolvimento de microsserviços e APIs RESTful seguras com autenticação centralizada via Keycloak (OAuth2 / OIDC / PKCE).",
+                    "• Aplicação contínua de Clean Code, SOLID, Design Patterns, cobertura rigorosa de testes com Testcontainers / pytest e esteiras de CI/CD automatizadas."
+                ],
+                "en": [
+                    "• Insights AI: Architecture and development of a conversational legal BI platform with multi-agent systems (LangGraph + Google Gemini), real-time data streaming (SSE) with FastAPI (Python 3.12) and Next.js 16 / React 19, and dynamic generation of statistical queries and interactive charts with Recharts.",
+                    "• SIES (Poder Judicial del Perú): Development of a high-throughput batch statistical integration pipeline for the Peruvian judiciary, using Java 21, Spring Boot 3.5, plain Spring JDBC with 5 segregated Hikari pools, Change Data Capture (CDC via PL/pgSQL), exactly-once guarantees and observability with Elastic APM.",
+                    "• Development of secure microservices and RESTful APIs with centralized authentication via Keycloak (OAuth2 / OIDC / PKCE).",
+                    "• Continuous application of Clean Code, SOLID and Design Patterns, rigorous test coverage with Testcontainers / pytest, and automated CI/CD pipelines."
+                ],
+                "es": [
+                    "• Insights AI: Arquitectura y desarrollo de un BI conversacional jurídico con sistemas multiagente (LangGraph + Google Gemini), streaming de datos en tiempo real (SSE) con FastAPI (Python 3.12) y Next.js 16 / React 19, y generación dinámica de consultas estadísticas y gráficos interactivos con Recharts.",
+                    "• SIES (Poder Judicial del Perú): Desarrollo de un pipeline de integración estadística por lotes de alto rendimiento para el Poder Judicial peruano, utilizando Java 21, Spring Boot 3.5, Spring JDBC puro con 5 pools Hikari segregados, Change Data Capture (CDC vía PL/pgSQL), garantía exactly-once y observabilidad con Elastic APM.",
+                    "• Desarrollo de microservicios y APIs RESTful seguras con autenticación centralizada vía Keycloak (OAuth2 / OIDC / PKCE).",
+                    "• Aplicación continua de Clean Code, SOLID y patrones de diseño, cobertura rigurosa de pruebas con Testcontainers / pytest y pipelines de CI/CD automatizados."
+                ]
+            }
         },
         {
             "id": 2,
-            "title": "Análista de Serviços de TI na Softplan",
-            "description": "Atualmente trabalho como análista de Serviços de TI na Softplan.",
-            "dates": "outubro/2021 - atualmente",
-            "details": [
-                "Na minha equipe sou responsável pelo software utilizado pela Jurisdicción Especial para la Paz (JEP) na Colômbia, desempenho o papel de Analista de Serviços de TI N2, concentrando-me na análise de erros, configuração de parâmetros, abertura de defeitos e PMLs, participação em reuniões com o cliente e empresas terceiras que possuem algum tipo de integração com o sistema.",
-                "Principais responsabilidades e atividades:",
-                "- Gerenciamento de versões de usuários através do Keycloak.",
-                "- Análise de logs no Kibana para identificar os erros que ocorreram no sistema.",
-                "- Consultas e criação de scripts na base de dados.",
-                "- Utilização de ferramentas como Postman e Insomnia para testar integrações do sistema.",
-                "- Realização da análise detalhada de chamados técnicos, identificando e diagnosticando problemas relatados pelos usuários.",
-                "- Abertura de defeitos no sistema, documentando de forma precisa e completa as questões encontradas para facilitar o processo de resolução.",
-                "- Configuração do sistema de acordo com os requisitos específicos do cliente, garantindo sua adequação e funcionamento adequado.",
-                "- Criação e manutenção de perfis de usuários, garantindo o acesso apropriado e a segurança da informação."
-            ]
-        }
-    ],
-
-    "education": [
-        {
-            "id": 1,
-            "title": "Superior, Análise e Desenvolvimento de Sistemas",
-            "description": "Recém graduado pela Estácio no curso de Análise e Desenvolvimento de Sistemas.",
-            "dates": "fevereiro/2021 - dezembro/2023",
-            "details": [
-                "Em 2023, concluí minha formação em Análise e Desenvolvimento de Sistemas pela Estácio. Aprendi sobre as principais tecnologias e ferramentas de desenvolvimento web.",
-                "Essa é a lista de disciplinas cursadas:",
-                "• Introdução A Segurança Da Informação",
-                "• Fundamentos De Redes De Computadores",
-                "• Introdução A Programação Estruturada Em C",
-                "• Introdução A Segurança Da Informação",
-                "• Organização E Arquitetura De Computadores",
-                "• Planejamento De Carreira E Sucesso Profissional",
-                "• Banco De Dados",
-                "• Computação Em Nuvem E Web Services Em Linux",
-                "• Desenvolvimento Web Em Html5, Css, Javascript E Php",
-                "• Pensamento Computacional",
-                "• Engenharia De Software",
-                "• Estrutura De Dados Em C",
-                "• Programação Cliente Servidor",
-                "• Web Design",
-                "• Complexidade De Algoritmos",
-                "• Matemática E Lógica",
-                "• Modelagem De Sistemas Com UML",
-                "• Programação Orientada A Objetos Em Java",
-                "• Sistemas Distribuídos E Computação Paralela",
-                "• Padrões De Projeto De Software Com Java",
-                "• Programação Para Dispositivos Móveis Em Android",
-                "• Tópicos De Big Data Em Python",
-                "• Tópicos De Cloud, IoT E Indústria 4.0 Em Python"
-            ]
-        },
-        {
-            "id": 2,
-            "title": "DEVinHouse - SENAI",
-            "description": "Recentemente conclui o curso de Desenvolvimento Full Stack utilizando React, Spring e PostgreSQL, no SENAI.",
-            "dates": "maio/2023 - abril/2024",
-            "details": [
-                "Em abril de 2024, completei o curso DEVinHouse oferecido pelo Senai, um curso com o objetivo de formar desenvolvedores fullstack. Entre as tecnologias utilizadas destacam-se o Postgres, Spring e React.",
-                "O curso foi estruturado em três módulos distintos, cada um focado em aspectos específicos do desenvolvimento fullstack.",
-                "Módulo 1: Frontend",
-                " - Fundamentos da programação web: HTML, CSS, JavaScript",
-                " - Framework Bootstrap",
-                " - React (básico e avançado)",
-                " - Componentização em React",
-                " - Manipulação do DOM",
-                " - Gerenciamento de estado com useState, useContext, useReducer",
-                " - Estilização com CSS Modules e Styled Components",
-                "Módulo 2: Backend",
-                " - Linguagem de programação Java (básico, intermediário e avançado)",
-                " - Spring Framework (Spring Boot, Spring MVC, Spring Data)",
-                " - Banco de dados PostgreSQL",
-                " - API RESTful",
-                " - Segurança com Spring Security e JWT",
-                "Módulo 3: DevOps e Metodologias Ageis",
-                " - Metodologias ágeis (SCRUM)",
-                " - Clean Code e Design Patterns",
-                " - Testes unitários",
-                " - Documentação de código",
-                " - DevOps (CI/CD, automação)",
-                " - Projetos práticos de desenvolvimento de aplicações web completas",
-                "Cada módulo culmina em um projeto prático que permite aos alunos aplicarem os conhecimentos adquiridos em situações reais de desenvolvimento de software. Esses projetos demonstram as habilidades e competências dos alunos e podem servir como portfólio para oportunidades profissionais futuras.",
-                "Link do projeto do modulo 1: https://github.com/Antonio13050/devinhouse-projeto-modulo-1",
-                "Link do projeto do modulo 2: https://github.com/Antonio13050/devinhouse-projeto-modulo-2"
-            ]
+            "title": {
+                "pt": "Analista de Serviços de TI na Softplan",
+                "en": "IT Services Analyst at Softplan",
+                "es": "Analista de Servicios de TI en Softplan"
+            },
+            "description": {
+                "pt": "Atuação na sustentação, análise técnica avançada e garantia de disponibilidade de soluções corporativas de TI da Softplan.",
+                "en": "Support, advanced technical analysis and availability assurance for Softplan's enterprise IT solutions.",
+                "es": "Soporte, análisis técnico avanzado y garantía de disponibilidad de las soluciones corporativas de TI de Softplan."
+            },
+            "dates": {
+                "pt": "outubro/2021 - agosto/2024",
+                "en": "Oct 2021 - Aug 2024",
+                "es": "octubre/2021 - agosto/2024"
+            },
+            "details": {
+                "pt": [
+                    "Na minha equipe fui responsável pelo software utilizado pela Jurisdicción Especial para la Paz (JEP) na Colômbia, atuando como Analista de Serviços de TI N2, concentrando-me na análise de erros, configuração de parâmetros, abertura de defeitos e PMLs, e alinhamento técnico com o cliente e integrações terceiras.",
+                    "Principais responsabilidades e atividades:",
+                    "• Gerenciamento de versões de usuários e segurança através do Keycloak (OIDC).",
+                    "• Análise e diagnóstico de logs estruturados no Kibana/Elastic para identificação de causas-raiz em produção.",
+                    "• Consultas e criação de scripts SQL avançados na base de dados para integridade de registros.",
+                    "• Testes de integrações e contratos de API com Postman e Insomnia.",
+                    "• Mapeamento contínuo de melhorias e ponte direta com os times de engenharia de software."
+                ],
+                "en": [
+                    "On my team, I was responsible for the software used by the Jurisdicción Especial para la Paz (JEP) in Colombia, working as a Tier 2 IT Services Analyst focused on error analysis, parameter configuration, filing defects and PMLs, and technical alignment with the client and third-party integrations.",
+                    "Main responsibilities and activities:",
+                    "• User and security management through Keycloak (OIDC).",
+                    "• Analysis and diagnosis of structured logs in Kibana/Elastic to identify root causes in production.",
+                    "• Writing advanced SQL queries and scripts against the database to ensure record integrity.",
+                    "• Testing integrations and API contracts with Postman and Insomnia.",
+                    "• Continuous identification of improvements and direct liaison with the software engineering teams."
+                ],
+                "es": [
+                    "En mi equipo fui responsable del software utilizado por la Jurisdicción Especial para la Paz (JEP) en Colombia, actuando como Analista de Servicios de TI N2, enfocado en el análisis de errores, la configuración de parámetros, el registro de defectos y PMLs, y la alineación técnica con el cliente y con integraciones de terceros.",
+                    "Principales responsabilidades y actividades:",
+                    "• Gestión de usuarios y seguridad a través de Keycloak (OIDC).",
+                    "• Análisis y diagnóstico de logs estructurados en Kibana/Elastic para identificar causas raíz en producción.",
+                    "• Consultas y creación de scripts SQL avanzados en la base de datos para garantizar la integridad de los registros.",
+                    "• Pruebas de integraciones y contratos de API con Postman e Insomnia.",
+                    "• Identificación continua de mejoras y enlace directo con los equipos de ingeniería de software."
+                ]
+            }
         },
         {
             "id": 3,
-            "title": "Técnico, Informática",
-            "description": "Em 2018 me formei em técnico de Informática pela IFSC Instituto Federal de Santa Catarina.",
-            "dates": "julho/2017 - dezembro/2018",
-            "details": [
-                "O curso de Técnico em Informática no IFSC (Instituto Federal de Santa Catarina) foi uma jornada de 1 ano e meio dividida em três módulos, focada no desenvolvimento de sistemas.",
-                "Módulo 1: Suporte em Tecnologia da Informação",
-                "Módulo 2: Desenvolvimento de Sistemas I",
-                "Módulo 3: Desenvolvimento de Sistemas II"
-            ]
+            "title": {
+                "pt": "Estagiário na Softplan",
+                "en": "Intern at Softplan",
+                "es": "Practicante en Softplan"
+            },
+            "description": {
+                "pt": "Início da jornada profissional na área de tecnologia na Softplan em 2021.",
+                "en": "Start of my professional journey in technology at Softplan in 2021.",
+                "es": "Inicio de mi trayectoria profesional en tecnología en Softplan en 2021."
+            },
+            "dates": {
+                "pt": "maio/2021 - outubro/2021",
+                "en": "May 2021 - Oct 2021",
+                "es": "mayo/2021 - octubre/2021"
+            },
+            "details": {
+                "pt": [
+                    "No estágio, participei de onboarding corporativo completo, com imersão técnica nos sistemas judiciais e regras de negócio da Softplan. Desenvolvimento de soft skills, suporte a rotinas técnicas de TI e primeiros passos em ferramentas de arquitetura corporativa."
+                ],
+                "en": [
+                    "During my internship, I went through a complete corporate onboarding, with technical immersion in Softplan's judicial systems and business rules. I developed soft skills, supported IT technical routines and took my first steps with enterprise architecture tools."
+                ],
+                "es": [
+                    "Durante la práctica, participé en un onboarding corporativo completo, con inmersión técnica en los sistemas judiciales y las reglas de negocio de Softplan. Desarrollé habilidades blandas, apoyé rutinas técnicas de TI y di mis primeros pasos con herramientas de arquitectura corporativa."
+                ]
+            }
+        }
+    ],
+    "education": [
+        {
+            "id": 1,
+            "title": {
+                "pt": "Superior, Análise e Desenvolvimento de Sistemas",
+                "en": "Technologist Degree in Systems Analysis and Development",
+                "es": "Tecnólogo en Análisis y Desarrollo de Sistemas"
+            },
+            "description": {
+                "pt": "Graduado pela Estácio no curso de Análise e Desenvolvimento de Sistemas.",
+                "en": "Graduated from Estácio in Systems Analysis and Development.",
+                "es": "Graduado por Estácio en Análisis y Desarrollo de Sistemas."
+            },
+            "dates": {
+                "pt": "fevereiro/2021 - dezembro/2023",
+                "en": "Feb 2021 - Dec 2023",
+                "es": "febrero/2021 - diciembre/2023"
+            },
+            "details": {
+                "pt": [
+                    "Formação superior com foco em engenharia de software, sistemas distribuídos, bancos de dados relacionais, segurança da informação e computação em nuvem.",
+                    "Disciplinas de destaque:",
+                    "• Sistemas Distribuídos e Computação Paralela",
+                    "• Padrões de Projeto de Software com Java",
+                    "• Engenharia de Software e Modelagem UML",
+                    "• Bancos de Dados e Web Services em Nuvem",
+                    "• Segurança da Informação e Redes"
+                ],
+                "en": [
+                    "Higher education focused on software engineering, distributed systems, relational databases, information security and cloud computing.",
+                    "Highlighted courses:",
+                    "• Distributed Systems and Parallel Computing",
+                    "• Software Design Patterns with Java",
+                    "• Software Engineering and UML Modeling",
+                    "• Databases and Cloud Web Services",
+                    "• Information Security and Networks"
+                ],
+                "es": [
+                    "Formación superior enfocada en ingeniería de software, sistemas distribuidos, bases de datos relacionales, seguridad de la información y computación en la nube.",
+                    "Asignaturas destacadas:",
+                    "• Sistemas Distribuidos y Computación Paralela",
+                    "• Patrones de Diseño de Software con Java",
+                    "• Ingeniería de Software y Modelado UML",
+                    "• Bases de Datos y Web Services en la Nube",
+                    "• Seguridad de la Información y Redes"
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "title": "DEVinHouse - SENAI/SC",
+            "description": {
+                "pt": "Programa intensivo de aceleração em Desenvolvimento Full Stack com React, Spring Boot e PostgreSQL.",
+                "en": "Intensive Full Stack Development acceleration program with React, Spring Boot and PostgreSQL.",
+                "es": "Programa intensivo de aceleración en Desarrollo Full Stack con React, Spring Boot y PostgreSQL."
+            },
+            "dates": {
+                "pt": "maio/2023 - abril/2024",
+                "en": "May 2023 - Apr 2024",
+                "es": "mayo/2023 - abril/2024"
+            },
+            "details": {
+                "pt": [
+                    "Programa de formação profissional prática em desenvolvimento Full Stack estruturado em módulos:",
+                    "• Módulo 1 (Frontend): React, JavaScript Moderno, Componentização, Gerenciamento de Estado, Tailwind/Bootstrap e UI/UX.",
+                    "• Módulo 2 (Backend): Java Avançado, Spring Boot, Spring Data JPA, APIs RESTful, Spring Security e PostgreSQL.",
+                    "• Módulo 3 (DevOps & Metodologias Ágeis): Scrum, Clean Code, Testes Unitários/Integração, Docker, CI/CD e arquitetura de microsserviços."
+                ],
+                "en": [
+                    "Hands-on professional Full Stack development program structured in modules:",
+                    "• Module 1 (Frontend): React, Modern JavaScript, Componentization, State Management, Tailwind/Bootstrap and UI/UX.",
+                    "• Module 2 (Backend): Advanced Java, Spring Boot, Spring Data JPA, RESTful APIs, Spring Security and PostgreSQL.",
+                    "• Module 3 (DevOps & Agile Methodologies): Scrum, Clean Code, Unit/Integration Testing, Docker, CI/CD and microservices architecture."
+                ],
+                "es": [
+                    "Programa de formación profesional práctica en desarrollo Full Stack estructurado en módulos:",
+                    "• Módulo 1 (Frontend): React, JavaScript moderno, componentización, gestión de estado, Tailwind/Bootstrap y UI/UX.",
+                    "• Módulo 2 (Backend): Java avanzado, Spring Boot, Spring Data JPA, APIs RESTful, Spring Security y PostgreSQL.",
+                    "• Módulo 3 (DevOps y Metodologías Ágiles): Scrum, Clean Code, pruebas unitarias/de integración, Docker, CI/CD y arquitectura de microservicios."
+                ]
+            }
+        },
+        {
+            "id": 3,
+            "title": {
+                "pt": "Técnico em Informática - IFSC",
+                "en": "IT Technician - IFSC",
+                "es": "Técnico en Informática - IFSC"
+            },
+            "description": {
+                "pt": "Formado em Técnico em Informática pelo Instituto Federal de Santa Catarina.",
+                "en": "IT Technician degree from the Federal Institute of Santa Catarina.",
+                "es": "Técnico en Informática por el Instituto Federal de Santa Catarina."
+            },
+            "dates": {
+                "pt": "julho/2017 - dezembro/2018",
+                "en": "Jul 2017 - Dec 2018",
+                "es": "julio/2017 - diciembre/2018"
+            },
+            "details": {
+                "pt": [
+                    "Formação técnica com ênfase em fundamentos de computação, suporte em TI, arquitetura de computadores, redes e desenvolvimento inicial de sistemas."
+                ],
+                "en": [
+                    "Technical training focused on computing fundamentals, IT support, computer architecture, networks and introductory systems development."
+                ],
+                "es": [
+                    "Formación técnica con énfasis en fundamentos de computación, soporte de TI, arquitectura de computadoras, redes y desarrollo inicial de sistemas."
+                ]
+            }
         },
         {
             "id": 4,
-            "title": "Espanhol, Avançado",
-            "description": "Recentemente conclui um curso de espanhol pela Vaivén Hispano.",
-            "dates": "julho/2022 - dezembro/2023",
-            "details": [
-                "Recentemente, finalizei um curso de espanhol avançado na Vaivén Hispano, totalizando 308 horas de estudo. O curso foi estruturado em seis módulos, cada um com a duração de um trimestre. Ao longo do programa, foram abordados os níveis A1, A2, B1, B2, C1 e C2 do Quadro Europeu Comum de Referência para Línguas (CEFR), permitindo-me alcançar um domínio avançado do idioma espanhol. Durante o curso, desenvolvi habilidades em compreensão auditiva, leitura, escrita e comunicação oral, preparando-me para interações eficazes em contextos profissionais e pessoais."
-            ]
+            "title": {
+                "pt": "Espanhol Avançado - Vaivén Hispano",
+                "en": "Advanced Spanish - Vaivén Hispano",
+                "es": "Español Avanzado - Vaivén Hispano"
+            },
+            "description": {
+                "pt": "Formação completa em língua espanhola (308 horas), atingindo nível avançado de comunicação profissional.",
+                "en": "Complete Spanish language program (308 hours), reaching an advanced level of professional communication.",
+                "es": "Formación completa en lengua española (308 horas), alcanzando un nivel avanzado de comunicación profesional."
+            },
+            "dates": {
+                "pt": "julho/2022 - dezembro/2023",
+                "en": "Jul 2022 - Dec 2023",
+                "es": "julio/2022 - diciembre/2023"
+            },
+            "details": {
+                "pt": [
+                    "Curso estruturado com foco em fluência oral, escrita técnica e comunicação corporativa, permitindo a condução direta de projetos internacionais na América Latina (Poder Judicial del Perú e JEP Colômbia)."
+                ],
+                "en": [
+                    "Structured course focused on oral fluency, technical writing and business communication, enabling me to lead international projects in Latin America directly (Poder Judicial del Perú and JEP Colombia)."
+                ],
+                "es": [
+                    "Curso estructurado con enfoque en fluidez oral, redacción técnica y comunicación corporativa, lo que me permite conducir directamente proyectos internacionales en América Latina (Poder Judicial del Perú y JEP Colombia)."
+                ]
+            }
         },
         {
             "id": 5,
-            "title": "Superior, Direito",
-            "description": "Conclui 3 semestres do curso de Direito pela Unisul.",
-            "dates": "março/2010 - agosto/2011 - Não concluido",
-            "details": [
-                "Concluí três semestres do curso de Direito pela Unisul, onde obtive uma base sólida em áreas fundamentais do direito. Durante esse período, estudei disciplinas que abrangiam diferentes campos do conhecimento jurídico, incluindo teoria geral do direito, direito civil, direito penal, direito constitucional, entre outros. Embora não tenha concluído o curso, os conhecimentos adquiridos durante esse período contribuíram significativamente para minha compreensão do sistema jurídico e minha formação acadêmica."
-            ]
+            "title": {
+                "pt": "Desenvolvedor de Jogos Eletrônicos - SENAI",
+                "en": "Video Game Developer - SENAI",
+                "es": "Desarrollador de Videojuegos - SENAI"
+            },
+            "description": {
+                "pt": "Formação em engines de jogos e lógica computacional.",
+                "en": "Training in game engines and computational logic.",
+                "es": "Formación en motores de juegos y lógica computacional."
+            },
+            "dates": {
+                "pt": "agosto/2014 - dezembro/2014",
+                "en": "Aug 2014 - Dec 2014",
+                "es": "agosto/2014 - diciembre/2014"
+            },
+            "details": {
+                "pt": [
+                    "Estudo de engines, simulações interativas e linguagens como Lua e Java."
+                ],
+                "en": [
+                    "Study of game engines, interactive simulations and languages such as Lua and Java."
+                ],
+                "es": [
+                    "Estudio de motores de juegos, simulaciones interactivas y lenguajes como Lua y Java."
+                ]
+            }
         },
         {
             "id": 6,
-            "title": "Programador de Sistemas - Delphi 7 - SENAI",
-            "description": "Conclui em 2014 o curso de Programador de Sistemas no Senai.",
-            "dates": "janeiro/2014 - julho/2014",
-            "details": [
-                "Em 2014 conclui o curso de Programador de Sistemas no Senai, com foco em Delphi 7"
-            ]
-        },
-        {
-            "id": 7,
-            "title": "Desenvolvedor de Jogos Eletrônicos - SENAI",
-            "description": "Conclui em 2014 o curso de Desenvolvimento de Jogos Eletrônicos no Senai.",
-            "dates": "agosto/2014 - dezembro/2014",
-            "details": [
-                "Em 2014 conclui o curso de Desenvolvedor de Jogos Eletrônicos no Senai, durante o curso, exploramos engines de criação de jogos, como Unity e Corona SDK.",
-                "As linguagens estudadas no curso foram Lua e Java"
-            ]
+            "title": {
+                "pt": "Programador de Sistemas (Delphi 7) - SENAI",
+                "en": "Systems Programmer (Delphi 7) - SENAI",
+                "es": "Programador de Sistemas (Delphi 7) - SENAI"
+            },
+            "description": {
+                "pt": "Curso de formação profissional em programação e lógica estruturada.",
+                "en": "Professional training course in programming and structured logic.",
+                "es": "Curso de formación profesional en programación y lógica estructurada."
+            },
+            "dates": {
+                "pt": "janeiro/2014 - julho/2014",
+                "en": "Jan 2014 - Jul 2014",
+                "es": "enero/2014 - julio/2014"
+            },
+            "details": {
+                "pt": [
+                    "Primeiros passos em lógica de programação estruturada e desenvolvimento orientado a objetos."
+                ],
+                "en": [
+                    "First steps in structured programming logic and object-oriented development."
+                ],
+                "es": [
+                    "Primeros pasos en lógica de programación estructurada y desarrollo orientado a objetos."
+                ]
+            }
         }
     ],
     "projects": [
         {
             "id": 1,
-            "title": "Bibliotech",
-            "link": "https://github.com/Antonio13050/bibliotech",
-            "description": "Criei este projeto para praticar o uso de tecnologias populares. Atualmente ele conta com as funcionalidades de autenticação e autorização de usuários com JWT. O próximo passo é o envio de e-mail para o serviço de esqueci minha senha.",
+            "title": {
+                "pt": "Insights AI — BI Conversacional Jurídico & Multi-Agente",
+                "en": "Insights AI — Multi-Agent Conversational Legal BI",
+                "es": "Insights AI — BI Conversacional Jurídico & Multiagente"
+            },
+            "category": "IA",
+            "badgeType": "Enterprise",
+            "badgeText": {
+                "pt": "Corporativo Softplan",
+                "en": "Softplan Enterprise",
+                "es": "Corporativo Softplan"
+            },
+            "description": {
+                "pt": "Plataforma corporativa de BI Conversacional para tribunais que traduz perguntas em linguagem natural em consultas analíticas e indicadores do CNJ em tempo real. Arquitetura multi-agente construída com LangGraph e Gemini, streaming SSE com Next.js 16 e FastAPI, geração automática de insights estatísticos e dashboards dinâmicos persistíveis.",
+                "en": "Enterprise conversational BI platform for courts that translates natural-language questions into analytical queries and CNJ indicators in real time. Multi-agent architecture built with LangGraph and Gemini, SSE streaming with Next.js 16 and FastAPI, automatic generation of statistical insights and persistable dynamic dashboards.",
+                "es": "Plataforma corporativa de BI conversacional para tribunales que traduce preguntas en lenguaje natural en consultas analíticas e indicadores del CNJ en tiempo real. Arquitectura multiagente construida con LangGraph y Gemini, streaming SSE con Next.js 16 y FastAPI, generación automática de insights estadísticos y dashboards dinámicos persistibles."
+            },
             "tags": [
-                "Spring",
-                "Spring-Security",
+                "LangGraph",
+                "Google Gemini",
+                "FastAPI",
+                "Next.js 16",
+                "React 19",
+                "Python 3.12",
+                "TypeScript",
+                "PostgreSQL",
+                "Redis",
+                "SSE",
+                "LangSmith",
+                "Docker"
+            ],
+            "highlights": {
+                "pt": [
+                    "Pipeline Multi-Agente: Guardian ➔ Router ➔ Specialists ➔ Formatter",
+                    "9+ Tools SQL parametrizáveis para indicadores processuais em tempo real",
+                    "Dashboards vivos: armazena os parâmetros e reconsulta a base ao abrir",
+                    "Streaming de respostas em tempo real via Server-Sent Events (SSE)"
+                ],
+                "en": [
+                    "Multi-Agent Pipeline: Guardian ➔ Router ➔ Specialists ➔ Formatter",
+                    "9+ parameterizable SQL tools for real-time case-flow indicators",
+                    "Live dashboards: stores the parameters and re-queries the database on open",
+                    "Real-time response streaming via Server-Sent Events (SSE)"
+                ],
+                "es": [
+                    "Pipeline Multiagente: Guardian ➔ Router ➔ Specialists ➔ Formatter",
+                    "9+ herramientas SQL parametrizables para indicadores procesales en tiempo real",
+                    "Dashboards vivos: almacena los parámetros y vuelve a consultar la base al abrirlos",
+                    "Streaming de respuestas en tiempo real vía Server-Sent Events (SSE)"
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "title": {
+                "pt": "Imobi AI — Agente Autônomo Imobiliário & WhatsApp SaaS",
+                "en": "Imobi AI — Autonomous Real Estate Agent & WhatsApp SaaS",
+                "es": "Imobi AI — Agente Inmobiliario Autónomo & WhatsApp SaaS"
+            },
+            "category": "IA",
+            "badgeType": "OpenSource",
+            "badgeText": "Open Source",
+            "link": "https://github.com/Antonio13050/imob-ai",
+            "description": {
+                "pt": "Agente autônomo de IA integrado à API do WhatsApp (Meta) e ao CRM Apresenta.me para qualificação de leads e recomendação de imóveis via busca vetorial (pgvector). Arquitetura orientada a eventos com FastAPI, LangGraph, fila distribuída no PostgreSQL (FOR UPDATE SKIP LOCKED), observabilidade completa com Prometheus/Jaeger e painel de handoff em Next.js 16.",
+                "en": "Autonomous AI agent integrated with the WhatsApp (Meta) API and the Apresenta.me CRM for lead qualification and property recommendations via vector search (pgvector). Event-driven architecture with FastAPI, LangGraph, a distributed queue in PostgreSQL (FOR UPDATE SKIP LOCKED), full observability with Prometheus/Jaeger and a handoff dashboard in Next.js 16.",
+                "es": "Agente autónomo de IA integrado a la API de WhatsApp (Meta) y al CRM Apresenta.me para la calificación de leads y la recomendación de inmuebles mediante búsqueda vectorial (pgvector). Arquitectura orientada a eventos con FastAPI, LangGraph, cola distribuida en PostgreSQL (FOR UPDATE SKIP LOCKED), observabilidad completa con Prometheus/Jaeger y panel de handoff en Next.js 16."
+            },
+            "tags": [
+                "LangGraph",
+                "pgvector",
+                "WhatsApp API",
+                "Google Gemini",
+                "FastAPI",
+                "Next.js 16",
+                "React 19",
+                "Prometheus",
+                "Jaeger",
+                "Docker",
+                "OpenTelemetry"
+            ],
+            "highlights": {
+                "pt": [
+                    "Busca Semântica & Vetorial de imóveis por perfil e orçamento com pgvector",
+                    "Human Handoff em tempo real via WebSockets no painel do corretor",
+                    "Workers com concorrência segura distribuída (FOR UPDATE SKIP LOCKED)",
+                    "Observabilidade ponta a ponta com OpenTelemetry, Prometheus e Jaeger"
+                ],
+                "en": [
+                    "Semantic & vector property search by profile and budget with pgvector",
+                    "Real-time human handoff via WebSockets in the realtor dashboard",
+                    "Workers with safe distributed concurrency (FOR UPDATE SKIP LOCKED)",
+                    "End-to-end observability with OpenTelemetry, Prometheus and Jaeger"
+                ],
+                "es": [
+                    "Búsqueda semántica y vectorial de inmuebles por perfil y presupuesto con pgvector",
+                    "Human handoff en tiempo real vía WebSockets en el panel del corredor",
+                    "Workers con concurrencia distribuida segura (FOR UPDATE SKIP LOCKED)",
+                    "Observabilidad de punta a punta con OpenTelemetry, Prometheus y Jaeger"
+                ]
+            }
+        },
+        {
+            "id": 3,
+            "title": {
+                "pt": "SIES — Pipeline de Integração Estatística & CDC (Poder Judicial del Perú)",
+                "en": "SIES — Statistical Integration & CDC Pipeline (Poder Judicial del Perú)",
+                "es": "SIES — Pipeline de Integración Estadística & CDC (Poder Judicial del Perú)"
+            },
+            "category": "Backend",
+            "badgeType": "Enterprise",
+            "badgeText": {
+                "pt": "Internacional",
+                "en": "International",
+                "es": "Internacional"
+            },
+            "description": {
+                "pt": "Sistema de missão crítica desenvolvido para o Poder Judicial del Perú que integra o sistema processual EJE ao sistema estatístico nacional (SIE-PJ). Arquitetura de alta performance com Java 21, Spring Boot 3.5 e Spring JDBC puro (5 pools Hikari), captura de mudanças via CDC/PL-pgSQL, garantia exactly-once, cache Caffeine, observabilidade com Elastic APM e painel de controle em Next.js 16.",
+                "en": "Mission-critical system developed for the Poder Judicial del Perú that integrates the EJE case management system with the national statistical system (SIE-PJ). High-performance architecture with Java 21, Spring Boot 3.5 and plain Spring JDBC (5 Hikari pools), change capture via CDC/PL-pgSQL, exactly-once guarantees, Caffeine caching, observability with Elastic APM and a control panel in Next.js 16.",
+                "es": "Sistema de misión crítica desarrollado para el Poder Judicial del Perú que integra el sistema procesal EJE con el sistema estadístico nacional (SIE-PJ). Arquitectura de alto rendimiento con Java 21, Spring Boot 3.5 y Spring JDBC puro (5 pools Hikari), captura de cambios vía CDC/PL-pgSQL, garantía exactly-once, caché Caffeine, observabilidad con Elastic APM y panel de control en Next.js 16."
+            },
+            "tags": [
+                "Java 21",
+                "Spring Boot 3.5",
+                "Spring JDBC",
+                "PostgreSQL",
+                "PL/pgSQL (CDC)",
+                "Next.js 16",
+                "Keycloak",
+                "Elastic APM",
+                "Testcontainers",
+                "Kubernetes",
+                "Liquibase"
+            ],
+            "highlights": {
+                "pt": [
+                    "Processamento de alta vazão sem ORM: 5 pools de conexão Hikari independentes",
+                    "Garantia Exactly-Once com controle de idempotência entre bases distintas",
+                    "Captura de mudanças em tempo real (CDC) com triggers PL/pgSQL",
+                    "Integração internacional cobrindo 7 especialidades judiciais no Peru"
+                ],
+                "en": [
+                    "High-throughput processing without an ORM: 5 independent Hikari connection pools",
+                    "Exactly-once guarantee with idempotency control across separate databases",
+                    "Real-time change data capture (CDC) with PL/pgSQL triggers",
+                    "International integration covering 7 judicial specialties in Peru"
+                ],
+                "es": [
+                    "Procesamiento de alto rendimiento sin ORM: 5 pools de conexión Hikari independientes",
+                    "Garantía exactly-once con control de idempotencia entre bases distintas",
+                    "Captura de cambios en tiempo real (CDC) con triggers PL/pgSQL",
+                    "Integración internacional que cubre 7 especialidades judiciales en el Perú"
+                ]
+            }
+        },
+        {
+            "id": 4,
+            "title": "Bibliotech — Full Stack Library Management",
+            "category": "Fullstack",
+            "badgeType": "OpenSource",
+            "badgeText": "Open Source",
+            "link": "https://github.com/Antonio13050/bibliotech",
+            "cover": "bibliotech.webp",
+            "description": {
+                "pt": "Aplicação fullstack com autenticação e autorização robusta de usuários via JWT, Spring Boot e React. Possui serviços de catálogo, empréstimos e controle de acesso dockerizado com PostgreSQL.",
+                "en": "Full stack application with robust user authentication and authorization via JWT, Spring Boot and React. Includes catalog, loan and access-control services, dockerized with PostgreSQL.",
+                "es": "Aplicación fullstack con autenticación y autorización robusta de usuarios vía JWT, Spring Boot y React. Incluye servicios de catálogo, préstamos y control de acceso, dockerizados con PostgreSQL."
+            },
+            "tags": [
+                "Spring Boot",
+                "Spring Security",
                 "Oauth2",
                 "JWT",
                 "Docker",
                 "PostgreSQL",
                 "React",
-                "React-Hook-Form",
-                "React-Router-Dom",
                 "Tailwind",
                 "Shadcn",
-                "Zod",
-                "FullStack"
-            ],
-            "img": []
+                "Zod"
+            ]
         },
         {
-            "id": 2,
-            "title": "DEVinPharmacy",
+            "id": 5,
+            "title": "DEVinPharmacy — Pharmacy Management System",
+            "category": "Frontend",
+            "badgeType": "LiveDemo",
+            "badgeText": "Live Demo",
             "link": "https://github.com/Antonio13050/devinhouse-projeto-modulo-1",
-            "description": "Projeto realizado no final do Modulo 1 do curso DEVinHouse - Senai. O projeto consiste no frontend de uma aplicação web para gerenciamento de farmácias, medicamentos e controle de estoque.",
+            "online": "https://devinhouse-projeto-modulo-1.vercel.app/",
+            "cover": "devinpharmacy.webp",
+            "description": {
+                "pt": "Aplicação web frontend para gerenciamento de redes de farmácias, medicamentos, controle de estoque e geolocalização com mapas interativos.",
+                "en": "Frontend web application for managing pharmacy chains, medications and stock control, with geolocation on interactive maps.",
+                "es": "Aplicación web frontend para la gestión de redes de farmacias, medicamentos, control de inventario y geolocalización con mapas interactivos."
+            },
             "tags": [
                 "React",
                 "React-Hook-Form",
                 "React-Router-Dom",
                 "React-Leaflet",
-                "Boostrap",
+                "Bootstrap",
                 "Zod",
                 "JavaScript",
-                "HTML",
-                "CSS",
-                "Frontend"
-            ],
-            "img": [],
-            "online": "https://devinhouse-projeto-modulo-1.vercel.app/"
+                "CSS"
+            ]
         },
         {
-            "id": 3,
-            "title": "Medication Management",
+            "id": 6,
+            "title": "Medication Management API",
+            "category": "Backend",
+            "badgeType": "OpenSource",
+            "badgeText": "Open Source",
             "link": "https://github.com/Antonio13050/devinhouse-projeto-modulo-2",
-            "description": "Projeto realizado no final do Modulo 2 do curso DEVinHouse - Senai. O projeto consiste no backend de uma aplicação web para gerenciamento de farmácias, medicamentos e controle de estoque.",
+            "cover": "medication-api.webp",
+            "description": {
+                "pt": "API RESTful para controle de medicamentos e estoques de farmácias com validações de regras de negócio, documentação Swagger e persistência em PostgreSQL.",
+                "en": "RESTful API for managing medications and pharmacy stock, with business-rule validation, Swagger documentation and PostgreSQL persistence.",
+                "es": "API RESTful para el control de medicamentos e inventarios de farmacias, con validaciones de reglas de negocio, documentación Swagger y persistencia en PostgreSQL."
+            },
             "tags": [
-                "Spring-Boot",
+                "Spring Boot",
                 "JPA",
-                "API-RESTfull",
+                "API-RESTful",
                 "Maven",
                 "Bean-Validation",
+                "PostgreSQL",
+                "Swagger"
+            ]
+        },
+        {
+            "id": 7,
+            "title": {
+                "pt": "API Padrão Builder & Design Patterns",
+                "en": "Builder Pattern API & Design Patterns",
+                "es": "API Patrón Builder & Patrones de Diseño"
+            },
+            "category": "Backend",
+            "badgeType": "OpenSource",
+            "badgeText": "Open Source",
+            "link": "https://github.com/Antonio13050/api-padrao-builder",
+            "cover": "api-builder.webp",
+            "description": {
+                "pt": "API dockerizada em Spring Boot para cadastro de usuários aplicando o padrão de projeto Builder (Design Patterns) e boas práticas de Clean Architecture.",
+                "en": "Dockerized Spring Boot API for user registration applying the Builder design pattern and Clean Architecture best practices.",
+                "es": "API dockerizada en Spring Boot para el registro de usuarios aplicando el patrón de diseño Builder y buenas prácticas de Clean Architecture."
+            },
+            "tags": [
+                "Spring Boot",
+                "JPA",
+                "Design Patterns",
+                "Docker",
                 "PostgreSQL",
                 "Swagger",
-                "Backend"
-            ],
-            "img": []
-        },
-        {
-            "id": 4,
-            "title": "API Padrao Builder",
-            "link": "https://github.com/Antonio13050/api-padrao-builder",
-            "description": "Este projeto é uma API para cadastro de usuários que aplica o padrão de projeto Builder. A API é dockerizada, o que significa que pode ser facilmente executada em qualquer ambiente compatível com Docker.",
-            "tags": [
-                "Spring-Boot",
-                "JPA",
-                "API-RESTfull",
-                "Maven",
-                "Bean-Validation",
-                "PostgreSQL",
-                "Docker",
-                "Backend",
-                "Builder",
-                "Design Patterns",
-                "Swagger"
-            ],
-            "img": []
+                "Maven"
+            ]
         }
     ]
 }

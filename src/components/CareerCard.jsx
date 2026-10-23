@@ -1,42 +1,45 @@
-import React from "react";
+import { HiOutlineArrowRight, HiOutlineCalendar } from "react-icons/hi2";
+import { useLanguage } from "../context/LanguageContext";
 
-export default function CareerCard({ item, handleShowModal }) {
+export default function CareerCard({ item, handleShowModal, type }) {
+    const { t, localize } = useLanguage();
+    const isLatestCareer = type === "career" && item.id === 1;
+
     return (
         <div
-            key={item.id}
-            className="card min-w-[500px] max-w-[500px] min-h-[224px] p-6 border border-gray-400 rounded-lg flex flex-col"
+            className={`glass-panel rounded-2xl p-6 flex flex-col justify-between group hover:border-zinc-600 transition-all duration-300 relative ${
+                isLatestCareer ? "border-emerald-500/40 bg-emerald-950/10" : ""
+            }`}
         >
-            <div className="h-full">
-                <h5 className="mb-2 text-2xl font-bold min-h-[64px] text-white ">
-                    {item.title}
-                </h5>
-                <p className="font-normal text-white pb-8">
-                    {item.description}
+            <div>
+                <div className="flex items-center justify-between gap-2 mb-2">
+                    <span className="flex items-center gap-1.5 text-xs text-zinc-400 font-medium">
+                        <HiOutlineCalendar className="text-indigo-400 text-xs" />
+                        {localize(item.dates)}
+                    </span>
+                    {isLatestCareer && (
+                        <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                            {t.career.currentRole}
+                        </span>
+                    )}
+                </div>
+
+                <h4 className="text-base sm:text-lg font-bold text-white group-hover:text-indigo-300 transition-colors mb-2">
+                    {localize(item.title)}
+                </h4>
+
+                <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed line-clamp-3 mb-4">
+                    {localize(item.description)}
                 </p>
             </div>
 
-            <div className="flex flex-col items-start gap-y-2">
-                <span className="font-normal text-gray-400">{item.dates}</span>
+            <div className="pt-2 border-t border-white/5 flex items-center justify-between">
                 <button
                     onClick={() => handleShowModal(item)}
-                    className="inline-flex items-center font-medium text-white hover:text-gray-200 hover:underline"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-400 hover:text-indigo-300 group-hover:translate-x-1 transition-all"
                 >
-                    Mais detalhes
-                    <svg
-                        className=" w-2.5 h-2.5 ms-2 rtl:rotate-180"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 6 10"
-                    >
-                        <path
-                            stroke="currentColor"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="m1 9 4-4-4-4"
-                        />
-                    </svg>
+                    <span>{t.career.detailsBtn}</span>
+                    <HiOutlineArrowRight className="text-xs" />
                 </button>
             </div>
         </div>
