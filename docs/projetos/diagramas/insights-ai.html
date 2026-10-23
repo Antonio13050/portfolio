@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Insights AI — arquitetura</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #060914; }
+  body { width: 1366px; height: 712px; overflow: hidden; position: relative; font-family: Inter, sans-serif; color: #EEF1FA; }
+  .stars { position: absolute; inset: 0; background-image: radial-gradient(1px 1px at 23px 41px, rgba(255,255,255,.55), transparent 60%), radial-gradient(1px 1px at 141px 97px, rgba(255,255,255,.35), transparent 60%), radial-gradient(1px 1px at 87px 163px, rgba(255,255,255,.5), transparent 60%), radial-gradient(1px 1px at 199px 21px, rgba(255,255,255,.3), transparent 60%); background-size: 229px 229px; }
+  .box { position: absolute; border: 1px solid #2A3452; border-radius: 16px; background: #0C1122; padding: 16px 18px; }
+  .label { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: #9BA3BD; font-weight: 600; }
+  .name { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; margin-top: 4px; }
+  .desc { font-size: 13px; color: #C3C9DB; margin-top: 6px; line-height: 1.45; }
+  .agent { position: absolute; width: 132px; height: 92px; border-radius: 14px; border: 1px solid #FF9E5E; background: #1A1410; padding: 12px 12px; }
+  .agent .name { font-size: 17px; color: #FF9E5E; margin: 0; }
+  .agent .desc { font-size: 12px; margin-top: 4px; }
+  .chip { position: absolute; border-radius: 10px; background: #1A2238; border: 1px solid #2A3452; padding: 8px 12px; font-size: 12.5px; color: #EEF1FA; }
+  .chip b { color: #FF9E5E; font-weight: 600; }
+  .side .name { font-size: 18px; }
+  .tag { position: absolute; font-size: 12px; color: #9BA3BD; background: #060914; padding: 2px 8px; border-radius: 6px; }
+  svg { position: absolute; inset: 0; z-index: 1; }
+</style>
+</head>
+<body>
+<div class="stars"></div>
+<svg width="1366" height="712" viewBox="0 0 1366 712" aria-hidden="true">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8AB4FF"/></marker>
+    <marker id="o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#FF9E5E"/></marker>
+  </defs>
+  <!-- frontend <-> backend -->
+  <line x1="300" y1="250" x2="362" y2="250" stroke="#8AB4FF" stroke-width="2" marker-start="url(#a)" marker-end="url(#a)"/>
+  <!-- frontend -> keycloak -->
+  <line x1="170" y1="404" x2="170" y2="482" stroke="#8AB4FF" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#a)"/>
+  <!-- backend -> keycloak (validação do JWT) -->
+  <path d="M520 584 L520 600 L302 600" fill="none" stroke="#8AB4FF" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#a)"/>
+  <!-- pipeline -->
+  <line x1="534" y1="246" x2="562" y2="246" stroke="#FF9E5E" stroke-width="2" marker-end="url(#o)"/>
+  <line x1="696" y1="246" x2="724" y2="246" stroke="#FF9E5E" stroke-width="2" marker-end="url(#o)"/>
+  <line x1="858" y1="246" x2="886" y2="246" stroke="#FF9E5E" stroke-width="2" marker-end="url(#o)"/>
+  <!-- specialists -> tools -->
+  <line x1="790" y1="292" x2="790" y2="330" stroke="#FF9E5E" stroke-width="2" stroke-dasharray="4 4"/>
+  <!-- backend -> serviços -->
+  <line x1="1038" y1="140" x2="1074" y2="140" stroke="#8AB4FF" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="1038" y1="283" x2="1074" y2="283" stroke="#8AB4FF" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="1038" y1="426" x2="1074" y2="426" stroke="#8AB4FF" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="1038" y1="569" x2="1074" y2="569" stroke="#8AB4FF" stroke-width="2" marker-end="url(#a)"/>
+</svg>
+
+<!-- título -->
+<div style="position:absolute;left:40px;top:30px">
+  <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:28px">Insights AI</div>
+  <div style="font-size:14px;color:#9BA3BD;margin-top:2px">Arquitetura do BI conversacional para tribunais</div>
+</div>
+
+<!-- frontend -->
+<div class="box" style="left:40px;top:118px;width:260px;height:286px">
+  <div class="label">Frontend</div>
+  <div class="name">Next.js 16 · React 19</div>
+  <div class="desc">Chat com assistant-ui: respostas em streaming, histórico de conversas e Markdown.</div>
+  <div class="desc">Dashboard de métricas com Recharts.</div>
+  <div class="desc">API routes como proxy autenticado.</div>
+</div>
+<span class="tag" style="left:306px;top:216px">SSE</span>
+
+<!-- keycloak -->
+<div class="box" style="left:40px;top:482px;width:260px;height:130px">
+  <div class="label">Identidade</div>
+  <div class="name">Keycloak · OIDC</div>
+  <div class="desc">Login com next-auth; o JWT segue para a API e é validado lá.</div>
+</div>
+
+<!-- backend -->
+<div class="box" style="left:362px;top:70px;width:676px;height:514px;background:rgba(12,17,34,.72);border-color:#3A4770">
+  <div class="label">Backend</div>
+  <div class="name">FastAPI · Python 3.12</div>
+</div>
+<div style="position:absolute;left:386px;top:160px;font-size:12px;color:#9BA3BD;letter-spacing:.1em;text-transform:uppercase;font-weight:600">Sistema multi-agente · LangGraph</div>
+
+<div class="agent" style="left:402px;top:200px"><div class="name">Guardian</div><div class="desc">Confere o escopo da pergunta</div></div>
+<div class="agent" style="left:564px;top:200px"><div class="name">Router</div><div class="desc">Escolhe o especialista certo</div></div>
+<div class="agent" style="left:726px;top:200px"><div class="name">Specialists</div><div class="desc">Consultam os indicadores</div></div>
+<div class="agent" style="left:888px;top:200px"><div class="name">Formatter</div><div class="desc">Monta a resposta final</div></div>
+
+<div class="chip" style="left:646px;top:330px;width:290px"><b>9 tools SQL</b> · indicadores do CNJ</div>
+<div class="chip" style="left:402px;top:330px;width:226px"><b>Produtividade</b> · agente ReAct</div>
+<div class="chip" style="left:402px;top:378px;width:534px">Nomes de magistrados reconhecidos mesmo com grafia aproximada</div>
+
+<div style="position:absolute;left:386px;top:450px;font-size:12px;color:#9BA3BD;letter-spacing:.1em;text-transform:uppercase;font-weight:600">Resiliência</div>
+<div style="position:absolute;left:402px;top:480px;width:600px;display:flex;flex-wrap:wrap;gap:12px 10px">
+<div class="chip" style="position:static">Rate limit</div>
+<div class="chip" style="position:static">Circuit breaker</div>
+<div class="chip" style="position:static">Retries com backoff</div>
+<div class="chip" style="position:static">Sentry</div>
+<div class="chip" style="position:static">Testes com meta de mais de 90% de cobertura</div>
+</div>
+
+<!-- serviços -->
+<div class="box side" style="left:1076px;top:84px;width:250px;height:112px;border-color:#FF9E5E">
+  <div class="label">Modelos</div>
+  <div class="name">LiteLLM</div>
+  <div class="desc">Camada única para os LLMs</div>
+</div>
+<div class="box side" style="left:1076px;top:227px;width:250px;height:112px">
+  <div class="label">Dados</div>
+  <div class="name">PostgreSQL</div>
+  <div class="desc">Pools de leitura e de escrita</div>
+</div>
+<div class="box side" style="left:1076px;top:370px;width:250px;height:112px">
+  <div class="label">Cache e memória</div>
+  <div class="name">Redis</div>
+  <div class="desc">Cache de consultas e estado das conversas</div>
+</div>
+<div class="box side" style="left:1076px;top:513px;width:250px;height:112px">
+  <div class="label">Observabilidade</div>
+  <div class="name">LangSmith</div>
+  <div class="desc">Tracing de cada chamada de LLM</div>
+</div>
+
+<div style="position:absolute;left:40px;bottom:22px;font-size:12px;color:#7E87A3">Diagrama ilustrativo da arquitetura · sem dados do sistema</div>
+</body>
+</html>

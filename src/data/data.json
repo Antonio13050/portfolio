@@ -521,56 +521,79 @@
         {
             "id": 1,
             "title": {
-                "pt": "Insights AI — BI Conversacional Jurídico & Multi-Agente",
-                "en": "Insights AI — Multi-Agent Conversational Legal BI",
-                "es": "Insights AI — BI Conversacional Jurídico & Multiagente"
+                "pt": "Insights AI — BI conversacional para tribunais",
+                "en": "Insights AI — Conversational BI for courts",
+                "es": "Insights AI — BI conversacional para tribunales"
             },
             "category": "IA",
             "badgeType": "Enterprise",
             "badgeText": {
-                "pt": "Corporativo Softplan",
-                "en": "Softplan Enterprise",
-                "es": "Corporativo Softplan"
+                "pt": "Corporativo · Softplan",
+                "en": "Enterprise · Softplan",
+                "es": "Corporativo · Softplan"
             },
-            "flow": "Guardian → Router → Specialists",
             "description": {
-                "pt": "Plataforma corporativa de BI Conversacional para tribunais que traduz perguntas em linguagem natural em consultas analíticas e indicadores do CNJ em tempo real. Arquitetura multi-agente construída com LangGraph e Gemini, streaming SSE com Next.js 16 e FastAPI, geração automática de insights estatísticos e dashboards dinâmicos persistíveis.",
-                "en": "Enterprise conversational BI platform for courts that translates natural-language questions into analytical queries and CNJ indicators in real time. Multi-agent architecture built with LangGraph and Gemini, SSE streaming with Next.js 16 and FastAPI, automatic generation of statistical insights and persistable dynamic dashboards.",
-                "es": "Plataforma corporativa de BI conversacional para tribunales que traduce preguntas en lenguaje natural en consultas analíticas e indicadores del CNJ en tiempo real. Arquitectura multiagente construida con LangGraph y Gemini, streaming SSE con Next.js 16 y FastAPI, generación automática de insights estadísticos y dashboards dinámicos persistibles."
+                "pt": "Perguntas em linguagem natural viram indicadores do CNJ, respondidos em streaming. Um sistema multi-agente em LangGraph (Guardian → Router → Specialists → Formatter) escolhe entre 9 ferramentas SQL e consulta o PostgreSQL; um agente de produtividade reconhece magistrados mesmo pelo nome escrito de forma aproximada. Os modelos passam pelo LiteLLM, com memória das conversas no Redis, login via Keycloak e tracing no LangSmith.",
+                "en": "Natural-language questions become CNJ indicators, answered in streaming. A LangGraph multi-agent system (Guardian → Router → Specialists → Formatter) picks among 9 SQL tools and queries PostgreSQL; a productivity agent recognizes judges even when their names are misspelled. Models go through LiteLLM, with conversation memory in Redis, login via Keycloak and tracing in LangSmith.",
+                "es": "Preguntas en lenguaje natural se convierten en indicadores del CNJ, respondidos en streaming. Un sistema multiagente en LangGraph (Guardian → Router → Specialists → Formatter) elige entre 9 herramientas SQL y consulta PostgreSQL; un agente de productividad reconoce a magistrados aun con el nombre escrito de forma aproximada. Los modelos pasan por LiteLLM, con memoria de las conversaciones en Redis, login vía Keycloak y tracing en LangSmith."
             },
             "tags": [
                 "LangGraph",
-                "Google Gemini",
+                "LangChain",
+                "LiteLLM",
+                "LangSmith",
                 "FastAPI",
-                "Next.js 16",
-                "React 19",
                 "Python 3.12",
-                "TypeScript",
                 "PostgreSQL",
                 "Redis",
+                "Next.js 16",
+                "assistant-ui",
                 "SSE",
-                "LangSmith",
-                "Docker"
+                "Keycloak"
             ],
             "highlights": {
                 "pt": [
-                    "Pipeline Multi-Agente: Guardian ➔ Router ➔ Specialists ➔ Formatter",
-                    "9+ Tools SQL parametrizáveis para indicadores processuais em tempo real",
-                    "Dashboards vivos: armazena os parâmetros e reconsulta a base ao abrir",
-                    "Streaming de respostas em tempo real via Server-Sent Events (SSE)"
+                    "Pipeline multi-agente: Guardian → Router → Specialists → Formatter",
+                    "9 ferramentas SQL para indicadores do CNJ",
+                    "Agente de produtividade (ReAct) com reconhecimento aproximado de nomes",
+                    "Modelos via LiteLLM, memória no Redis e tracing no LangSmith"
                 ],
                 "en": [
-                    "Multi-Agent Pipeline: Guardian ➔ Router ➔ Specialists ➔ Formatter",
-                    "9+ parameterizable SQL tools for real-time case-flow indicators",
-                    "Live dashboards: stores the parameters and re-queries the database on open",
-                    "Real-time response streaming via Server-Sent Events (SSE)"
+                    "Multi-agent pipeline: Guardian → Router → Specialists → Formatter",
+                    "9 SQL tools for CNJ indicators",
+                    "Productivity agent (ReAct) with fuzzy name matching",
+                    "Models via LiteLLM, memory in Redis and tracing in LangSmith"
                 ],
                 "es": [
-                    "Pipeline Multiagente: Guardian ➔ Router ➔ Specialists ➔ Formatter",
-                    "9+ herramientas SQL parametrizables para indicadores procesales en tiempo real",
-                    "Dashboards vivos: almacena los parámetros y vuelve a consultar la base al abrirlos",
-                    "Streaming de respuestas en tiempo real vía Server-Sent Events (SSE)"
+                    "Pipeline multiagente: Guardian → Router → Specialists → Formatter",
+                    "9 herramientas SQL para indicadores del CNJ",
+                    "Agente de productividad (ReAct) con reconocimiento aproximado de nombres",
+                    "Modelos vía LiteLLM, memoria en Redis y tracing en LangSmith"
                 ]
+            },
+            "gallery": [
+                {
+                    "image": {
+                        "pt": "projects/insights-ai/01-arquitetura-pt.webp",
+                        "en": "projects/insights-ai/01-arquitetura-en.webp",
+                        "es": "projects/insights-ai/01-arquitetura-es.webp"
+                    },
+                    "title": {
+                        "pt": "Arquitetura",
+                        "en": "Architecture",
+                        "es": "Arquitectura"
+                    },
+                    "caption": {
+                        "pt": "do chat ao pipeline de agentes, com os modelos via LiteLLM e os dados no PostgreSQL e no Redis.",
+                        "en": "from the chat to the agent pipeline, with models via LiteLLM and data in PostgreSQL and Redis.",
+                        "es": "del chat al pipeline de agentes, con los modelos vía LiteLLM y los datos en PostgreSQL y Redis."
+                    }
+                }
+            ],
+            "galleryNote": {
+                "pt": "diagrama ilustrativo",
+                "en": "illustrative diagram",
+                "es": "diagrama ilustrativo"
             }
         },
         {
