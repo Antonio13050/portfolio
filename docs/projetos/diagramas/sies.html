@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>SIES — arquitetura</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #060914; }
+  body { width: 1366px; height: 712px; overflow: hidden; position: relative; font-family: Inter, sans-serif; color: #EEF1FA; }
+  .stars { position: absolute; inset: 0; background-image: radial-gradient(1px 1px at 23px 41px, rgba(255,255,255,.55), transparent 60%), radial-gradient(1px 1px at 141px 97px, rgba(255,255,255,.35), transparent 60%), radial-gradient(1px 1px at 87px 163px, rgba(255,255,255,.5), transparent 60%), radial-gradient(1px 1px at 199px 21px, rgba(255,255,255,.3), transparent 60%); background-size: 229px 229px; }
+  .box { position: absolute; border: 1px solid #2A3452; border-radius: 16px; background: #0C1122; padding: 16px 18px; }
+  .label { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: #9BA3BD; font-weight: 600; }
+  .name { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 19px; margin-top: 4px; }
+  .desc { font-size: 13px; color: #C3C9DB; margin-top: 6px; line-height: 1.45; }
+  .step { position: absolute; width: 132px; height: 112px; border-radius: 14px; border: 1px solid #8AB4FF; background: #0E1830; padding: 12px; }
+  .step .name { font-size: 16px; color: #8AB4FF; margin: 0; }
+  .step .desc { font-size: 12px; margin-top: 4px; }
+  .chips { position: absolute; display: flex; flex-wrap: wrap; gap: 10px; }
+  .chip { border-radius: 10px; background: #1A2238; border: 1px solid #2A3452; padding: 8px 12px; font-size: 12.5px; color: #EEF1FA; }
+  .chip b { color: #8AB4FF; font-weight: 600; }
+  .section { position: absolute; font-size: 12px; color: #9BA3BD; letter-spacing: .1em; text-transform: uppercase; font-weight: 600; }
+  .tag { position: absolute; font-size: 12px; color: #9BA3BD; background: #060914; padding: 2px 8px; border-radius: 6px; z-index: 2; }
+  svg { position: absolute; inset: 0; z-index: 1; }
+</style>
+</head>
+<body>
+<div class="stars"></div>
+<svg width="1366" height="712" viewBox="0 0 1366 712" aria-hidden="true">
+  <defs>
+    <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8AB4FF"/></marker>
+    <marker id="o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#FF9E5E"/></marker>
+  </defs>
+  <!-- origem -> triggers -->
+  <line x1="170" y1="268" x2="170" y2="320" stroke="#8AB4FF" stroke-width="2" marker-end="url(#b)"/>
+  <!-- fila de CDC -> api -->
+  <line x1="300" y1="400" x2="362" y2="400" stroke="#8AB4FF" stroke-width="2" marker-end="url(#b)"/>
+  <!-- pipeline -->
+  <line x1="534" y1="256" x2="562" y2="256" stroke="#8AB4FF" stroke-width="2" marker-end="url(#b)"/>
+  <line x1="696" y1="256" x2="724" y2="256" stroke="#8AB4FF" stroke-width="2" marker-end="url(#b)"/>
+  <line x1="858" y1="256" x2="886" y2="256" stroke="#8AB4FF" stroke-width="2" marker-end="url(#b)"/>
+  <!-- api -> destino -->
+  <line x1="1038" y1="140" x2="1074" y2="140" stroke="#FF9E5E" stroke-width="2" marker-end="url(#o)"/>
+  <!-- destino -> ETL -->
+  <line x1="1201" y1="196" x2="1201" y2="225" stroke="#FF9E5E" stroke-width="2" marker-end="url(#o)"/>
+  <!-- painel <-> api -->
+  <line x1="1040" y1="426" x2="1074" y2="426" stroke="#8AB4FF" stroke-width="2" marker-start="url(#b)" marker-end="url(#b)"/>
+  <!-- keycloak -> api -->
+  <line x1="1074" y1="569" x2="1040" y2="569" stroke="#8AB4FF" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#b)"/>
+</svg>
+
+<div style="position:absolute;left:40px;top:30px">
+  <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:28px">SIES</div>
+  <div style="font-size:14px;color:#9BA3BD;margin-top:2px">Integração estatística · Poder Judicial del Perú</div>
+</div>
+
+<!-- origem -->
+<div class="box" style="left:40px;top:118px;width:260px;height:150px">
+  <div class="label">Origem</div>
+  <div class="name">Expedientes judiciais</div>
+  <div class="desc">Sistema da Softplan usado pelo Judiciário peruano, em PostgreSQL. 7 especialidades.</div>
+</div>
+<div class="box" style="left:40px;top:322px;width:260px;height:150px">
+  <div class="label">Captura de mudanças</div>
+  <div class="name">Triggers PL/pgSQL</div>
+  <div class="desc">Cada movimento gravado entra numa fila de CDC.</div>
+</div>
+<span class="tag" style="left:304px;top:370px">fila CDC</span>
+
+<!-- serviço -->
+<div class="box" style="left:362px;top:70px;width:676px;height:514px;background:rgba(12,17,34,.72);border-color:#3A4770">
+  <div class="label">Serviço</div>
+  <div class="name">Java 21 · Spring Boot 3.5</div>
+</div>
+<div class="section" style="left:386px;top:160px">Pipeline de integração</div>
+
+<div class="step" style="left:402px;top:200px"><div class="name">Polling</div><div class="desc">Lê a fila em lotes, com marca por linha</div></div>
+<div class="step" style="left:564px;top:200px"><div class="name">Mapeamento</div><div class="desc">Movimento → ato processual → variável estatística</div></div>
+<div class="step" style="left:726px;top:200px"><div class="name">Regras</div><div class="desc">Aplica as regras estatísticas oficiais</div></div>
+<div class="step" style="left:888px;top:200px"><div class="name">Escrita</div><div class="desc">Exactly-once com tabela de controle</div></div>
+
+<div class="section" style="left:386px;top:340px">Jobs agendados</div>
+<div class="chips" style="left:402px;top:368px;width:600px">
+  <div class="chip"><b>Fechamento mensal</b></div>
+  <div class="chip"><b>Inventário anual</b></div>
+  <div class="chip"><b>Reaberturas</b> auditadas</div>
+</div>
+
+<div class="section" style="left:386px;top:440px">Engenharia</div>
+<div class="chips" style="left:402px;top:468px;width:600px">
+  <div class="chip">Spring JDBC puro · 5 pools</div>
+  <div class="chip">Cache Caffeine</div>
+  <div class="chip">Testcontainers</div>
+  <div class="chip">JaCoCo + SonarQube</div>
+  <div class="chip">Elastic APM</div>
+  <div class="chip">Kubernetes</div>
+</div>
+
+<!-- destino e uso -->
+<div class="box" style="left:1076px;top:84px;width:250px;height:112px;border-color:#FF9E5E">
+  <div class="label">Destino</div>
+  <div class="name">Base estatística</div>
+  <div class="desc">6 tabelas estatísticas oficiais</div>
+</div>
+<div class="box" style="left:1076px;top:227px;width:250px;height:112px">
+  <div class="label">Consumo</div>
+  <div class="name">ETL do Judiciário</div>
+  <div class="desc">Sistema estatístico oficial do Poder Judicial</div>
+</div>
+<div class="box" style="left:1076px;top:370px;width:250px;height:112px">
+  <div class="label">Operação</div>
+  <div class="name">Painel · Next.js 16</div>
+  <div class="desc">Saúde, pausar jobs, reaberturas e reprocessamento</div>
+</div>
+<div class="box" style="left:1076px;top:513px;width:250px;height:112px">
+  <div class="label">Identidade</div>
+  <div class="name">Keycloak · OIDC</div>
+  <div class="desc">API protegida por JWT</div>
+</div>
+
+<div style="position:absolute;left:40px;bottom:22px;font-size:12px;color:#7E87A3">Diagrama ilustrativo da arquitetura · sem dados do sistema</div>
+</body>
+</html>

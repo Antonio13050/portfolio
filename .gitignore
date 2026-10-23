@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Notas internas de projetos (detalhes de clientes e da empresa): só locais
+docs/projetos/privado/

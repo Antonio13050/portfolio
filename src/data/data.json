@@ -727,55 +727,79 @@
         {
             "id": 3,
             "title": {
-                "pt": "SIES — Pipeline de Integração Estatística & CDC (Poder Judicial del Perú)",
-                "en": "SIES — Statistical Integration & CDC Pipeline (Poder Judicial del Perú)",
-                "es": "SIES — Pipeline de Integración Estadística & CDC (Poder Judicial del Perú)"
+                "pt": "SIES — Integração estatística do Poder Judicial del Perú",
+                "en": "SIES — Statistical integration for Peru's Judiciary",
+                "es": "SIES — Integración estadística del Poder Judicial del Perú"
             },
             "category": "Backend",
             "badgeType": "Enterprise",
             "badgeText": {
-                "pt": "Internacional",
-                "en": "International",
-                "es": "Internacional"
+                "pt": "Corporativo Softplan · Peru",
+                "en": "Softplan Enterprise · Peru",
+                "es": "Corporativo Softplan · Perú"
             },
-            "flow": "EJE → CDC → SIE-PJ",
             "description": {
-                "pt": "Sistema de missão crítica desenvolvido para o Poder Judicial del Perú que integra o sistema processual EJE ao sistema estatístico nacional (SIE-PJ). Arquitetura de alta performance com Java 21, Spring Boot 3.5 e Spring JDBC puro (5 pools Hikari), captura de mudanças via CDC/PL-pgSQL, garantia exactly-once, cache Caffeine, observabilidade com Elastic APM e painel de controle em Next.js 16.",
-                "en": "Mission-critical system developed for the Poder Judicial del Perú that integrates the EJE case management system with the national statistical system (SIE-PJ). High-performance architecture with Java 21, Spring Boot 3.5 and plain Spring JDBC (5 Hikari pools), change capture via CDC/PL-pgSQL, exactly-once guarantees, Caffeine caching, observability with Elastic APM and a control panel in Next.js 16.",
-                "es": "Sistema de misión crítica desarrollado para el Poder Judicial del Perú que integra el sistema procesal EJE con el sistema estadístico nacional (SIE-PJ). Arquitectura de alto rendimiento con Java 21, Spring Boot 3.5 y Spring JDBC puro (5 pools Hikari), captura de cambios vía CDC/PL-pgSQL, garantía exactly-once, caché Caffeine, observabilidad con Elastic APM y panel de control en Next.js 16."
+                "pt": "Integra o sistema de expedientes judiciais da Softplan, usado pelo Poder Judicial del Perú, ao sistema estatístico oficial do Judiciário, em 7 especialidades. Triggers PL/pgSQL alimentam uma fila de CDC; um serviço Java 21 / Spring Boot lê por polling, mapeia cada movimento para a variável estatística e grava com garantia exactly-once entre duas bases. Fechamentos mensais e anuais automáticos, reaberturas auditadas e um painel de operação em Next.js.",
+                "en": "Connects Softplan's case management system, used by Peru's Judiciary, to the Judiciary's official statistics system across 7 specialties. PL/pgSQL triggers feed a CDC queue; a Java 21 / Spring Boot service polls it, maps each case event to its statistical variable and writes with an exactly-once guarantee across two databases. Automatic monthly and annual closes, audited reopenings and an operations dashboard in Next.js.",
+                "es": "Integra el sistema de expedientes judiciales de Softplan, usado por el Poder Judicial del Perú, al sistema estadístico oficial del Poder Judicial, en 7 especialidades. Triggers PL/pgSQL alimentan una cola de CDC; un servicio Java 21 / Spring Boot la lee por polling, mapea cada movimiento a su variable estadística y escribe con garantía exactly-once entre dos bases. Cierres mensuales y anuales automáticos, reaperturas auditadas y un panel de operación en Next.js."
             },
             "tags": [
                 "Java 21",
                 "Spring Boot 3.5",
                 "Spring JDBC",
                 "PostgreSQL",
-                "PL/pgSQL (CDC)",
-                "Next.js 16",
+                "PL/pgSQL",
+                "Liquibase",
+                "Caffeine",
                 "Keycloak",
                 "Elastic APM",
                 "Testcontainers",
-                "Kubernetes",
-                "Liquibase"
+                "Next.js 16",
+                "Kubernetes"
             ],
             "highlights": {
                 "pt": [
-                    "Processamento de alta vazão sem ORM: 5 pools de conexão Hikari independentes",
-                    "Garantia Exactly-Once com controle de idempotência entre bases distintas",
-                    "Captura de mudanças em tempo real (CDC) com triggers PL/pgSQL",
-                    "Integração internacional cobrindo 7 especialidades judiciais no Peru"
+                    "Captura de mudanças com triggers PL/pgSQL e leitura por polling",
+                    "Garantia exactly-once entre duas bases com tabela de controle",
+                    "Fechamentos mensais e anuais automáticos, com reaberturas auditadas",
+                    "Spring JDBC puro em 5 pools e testes com Testcontainers"
                 ],
                 "en": [
-                    "High-throughput processing without an ORM: 5 independent Hikari connection pools",
-                    "Exactly-once guarantee with idempotency control across separate databases",
-                    "Real-time change data capture (CDC) with PL/pgSQL triggers",
-                    "International integration covering 7 judicial specialties in Peru"
+                    "Change data capture with PL/pgSQL triggers and polling",
+                    "Exactly-once guarantee across two databases with a control table",
+                    "Automatic monthly and annual closes, with audited reopenings",
+                    "Plain Spring JDBC in 5 pools and tests with Testcontainers"
                 ],
                 "es": [
-                    "Procesamiento de alto rendimiento sin ORM: 5 pools de conexión Hikari independientes",
-                    "Garantía exactly-once con control de idempotencia entre bases distintas",
-                    "Captura de cambios en tiempo real (CDC) con triggers PL/pgSQL",
-                    "Integración internacional que cubre 7 especialidades judiciales en el Perú"
+                    "Captura de cambios con triggers PL/pgSQL y lectura por polling",
+                    "Garantía exactly-once entre dos bases con tabla de control",
+                    "Cierres mensuales y anuales automáticos, con reaperturas auditadas",
+                    "Spring JDBC puro en 5 pools y pruebas con Testcontainers"
                 ]
+            },
+            "gallery": [
+                {
+                    "image": {
+                        "pt": "projects/sies/01-arquitetura-pt.webp",
+                        "en": "projects/sies/01-arquitetura-en.webp",
+                        "es": "projects/sies/01-arquitetura-es.webp"
+                    },
+                    "title": {
+                        "pt": "Arquitetura",
+                        "en": "Architecture",
+                        "es": "Arquitectura"
+                    },
+                    "caption": {
+                        "pt": "da captura de mudanças no sistema de expedientes às tabelas estatísticas oficiais.",
+                        "en": "from change data capture in the case management system to the official statistical tables.",
+                        "es": "de la captura de cambios en el sistema de expedientes a las tablas estadísticas oficiales."
+                    }
+                }
+            ],
+            "galleryNote": {
+                "pt": "diagrama ilustrativo",
+                "en": "illustrative diagram",
+                "es": "diagrama ilustrativo"
             }
         },
         {
