@@ -1,23 +1,52 @@
-import { FaGithub, FaArrowUpRightFromSquare, FaGlobe, FaLock } from "react-icons/fa6";
+import { useState } from "react";
+import { FaGithub, FaArrowUpRightFromSquare, FaGlobe, FaLock, FaExpand, FaRegImages } from "react-icons/fa6";
+import ProjectGallery from "./ProjectGallery";
 import { useLanguage } from "../context/LanguageContext";
+import { assetUrl } from "../data/images";
 
 export default function ProjectCard({ item }) {
     const { t, localize } = useLanguage();
+    const [galleryOpen, setGalleryOpen] = useState(false);
+    const [galleryIndex, setGalleryIndex] = useState(0);
     const title = localize(item.title);
     // "Nome — subtítulo": o nome vira o título do card e o resto, uma linha de apoio
     const [name, subtitle] = title.split(" — ");
-    const cover = item.cover && new URL(`../assets/covers/${item.cover}`, import.meta.url).href;
+
+    // Galeria do projeto; sem galeria, a capa sozinha. A primeira imagem é a capa do card.
+    const images = (item.gallery ?? (item.cover ? [{ image: `covers/${item.cover}` }] : [])).map((image) => ({
+        src: assetUrl(localize(image.image)),
+        title: localize(image.title),
+        caption: localize(image.caption),
+    }));
+    const cover = images[0];
+
+    const openGallery = () => {
+        setGalleryIndex(0);
+        setGalleryOpen(true);
+    };
 
     return (
         <article className="flex flex-col overflow-hidden rounded-[20px] border border-night-line bg-night-card/85 transition-colors hover:border-night-edge">
-            {/* Capa: print do projeto ou, sem print, o fluxo principal da arquitetura */}
+            {/* Capa: print do projeto (abre a galeria) ou, sem print, o fluxo principal da arquitetura */}
             {cover ? (
-                <img
-                    src={cover}
-                    alt={title}
-                    loading="lazy"
-                    className="h-[180px] w-full border-b border-night-line object-cover object-top"
-                />
+                <button
+                    type="button"
+                    onClick={openGallery}
+                    className="group/cover relative block h-[180px] w-full cursor-zoom-in overflow-hidden border-b border-night-line bg-night-panel"
+                >
+                    <img
+                        src={cover.src}
+                        alt={cover.title || name}
+                        loading="lazy"
+                        className="h-full w-full object-cover object-left-top transition-transform duration-500 group-hover/cover:scale-[1.03]"
+                    />
+                    <span className="absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-night/80 px-3 py-1.5 text-xs font-semibold text-mist-bright transition-colors group-hover/cover:bg-accent group-hover/cover:text-night">
+                        {images.length > 1 ? <FaRegImages aria-hidden="true" /> : <FaExpand aria-hidden="true" />}
+                        {images.length > 1
+                            ? t.projects.gallery.count.replace("{count}", images.length)
+                            : t.projects.gallery.enlarge}
+                    </span>
+                </button>
             ) : (
                 <div className="flex min-h-[180px] flex-col justify-end gap-1.5 border-b border-night-line bg-night-panel p-6">
                     <span className="text-xs uppercase tracking-[0.1em] text-mist-dim">
@@ -78,14 +107,26 @@ export default function ProjectCard({ item }) {
                             {t.projects.site}
                         </a>
                     )}
-                    {item.badgeType === "Enterprise" && (
+                    {(item.badgeType === "Enterprise" || item.private) && (
                         <span className="inline-flex items-center gap-2 font-normal text-mist-dim">
                             <FaLock className="text-xs" />
-                            {t.projects.enterprise}
+                            {item.badgeType === "Enterprise" ? t.projects.enterprise : t.projects.private}
                         </span>
                     )}
                 </div>
             </div>
+
+            {cover && (
+                <ProjectGallery
+                    open={galleryOpen}
+                    onClose={() => setGalleryOpen(false)}
+                    images={images}
+                    index={galleryIndex}
+                    onIndexChange={setGalleryIndex}
+                    projectName={name}
+                    note={localize(item.galleryNote)}
+                />
+            )}
         </article>
     );
 }

@@ -22,6 +22,14 @@ export const translations = {
             github: "Repositório no GitHub",
             live: "Demo online",
             site: "Site do app",
+            private: "Código privado",
+            gallery: {
+                count: "Ver {count} imagens",
+                enlarge: "Ampliar",
+                prev: "Imagem anterior",
+                next: "Próxima imagem",
+                close: "Fechar galeria"
+            },
             enterprise: "Repositório corporativo"
         },
         experience: {
@@ -70,6 +78,14 @@ export const translations = {
             github: "GitHub repository",
             live: "Live demo",
             site: "App website",
+            private: "Private code",
+            gallery: {
+                count: "View {count} images",
+                enlarge: "Enlarge",
+                prev: "Previous image",
+                next: "Next image",
+                close: "Close gallery"
+            },
             enterprise: "Enterprise repository"
         },
         experience: {
@@ -118,6 +134,14 @@ export const translations = {
             github: "Repositorio en GitHub",
             live: "Demo en línea",
             site: "Sitio de la app",
+            private: "Código privado",
+            gallery: {
+                count: "Ver {count} imágenes",
+                enlarge: "Ampliar",
+                prev: "Imagen anterior",
+                next: "Imagen siguiente",
+                close: "Cerrar galería"
+            },
             enterprise: "Repositorio corporativo"
         },
         experience: {

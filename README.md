@@ -70,7 +70,6 @@ Os itens de `career` e `education` aparecem juntos na linha do tempo, agrupados 
 
 Cada projeto tem uma ficha completa em `docs/projetos/<nome>.md` (contexto, arquitetura, stack, links e pendências). O card do site é um resumo dela: atualize a ficha primeiro.
 
-
 Acrescente um item em `projects` no `data.json`:
 
 | Campo | Obrigatório | Descrição |
@@ -85,7 +84,10 @@ Acrescente um item em `projects` no `data.json`:
 | `link` | não | URL do repositório no GitHub |
 | `online` | não | URL da demo |
 | `site` | não | URL do site do produto (link "Site do app") |
-| `cover` | não | nome de um arquivo em `src/assets/covers/` |
-| `flow` | não | fluxo da arquitetura exibido no lugar da capa (ex.: `EJE → CDC → SIE-PJ`) |
+| `private` | não | `true` mostra "Código privado" no lugar do link do repositório |
+| `gallery` | não | lista de imagens `{ image, title, caption }`; a primeira é a capa e o clique abre a galeria |
+| `galleryNote` | não | aviso exibido na galeria (ex.: "dados de demonstração") |
+| `cover` | não | sem `gallery`, um arquivo em `src/assets/covers/` (abre ampliado ao clicar) |
+| `flow` | não | fluxo da arquitetura exibido quando não há imagem (ex.: `EJE → CDC → SIE-PJ`) |
 
-Para a capa, use um print em `.webp` com cerca de 800 px de largura. Sem `cover`, o card mostra `badgeText` e `flow`.
+Na galeria, `image` é um caminho relativo a `src/assets/` (ex.: `projects/imobi/01-atendimento.webp`) ou um objeto `{ pt, en, es }` com uma imagem por idioma; `title` e `caption` também aceitam `{ pt, en, es }`. Use prints em `.webp`: largura original para telas de sistema (o texto precisa ficar legível ampliado) e cerca de 720 px para telas de celular. Sem imagem, o card mostra `badgeText` e `flow`.

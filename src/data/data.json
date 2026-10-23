@@ -339,7 +339,6 @@
                 "es": "App Android · próximo lanzamiento"
             },
             "site": "https://attosfit.com",
-            "cover": "attos.webp",
             "description": {
                 "pt": "App de musculação e nutrição com um Coach de IA que conhece a ficha do atleta. O Coach responde em streaming, monta treinos que viram fichas salvas com um toque e lê fotos de fichas de papel da academia para digitalizá-las. A IA roda num servidor próprio na Cloudflare, com troca automática de modelo, limite diário de uso e conferência do plano PRO.",
                 "en": "Workout and nutrition app with an AI Coach that knows the athlete's profile. The Coach streams its answers, builds workouts that become saved routines with one tap, and reads photos of paper gym sheets to digitize them. The AI runs on its own Cloudflare server, with automatic model fallback, daily usage limits and PRO plan verification.",
@@ -378,7 +377,146 @@
                     "Lectura de rutinas en papel con un modelo de visión",
                     "Servidor propio con cambio de modelo, límites diarios y verificación del PRO"
                 ]
-            }
+            },
+            "private": true,
+            "gallery": [
+                {
+                    "image": {
+                        "pt": "projects/attos/pt/01-loja.webp",
+                        "en": "projects/attos/en/01-loja.webp",
+                        "es": "projects/attos/es/01-loja.webp"
+                    },
+                    "title": {
+                        "pt": "Google Play",
+                        "en": "Google Play",
+                        "es": "Google Play"
+                    },
+                    "caption": {
+                        "pt": "ficha do app na loja.",
+                        "en": "the app's store listing.",
+                        "es": "la ficha de la app en la tienda."
+                    }
+                },
+                {
+                    "image": {
+                        "pt": "projects/attos/pt/02-coach-ia.webp",
+                        "en": "projects/attos/en/02-coach-ia.webp",
+                        "es": "projects/attos/es/02-coach-ia.webp"
+                    },
+                    "title": {
+                        "pt": "Coach IA",
+                        "en": "AI Coach",
+                        "es": "Coach IA"
+                    },
+                    "caption": {
+                        "pt": "o Coach monta um treino a partir da ficha do atleta e ele é salvo com um toque.",
+                        "en": "the Coach builds a workout from the athlete's profile, saved with one tap.",
+                        "es": "el Coach arma una rutina a partir del perfil del atleta y se guarda con un toque."
+                    }
+                },
+                {
+                    "image": {
+                        "pt": "projects/attos/pt/03-inicio.webp",
+                        "en": "projects/attos/en/03-inicio.webp",
+                        "es": "projects/attos/es/03-inicio.webp"
+                    },
+                    "title": {
+                        "pt": "Início",
+                        "en": "Home",
+                        "es": "Inicio"
+                    },
+                    "caption": {
+                        "pt": "treino do dia, semana e metas de água e dieta.",
+                        "en": "today's workout, the week and water and diet goals.",
+                        "es": "entrenamiento del día, la semana y metas de agua y dieta."
+                    }
+                },
+                {
+                    "image": {
+                        "pt": "projects/attos/pt/04-treino-ativo.webp",
+                        "en": "projects/attos/en/04-treino-ativo.webp",
+                        "es": "projects/attos/es/04-treino-ativo.webp"
+                    },
+                    "title": {
+                        "pt": "Treino ativo",
+                        "en": "Active workout",
+                        "es": "Entrenamiento activo"
+                    },
+                    "caption": {
+                        "pt": "registro de séries com a carga e as repetições da última vez.",
+                        "en": "set logging with last time's weight and reps.",
+                        "es": "registro de series con el peso y las repeticiones de la última vez."
+                    }
+                },
+                {
+                    "image": {
+                        "pt": "projects/attos/pt/05-treinos.webp",
+                        "en": "projects/attos/en/05-treinos.webp",
+                        "es": "projects/attos/es/05-treinos.webp"
+                    },
+                    "title": {
+                        "pt": "Treinos",
+                        "en": "Workouts",
+                        "es": "Rutinas"
+                    },
+                    "caption": {
+                        "pt": "rotinas do atleta e biblioteca com 101 exercícios.",
+                        "en": "the athlete's routines and a library of 101 exercises.",
+                        "es": "rutinas del atleta y biblioteca con 101 ejercicios."
+                    }
+                },
+                {
+                    "image": {
+                        "pt": "projects/attos/pt/06-dieta.webp",
+                        "en": "projects/attos/en/06-dieta.webp",
+                        "es": "projects/attos/es/06-dieta.webp"
+                    },
+                    "title": {
+                        "pt": "Dieta",
+                        "en": "Diet",
+                        "es": "Dieta"
+                    },
+                    "caption": {
+                        "pt": "metas de calorias e macros, refeições, água e suplementos.",
+                        "en": "calorie and macro goals, meals, water and supplements.",
+                        "es": "metas de calorías y macros, comidas, agua y suplementos."
+                    }
+                },
+                {
+                    "image": {
+                        "pt": "projects/attos/pt/07-evolucao.webp",
+                        "en": "projects/attos/en/07-evolucao.webp",
+                        "es": "projects/attos/es/07-evolucao.webp"
+                    },
+                    "title": {
+                        "pt": "Evolução",
+                        "en": "Progress",
+                        "es": "Progreso"
+                    },
+                    "caption": {
+                        "pt": "constância, volume, recordes e conquistas.",
+                        "en": "consistency, volume, personal records and achievements.",
+                        "es": "constancia, volumen, récords y logros."
+                    }
+                },
+                {
+                    "image": {
+                        "pt": "projects/attos/pt/08-musculos.webp",
+                        "en": "projects/attos/en/08-musculos.webp",
+                        "es": "projects/attos/es/08-musculos.webp"
+                    },
+                    "title": {
+                        "pt": "Músculos",
+                        "en": "Muscles",
+                        "es": "Músculos"
+                    },
+                    "caption": {
+                        "pt": "mapa dos músculos mais treinados.",
+                        "en": "map of the most trained muscles.",
+                        "es": "mapa de los músculos más entrenados."
+                    }
+                }
+            ]
         },
         {
             "id": 1,
@@ -438,52 +576,129 @@
         {
             "id": 2,
             "title": {
-                "pt": "Imobi AI — Agente Autônomo Imobiliário & WhatsApp SaaS",
-                "en": "Imobi AI — Autonomous Real Estate Agent & WhatsApp SaaS",
-                "es": "Imobi AI — Agente Inmobiliario Autónomo & WhatsApp SaaS"
+                "pt": "Imobi — Agente de IA para imobiliárias no WhatsApp",
+                "en": "Imobi — AI agent for real estate agencies on WhatsApp",
+                "es": "Imobi — Agente de IA para inmobiliarias en WhatsApp"
             },
             "category": "IA",
-            "badgeType": "OpenSource",
-            "badgeText": "Open Source",
-            "flow": "WhatsApp → LangGraph → pgvector",
-            "link": "https://github.com/Antonio13050/imob-ai",
+            "badgeType": "Product",
+            "badgeText": {
+                "pt": "Em produção · Líder Imóveis",
+                "en": "In production · Líder Imóveis",
+                "es": "En producción · Líder Imóveis"
+            },
+            "private": true,
             "description": {
-                "pt": "Agente autônomo de IA integrado à API do WhatsApp (Meta) e ao CRM Apresenta.me para qualificação de leads e recomendação de imóveis via busca vetorial (pgvector). Arquitetura orientada a eventos com FastAPI, LangGraph, fila distribuída no PostgreSQL (FOR UPDATE SKIP LOCKED), observabilidade completa com Prometheus/Jaeger e painel de handoff em Next.js 16.",
-                "en": "Autonomous AI agent integrated with the WhatsApp (Meta) API and the Apresenta.me CRM for lead qualification and property recommendations via vector search (pgvector). Event-driven architecture with FastAPI, LangGraph, a distributed queue in PostgreSQL (FOR UPDATE SKIP LOCKED), full observability with Prometheus/Jaeger and a handoff dashboard in Next.js 16.",
-                "es": "Agente autónomo de IA integrado a la API de WhatsApp (Meta) y al CRM Apresenta.me para la calificación de leads y la recomendación de inmuebles mediante búsqueda vectorial (pgvector). Arquitectura orientada a eventos con FastAPI, LangGraph, cola distribuida en PostgreSQL (FOR UPDATE SKIP LOCKED), observabilidad completa con Prometheus/Jaeger y panel de handoff en Next.js 16."
+                "pt": "Em uso pela Líder Imóveis, atende os leads da imobiliária pelo WhatsApp, por texto ou áudio. O agente LangGraph usa ferramentas ligadas ao CRM Apresenta.me para buscar imóveis, consultar contratos e emitir segunda via de boleto, qualifica o lead e passa a conversa ao corretor de plantão. O painel dos corretores se instala como app no Android e no iPhone e avisa cada novo atendimento por notificação, mesmo com o celular bloqueado.",
+                "en": "In use at Líder Imóveis, it handles the agency's leads on WhatsApp, by text or voice. The LangGraph agent uses tools connected to the Apresenta.me CRM to search properties, look up contracts and issue duplicate payment slips, qualifies the lead and hands the conversation to the on-duty agent. The agents' dashboard installs as an app on Android and iPhone and announces each new conversation with a notification, even with the phone locked.",
+                "es": "En uso en Líder Imóveis, atiende a los leads de la inmobiliaria por WhatsApp, por texto o audio. El agente LangGraph usa herramientas conectadas al CRM Apresenta.me para buscar inmuebles, consultar contratos y emitir segunda vía de boleto, califica al lead y pasa la conversación al corredor de turno. El panel de los corredores se instala como app en Android y iPhone y avisa cada nueva atención con una notificación, incluso con el celular bloqueado."
             },
             "tags": [
                 "LangGraph",
-                "pgvector",
-                "WhatsApp API",
-                "Google Gemini",
+                "LangChain",
+                "OpenRouter",
+                "Gemini (áudio)",
                 "FastAPI",
+                "PostgreSQL",
+                "Redis",
+                "WhatsApp Cloud API",
                 "Next.js 16",
-                "React 19",
-                "Prometheus",
-                "Jaeger",
-                "Docker",
-                "OpenTelemetry"
+                "PWA",
+                "Web Push",
+                "WebSockets",
+                "Docker"
             ],
             "highlights": {
                 "pt": [
-                    "Busca Semântica & Vetorial de imóveis por perfil e orçamento com pgvector",
-                    "Human Handoff em tempo real via WebSockets no painel do corretor",
-                    "Workers com concorrência segura distribuída (FOR UPDATE SKIP LOCKED)",
-                    "Observabilidade ponta a ponta com OpenTelemetry, Prometheus e Jaeger"
+                    "Agente com ferramentas ligadas ao CRM: imóveis, contratos e segunda via de boleto",
+                    "Áudios do WhatsApp transcritos antes de chegar ao agente",
+                    "Qualificação do lead e memória do que ele já informou",
+                    "Passagem ao corretor de plantão com notificação no celular"
                 ],
                 "en": [
-                    "Semantic & vector property search by profile and budget with pgvector",
-                    "Real-time human handoff via WebSockets in the realtor dashboard",
-                    "Workers with safe distributed concurrency (FOR UPDATE SKIP LOCKED)",
-                    "End-to-end observability with OpenTelemetry, Prometheus and Jaeger"
+                    "Agent with CRM-connected tools: properties, contracts and payment slips",
+                    "WhatsApp voice notes transcribed before reaching the agent",
+                    "Lead qualification and memory of what the lead already said",
+                    "Handoff to the on-duty agent with a phone notification"
                 ],
                 "es": [
-                    "Búsqueda semántica y vectorial de inmuebles por perfil y presupuesto con pgvector",
-                    "Human handoff en tiempo real vía WebSockets en el panel del corredor",
-                    "Workers con concurrencia distribuida segura (FOR UPDATE SKIP LOCKED)",
-                    "Observabilidad de punta a punta con OpenTelemetry, Prometheus y Jaeger"
+                    "Agente con herramientas conectadas al CRM: inmuebles, contratos y boletos",
+                    "Audios de WhatsApp transcritos antes de llegar al agente",
+                    "Calificación del lead y memoria de lo que ya informó",
+                    "Traspaso al corredor de turno con notificación en el celular"
                 ]
+            },
+            "gallery": [
+                {
+                    "image": "projects/imobi/01-atendimento.webp",
+                    "title": {
+                        "pt": "Atendimento",
+                        "en": "Conversation",
+                        "es": "Atención"
+                    },
+                    "caption": {
+                        "pt": "o agente responde com o imóvel do CRM e o painel mostra a qualificação e a memória do lead.",
+                        "en": "the agent replies with the property from the CRM and the panel shows the lead's qualification and memory.",
+                        "es": "el agente responde con el inmueble del CRM y el panel muestra la calificación y la memoria del lead."
+                    }
+                },
+                {
+                    "image": "projects/imobi/02-fluxo-de-leads.webp",
+                    "title": {
+                        "pt": "Fluxo de leads",
+                        "en": "Lead pipeline",
+                        "es": "Flujo de leads"
+                    },
+                    "caption": {
+                        "pt": "a IA faz a triagem e separa os leads qualificados, com orçamento, urgência e prontidão.",
+                        "en": "the AI triages leads and separates the qualified ones, with budget, urgency and readiness.",
+                        "es": "la IA hace el triaje y separa los leads calificados, con presupuesto, urgencia y disposición."
+                    }
+                },
+                {
+                    "image": "projects/imobi/03-relatorio.webp",
+                    "title": {
+                        "pt": "Relatório de qualificação",
+                        "en": "Qualification report",
+                        "es": "Informe de calificación"
+                    },
+                    "caption": {
+                        "pt": "o que a IA coletou de cada lead, com filtros e exportação para Excel.",
+                        "en": "what the AI collected from each lead, with filters and Excel export.",
+                        "es": "lo que la IA recopiló de cada lead, con filtros y exportación a Excel."
+                    }
+                },
+                {
+                    "image": "projects/imobi/04-imoveis-crm.webp",
+                    "title": {
+                        "pt": "Imóveis do CRM",
+                        "en": "CRM listings",
+                        "es": "Inmuebles del CRM"
+                    },
+                    "caption": {
+                        "pt": "o catálogo que o agente consulta para recomendar imóveis.",
+                        "en": "the catalog the agent queries to recommend properties.",
+                        "es": "el catálogo que el agente consulta para recomendar inmuebles."
+                    }
+                },
+                {
+                    "image": "projects/imobi/05-configuracoes-ia.webp",
+                    "title": {
+                        "pt": "Configurações da IA",
+                        "en": "AI settings",
+                        "es": "Configuración de la IA"
+                    },
+                    "caption": {
+                        "pt": "memória da conversa, imóveis por resposta e janela para agrupar mensagens seguidas.",
+                        "en": "conversation memory, properties per reply and the window for grouping consecutive messages.",
+                        "es": "memoria de la conversación, inmuebles por respuesta y ventana para agrupar mensajes seguidos."
+                    }
+                }
+            ],
+            "galleryNote": {
+                "pt": "dados de demonstração",
+                "en": "demo data",
+                "es": "datos de demostración"
             }
         },
         {

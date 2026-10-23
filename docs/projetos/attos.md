@@ -68,8 +68,8 @@ Cloudflare Worker entre o app e o provedor de IA (OpenRouter), publicado em `api
 
 ## Imagens
 
-- Capa do card: `src/assets/covers/attos.webp`, feita a partir de `store/pt-BR/feature-1024x500.png`.
-- Prints da loja em três idiomas ficam em `store/` no projeto do app.
+- Galeria do card em `src/assets/projects/attos/<pt|en|es>/`: as imagens da Google Play (`store/` no projeto do app) em três idiomas; o site mostra a versão do idioma escolhido. A primeira (banner da loja) é a capa.
+- Ordem: loja, Coach IA, início, treino ativo, treinos, dieta, evolução e músculos. A tela escura da home ficou de fora (repete a home).
 
 ## Pendências
 
