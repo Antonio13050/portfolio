@@ -325,6 +325,62 @@
     ],
     "projects": [
         {
+            "id": 8,
+            "title": {
+                "pt": "Attos — App de treino com Coach de IA",
+                "en": "Attos — Workout app with an AI Coach",
+                "es": "Attos — App de entrenamiento con Coach de IA"
+            },
+            "category": "IA",
+            "badgeType": "Product",
+            "badgeText": {
+                "pt": "App Android · em lançamento",
+                "en": "Android app · launching soon",
+                "es": "App Android · próximo lanzamiento"
+            },
+            "site": "https://attosfit.com",
+            "cover": "attos.webp",
+            "description": {
+                "pt": "App de musculação e nutrição com um Coach de IA que conhece a ficha do atleta. O Coach responde em streaming, monta treinos que viram fichas salvas com um toque e lê fotos de fichas de papel da academia para digitalizá-las. A IA roda num servidor próprio na Cloudflare, com troca automática de modelo, limite diário de uso e conferência do plano PRO.",
+                "en": "Workout and nutrition app with an AI Coach that knows the athlete's profile. The Coach streams its answers, builds workouts that become saved routines with one tap, and reads photos of paper gym sheets to digitize them. The AI runs on its own Cloudflare server, with automatic model fallback, daily usage limits and PRO plan verification.",
+                "es": "App de entrenamiento y nutrición con un Coach de IA que conoce el perfil del atleta. El Coach responde en streaming, arma rutinas que se guardan con un toque y lee fotos de rutinas en papel del gimnasio para digitalizarlas. La IA corre en un servidor propio en Cloudflare, con cambio automático de modelo, límite diario de uso y verificación del plan PRO."
+            },
+            "tags": [
+                "OpenRouter",
+                "Gemini Vision",
+                "Cloudflare Workers",
+                "D1",
+                "SSE",
+                "React 19",
+                "TypeScript",
+                "Capacitor",
+                "Firebase Auth",
+                "RevenueCat",
+                "Vitest",
+                "Playwright"
+            ],
+            "highlights": {
+                "pt": [
+                    "Coach com o contexto completo do atleta e resposta em streaming",
+                    "Treino sugerido em JSON vira ficha salva com um toque",
+                    "Leitura de fichas de papel com modelo de visão",
+                    "Servidor próprio com troca de modelo, limites diários e conferência do PRO"
+                ],
+                "en": [
+                    "Coach with the athlete's full context and streaming answers",
+                    "Suggested workouts in JSON become saved routines with one tap",
+                    "Paper gym sheets read with a vision model",
+                    "Own server with model fallback, daily limits and PRO verification"
+                ],
+                "es": [
+                    "Coach con el contexto completo del atleta y respuestas en streaming",
+                    "La rutina sugerida en JSON se guarda con un toque",
+                    "Lectura de rutinas en papel con un modelo de visión",
+                    "Servidor propio con cambio de modelo, límites diarios y verificación del PRO"
+                ]
+            }
+        },
+        {
             "id": 1,
             "title": {
                 "pt": "Insights AI — BI Conversacional Jurídico & Multi-Agente",

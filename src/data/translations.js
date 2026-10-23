@@ -21,6 +21,7 @@ export const translations = {
             title: "Projetos selecionados",
             github: "Repositório no GitHub",
             live: "Demo online",
+            site: "Site do app",
             enterprise: "Repositório corporativo"
         },
         experience: {
@@ -68,6 +69,7 @@ export const translations = {
             title: "Selected projects",
             github: "GitHub repository",
             live: "Live demo",
+            site: "App website",
             enterprise: "Enterprise repository"
         },
         experience: {
@@ -115,6 +117,7 @@ export const translations = {
             title: "Proyectos destacados",
             github: "Repositorio en GitHub",
             live: "Demo en línea",
+            site: "Sitio de la app",
             enterprise: "Repositorio corporativo"
         },
         experience: {

@@ -1,4 +1,4 @@
-import { FaGithub, FaArrowUpRightFromSquare, FaLock } from "react-icons/fa6";
+import { FaGithub, FaArrowUpRightFromSquare, FaGlobe, FaLock } from "react-icons/fa6";
 import { useLanguage } from "../context/LanguageContext";
 
 export default function ProjectCard({ item }) {
@@ -34,6 +34,11 @@ export default function ProjectCard({ item }) {
             )}
 
             <div className="flex flex-1 flex-col p-6">
+                {cover && item.badgeText && (
+                    <span className="mb-2 text-xs uppercase tracking-[0.1em] text-mist-dim">
+                        {localize(item.badgeText)}
+                    </span>
+                )}
                 <h3 className="font-display text-2xl font-bold">{name}</h3>
                 {subtitle && <p className="mt-1 text-sm font-medium text-mist-dim">{subtitle}</p>}
                 <p className="mt-2.5 text-[15px] leading-relaxed text-mist">{localize(item.description)}</p>
@@ -60,6 +65,17 @@ export default function ProjectCard({ item }) {
                         >
                             <FaArrowUpRightFromSquare className="text-xs" />
                             {t.projects.live}
+                        </a>
+                    )}
+                    {item.site && (
+                        <a
+                            href={item.site}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-flex items-center gap-2 text-accent transition-opacity hover:opacity-80"
+                        >
+                            <FaGlobe className="text-xs" />
+                            {t.projects.site}
                         </a>
                     )}
                     {item.badgeType === "Enterprise" && (

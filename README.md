@@ -68,6 +68,9 @@ Os itens de `career` e `education` aparecem juntos na linha do tempo, agrupados 
 
 ### Adicionando um projeto
 
+Cada projeto tem uma ficha completa em `docs/projetos/<nome>.md` (contexto, arquitetura, stack, links e pendências). O card do site é um resumo dela: atualize a ficha primeiro.
+
+
 Acrescente um item em `projects` no `data.json`:
 
 | Campo | Obrigatório | Descrição |
@@ -77,10 +80,11 @@ Acrescente um item em `projects` no `data.json`:
 | `category` | sim | `IA`, `Backend`, `Fullstack` ou `Frontend`; `Backend` deixa o fluxo do card em azul |
 | `tags` | sim | lista de tecnologias |
 | `badgeType` | não | `Enterprise` mostra "Repositório corporativo" no lugar do link; `OpenSource` e `LiveDemo` são informativos |
-| `badgeText` | não | rótulo exibido acima do fluxo, nos cards sem capa |
+| `badgeText` | não | rótulo do card: acima do título nos cards com capa, acima do fluxo nos sem capa |
 | `highlights` | não | lista (ou objeto `{ pt, en, es }` de listas) com os destaques; não aparece no layout atual |
 | `link` | não | URL do repositório no GitHub |
 | `online` | não | URL da demo |
+| `site` | não | URL do site do produto (link "Site do app") |
 | `cover` | não | nome de um arquivo em `src/assets/covers/` |
 | `flow` | não | fluxo da arquitetura exibido no lugar da capa (ex.: `EJE → CDC → SIE-PJ`) |
 
