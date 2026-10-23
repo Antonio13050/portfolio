@@ -15,7 +15,7 @@ O site é uma single page com as seções **Home**, **Sobre**, **Portfólio**, *
 
 ## Rodando localmente
 
-Requer Node.js 18+.
+Requer Node.js 24 (mesma versão usada no deploy da Vercel, definida em `engines` no package.json).
 
 ```bash
 npm install
