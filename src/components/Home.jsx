@@ -8,11 +8,11 @@ const outerOrbit = [
     { name: "LangGraph", x: "50%", y: "0%" },
     { name: "Java 21", x: "100%", y: "50%" },
     { name: "Next.js", x: "50%", y: "100%" },
-    { name: "PostgreSQL", x: "0%", y: "50%" },
+    { name: "Python", x: "0%", y: "50%" },
 ];
 
 const innerOrbit = [
-    { name: "Gemini", x: "85.36%", y: "14.64%", tone: "border-accent text-accent" },
+    { name: "LiteLLM", x: "85.36%", y: "14.64%", tone: "border-accent text-accent" },
     { name: "Spring Boot", x: "14.64%", y: "85.36%", tone: "border-accent-blue text-accent-blue" },
 ];
 

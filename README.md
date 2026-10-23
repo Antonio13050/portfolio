@@ -38,6 +38,7 @@ src/
     translations.js      # textos fixos da interface (pt, en, es)
     data.json            # carreira, formação e projetos
     links.js             # links de contato (GitHub, LinkedIn, WhatsApp, currículo)
+    skills.js            # competências: grupos de IA (com "Usado em") e base técnica
   assets/
     covers/              # capas dos cards de projeto (.webp)
 ```
