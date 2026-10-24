@@ -6,7 +6,7 @@ import { contactLinks } from "../data/links";
 // Posições em % da caixa de cada anel; o anel interno fica a 15% da borda
 const outerOrbit = [
     { name: "LangGraph", x: "50%", y: "0%" },
-    { name: "Java 21", x: "100%", y: "50%" },
+    { name: "Java", x: "100%", y: "50%" },
     { name: "Next.js", x: "50%", y: "100%" },
     { name: "Python", x: "0%", y: "50%" },
 ];

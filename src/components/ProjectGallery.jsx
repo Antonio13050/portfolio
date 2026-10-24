@@ -1,30 +1,12 @@
-import { Fragment, useEffect } from "react";
+import { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import { XMarkIcon, ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+import { XMarkIcon } from "@heroicons/react/24/outline";
+import ImageCarousel from "./ImageCarousel";
 import { useLanguage } from "../context/LanguageContext";
 
-const roundButton =
-    "inline-flex h-12 w-12 items-center justify-center rounded-full border border-night-edge bg-night-card/90 text-mist-bright transition-colors hover:border-mist-dim hover:bg-night-chip";
-
+// Galeria em tela cheia, aberta ao clicar na imagem do projeto
 export default function ProjectGallery({ open, onClose, images, index, onIndexChange, projectName, note }) {
     const { t } = useLanguage();
-    const total = images.length;
-    const current = images[index];
-    const hasMany = total > 1;
-    const go = (i) => onIndexChange((i + total) % total);
-
-    // Setas do teclado passam as imagens (Esc já é tratado pelo Dialog)
-    useEffect(() => {
-        if (!open || !hasMany) return undefined;
-        const handleKey = (event) => {
-            if (event.key === "ArrowLeft") go(index - 1);
-            if (event.key === "ArrowRight") go(index + 1);
-        };
-        window.addEventListener("keydown", handleKey);
-        return () => window.removeEventListener("keydown", handleKey);
-    });
-
-    if (!current) return null;
 
     return (
         <Transition appear show={open} as={Fragment}>
@@ -54,73 +36,24 @@ export default function ProjectGallery({ open, onClose, images, index, onIndexCh
                         >
                             <Dialog.Panel className="flex w-full max-w-[1180px] flex-col gap-3.5 font-sans text-mist-bright">
                                 <div className="flex items-center justify-between gap-4">
-                                    <div className="flex min-w-0 items-baseline gap-3">
-                                        <Dialog.Title className="font-display text-lg font-bold">{projectName}</Dialog.Title>
-                                        <span className="truncate text-[13px] text-mist-dim">
-                                            {hasMany && `${index + 1} / ${total}`}
-                                            {hasMany && note && " · "}
-                                            {note}
-                                        </span>
-                                    </div>
-                                    <button type="button" onClick={onClose} className={roundButton}>
+                                    <Dialog.Title className="font-display text-lg font-bold">{projectName}</Dialog.Title>
+                                    <button
+                                        type="button"
+                                        onClick={onClose}
+                                        className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-night-edge bg-night-card/90 hover:border-mist-dim"
+                                    >
                                         <span className="sr-only">{t.projects.gallery.close}</span>
                                         <XMarkIcon className="h-5 w-5" aria-hidden="true" />
                                     </button>
                                 </div>
-
-                                <div className="relative flex items-center">
-                                    <img
-                                        src={current.src}
-                                        alt={current.title || projectName}
-                                        className="max-h-[70vh] w-full rounded-2xl border border-night-edge bg-night-card object-contain"
-                                    />
-                                    {hasMany && (
-                                        <>
-                                            <button
-                                                type="button"
-                                                onClick={() => go(index - 1)}
-                                                className={`${roundButton} absolute left-3 top-1/2 -translate-y-1/2`}
-                                            >
-                                                <span className="sr-only">{t.projects.gallery.prev}</span>
-                                                <ChevronLeftIcon className="h-5 w-5" aria-hidden="true" />
-                                            </button>
-                                            <button
-                                                type="button"
-                                                onClick={() => go(index + 1)}
-                                                className={`${roundButton} absolute right-3 top-1/2 -translate-y-1/2`}
-                                            >
-                                                <span className="sr-only">{t.projects.gallery.next}</span>
-                                                <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
-                                            </button>
-                                        </>
-                                    )}
-                                </div>
-
-                                {current.title && (
-                                    <p className="text-[15px] leading-relaxed text-mist">
-                                        <b className="text-mist-bright">{current.title}</b>
-                                        {current.caption && `: ${current.caption}`}
-                                    </p>
-                                )}
-
-                                {hasMany && (
-                                    <div className="flex gap-2.5 overflow-x-auto pb-1">
-                                        {images.map((image, i) => (
-                                            <button
-                                                key={image.src}
-                                                type="button"
-                                                onClick={() => go(i)}
-                                                aria-current={i === index}
-                                                className={`h-14 w-24 flex-none overflow-hidden rounded-lg border-2 bg-night-card transition-opacity sm:w-28 ${
-                                                    i === index ? "border-accent" : "border-night-edge opacity-55 hover:opacity-100"
-                                                }`}
-                                            >
-                                                <span className="sr-only">{image.title || `${i + 1}`}</span>
-                                                <img src={image.src} alt="" className="h-full w-full object-cover object-left-top" />
-                                            </button>
-                                        ))}
-                                    </div>
-                                )}
+                                <ImageCarousel
+                                    images={images}
+                                    index={index}
+                                    onIndexChange={onIndexChange}
+                                    note={note}
+                                    alt={projectName}
+                                    imageClassName="max-h-[70vh]"
+                                />
                             </Dialog.Panel>
                         </Transition.Child>
                     </div>

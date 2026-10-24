@@ -62,7 +62,8 @@ Agente de IA que atende os leads de uma imobiliária pelo WhatsApp: entende text
 
 ## Imagens
 
-- Galeria em `src/assets/projects/imobi/` (a primeira imagem é a capa do card), prints de 23/10/2026 do painel rodando localmente (skill `dev-local`):
+- Capa: diagrama da arquitetura (`00-arquitetura-<pt|en|es>.webp`) e, em seguida, o fluxo simples (`00-fluxo-<pt|en|es>.webp`). Fontes em `docs/projetos/diagramas/imobi-arquitetura.html` e `imobi-fluxo.html`, traduções em `imobi-traducoes.py`.
+- Depois vêm os prints de 23/10/2026 do painel rodando localmente (skill `dev-local`):
   1. `01-atendimento.webp`: conversa do agente com o imóvel do CRM, qualificação BANT e memória do lead;
   2. `02-fluxo-de-leads.webp`: pipeline com triagem da IA e leads qualificados;
   3. `03-relatorio.webp`: relatório de qualificação com indicadores;

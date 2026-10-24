@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Imobi — arquitetura</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #060914; }
+  body { width: 1366px; height: 712px; overflow: hidden; position: relative; font-family: Inter, sans-serif; color: #EEF1FA; }
+  .stars { position: absolute; inset: 0; background-image: radial-gradient(1px 1px at 23px 41px, rgba(255,255,255,.55), transparent 60%), radial-gradient(1px 1px at 141px 97px, rgba(255,255,255,.35), transparent 60%), radial-gradient(1px 1px at 87px 163px, rgba(255,255,255,.5), transparent 60%); background-size: 229px 229px; }
+  .box { position: absolute; border: 1px solid #2A3452; border-radius: 16px; background: #0C1122; padding: 16px 18px; }
+  .label { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: #9BA3BD; font-weight: 600; }
+  .name { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 19px; margin-top: 4px; }
+  .desc { font-size: 13px; color: #C3C9DB; margin-top: 6px; line-height: 1.45; }
+  .tool { border-radius: 10px; background: #1A2238; border: 1px solid #2A3452; padding: 8px 12px; font-size: 12.5px; }
+  .agent { position: absolute; border-radius: 14px; border: 1px solid #FF9E5E; background: #1A1410; padding: 12px 14px; }
+  .agent .name { font-size: 17px; color: #FF9E5E; margin: 0; }
+  .agent .desc { font-size: 12px; margin-top: 4px; }
+  .tag { position: absolute; font-size: 12px; color: #9BA3BD; background: #060914; padding: 2px 8px; border-radius: 6px; z-index: 2; }
+  svg { position: absolute; inset: 0; z-index: 1; }
+</style>
+</head>
+<body>
+<div class="stars"></div>
+<svg width="1366" height="712" viewBox="0 0 1366 712" aria-hidden="true">
+  <defs>
+    <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#8AB4FF"/></marker>
+    <marker id="o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#FF9E5E"/></marker>
+  </defs>
+  <line x1="300" y1="200" x2="360" y2="200" stroke="#8AB4FF" stroke-width="2" marker-end="url(#b)"/>
+  <line x1="560" y1="200" x2="620" y2="200" stroke="#8AB4FF" stroke-width="2" marker-end="url(#b)"/>
+  <line x1="752" y1="300" x2="752" y2="344" stroke="#FF9E5E" stroke-width="2" marker-start="url(#o)" marker-end="url(#o)"/>
+  <line x1="1040" y1="200" x2="1076" y2="200" stroke="#FF9E5E" stroke-width="2" marker-start="url(#o)" marker-end="url(#o)"/>
+  <path d="M880 584 L880 620 L170 620 L170 592" fill="none" stroke="#8AB4FF" stroke-width="2" marker-end="url(#b)"/>
+  <line x1="170" y1="430" x2="170" y2="284" stroke="#8AB4FF" stroke-width="2" marker-end="url(#b)"/>
+  <line x1="1040" y1="500" x2="1076" y2="500" stroke="#8AB4FF" stroke-width="2" marker-end="url(#b)"/>
+</svg>
+
+<div style="position:absolute;left:40px;top:30px">
+  <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:28px">Imobi</div>
+  <div style="font-size:14px;color:#9BA3BD;margin-top:2px">Agente de IA para imobiliárias no WhatsApp</div>
+</div>
+
+<div class="box" style="left:40px;top:120px;width:260px;height:160px">
+  <div class="label">Lead</div>
+  <div class="name">WhatsApp</div>
+  <div class="desc">Mensagens de texto e de voz chegam pela API oficial da Meta.</div>
+</div>
+
+<div class="box" style="left:360px;top:120px;width:200px;height:160px">
+  <div class="label">Entrada</div>
+  <div class="name">Gateway</div>
+  <div class="desc">Agrupa mensagens seguidas e descarta repetidas.</div>
+</div>
+
+<div class="box" style="left:620px;top:84px;width:420px;height:500px;background:rgba(12,17,34,.72);border-color:#3A4770">
+  <div class="label">Worker · FastAPI</div>
+  <div class="name">Agente de IA</div>
+</div>
+<div class="agent" style="left:644px;top:156px;width:372px"><div class="name">Transcrição</div><div class="desc">Áudios viram texto com Gemini antes do agente</div></div>
+<div class="agent" style="left:644px;top:236px;width:372px;height:64px"><div class="name">LangGraph</div><div class="desc">Ciclo agente ↔ ferramentas até a resposta</div></div>
+<div style="position:absolute;left:644px;top:352px;width:372px;display:flex;flex-wrap:wrap;gap:8px">
+  <span class="tool">Buscar imóveis</span><span class="tool">Imóvel por código</span><span class="tool">Contratos</span><span class="tool">2ª via de boleto</span><span class="tool">Qualificar lead</span><span class="tool">Passar ao corretor</span>
+</div>
+<div style="position:absolute;left:644px;top:470px;width:372px;font-size:13px;color:#C3C9DB;line-height:1.5">Memória do lead: o que ele já informou entra no contexto e o agente não repete perguntas.</div>
+
+<div class="box" style="left:1076px;top:120px;width:250px;height:160px;border-color:#FF9E5E">
+  <div class="label">CRM</div>
+  <div class="name">Apresenta.me</div>
+  <div class="desc">Imóveis, contratos e boletos consultados em tempo real.</div>
+</div>
+
+<div class="box" style="left:1076px;top:420px;width:250px;height:164px">
+  <div class="label">Corretor</div>
+  <div class="name">Painel · PWA</div>
+  <div class="desc">Notificação no celular e conversa assumida em tempo real.</div>
+</div>
+
+<div class="box" style="left:40px;top:432px;width:260px;height:160px">
+  <div class="label">Resposta</div>
+  <div class="name">Outbox</div>
+  <div class="desc">Envio garantido ao WhatsApp, com listas de imóveis paginadas.</div>
+</div>
+<span class="tag" style="left:400px;top:608px">resposta ao lead</span>
+
+<div style="position:absolute;left:40px;bottom:22px;font-size:12px;color:#7E87A3">Diagrama ilustrativo da arquitetura</div>
+</body>
+</html>

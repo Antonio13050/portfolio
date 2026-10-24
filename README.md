@@ -76,12 +76,17 @@ Acrescente um item em `projects` no `data.json`:
 | Campo | Obrigatório | Descrição |
 | --- | --- | --- |
 | `id` | sim | número único |
-| `title`, `description` | sim | texto ou objeto `{ pt, en, es }`; no título, o que vem depois de ` — ` vira o subtítulo do card |
-| `category` | sim | `IA`, `Backend`, `Fullstack` ou `Frontend`; `Backend` deixa o fluxo do card em azul |
-| `tags` | sim | lista de tecnologias |
+| `title`, `description` | sim | texto ou objeto `{ pt, en, es }`; no título, o que vem depois de ` — ` vira o subtítulo; a `description` completa aparece na janela "Ver detalhes" |
+| `summary` | sim | resumo de uma ou duas frases, exibido na vitrine ou no cartão de "Outros projetos" |
+| `featured` | não | `true` coloca o projeto na vitrine principal (imagem grande, um por linha); sem ele, vai para "Outros projetos" |
+| `category` | sim | `IA`, `Backend`, `Fullstack` ou `Frontend` |
+| `tags` | sim | lista de tecnologias; a vitrine mostra as 6 primeiras |
 | `badgeType` | não | `Enterprise` mostra "Repositório corporativo" no lugar do link; `OpenSource` e `LiveDemo` são informativos |
-| `badgeText` | não | rótulo do card: acima do título nos cards com capa, acima do fluxo nos sem capa |
-| `highlights` | não | lista (ou objeto `{ pt, en, es }` de listas) com os destaques; não aparece no layout atual |
+| `badgeText` | não | rótulo acima do título (ex.: "Em produção · Líder Imóveis") |
+| `keyPoints` | não | 3 destaques `{ title, text }` exibidos em mini-blocos na vitrine |
+| `steps` | não | passos `{ title, text }` da seção "Como funciona" na janela de detalhes |
+| `facts` | não | linhas `{ label, value }` do quadro "Informações" na janela de detalhes |
+| `stackGroups` | não | tecnologias agrupadas `{ group, items }` na janela de detalhes; sem ele, a janela usa `tags` |
 | `link` | não | URL do repositório no GitHub |
 | `online` | não | URL da demo |
 | `site` | não | URL do site do produto (link "Site do app") |

@@ -358,26 +358,6 @@
                 "Vitest",
                 "Playwright"
             ],
-            "highlights": {
-                "pt": [
-                    "Coach com o contexto completo do atleta e resposta em streaming",
-                    "Treino sugerido em JSON vira ficha salva com um toque",
-                    "Leitura de fichas de papel com modelo de visão",
-                    "Servidor próprio com troca de modelo, limites diários e conferência do PRO"
-                ],
-                "en": [
-                    "Coach with the athlete's full context and streaming answers",
-                    "Suggested workouts in JSON become saved routines with one tap",
-                    "Paper gym sheets read with a vision model",
-                    "Own server with model fallback, daily limits and PRO verification"
-                ],
-                "es": [
-                    "Coach con el contexto completo del atleta y respuestas en streaming",
-                    "La rutina sugerida en JSON se guarda con un toque",
-                    "Lectura de rutinas en papel con un modelo de visión",
-                    "Servidor propio con cambio de modelo, límites diarios y verificación del PRO"
-                ]
-            },
             "private": true,
             "gallery": [
                 {
@@ -516,85 +496,214 @@
                         "es": "mapa de los músculos más entrenados."
                     }
                 }
-            ]
-        },
-        {
-            "id": 1,
-            "title": {
-                "pt": "Insights AI — BI conversacional para tribunais",
-                "en": "Insights AI — Conversational BI for courts",
-                "es": "Insights AI — BI conversacional para tribunales"
-            },
-            "category": "IA",
-            "badgeType": "Enterprise",
-            "badgeText": {
-                "pt": "Corporativo · Softplan",
-                "en": "Enterprise · Softplan",
-                "es": "Corporativo · Softplan"
-            },
-            "description": {
-                "pt": "Perguntas em linguagem natural viram indicadores do CNJ, respondidos em streaming. Um sistema multi-agente em LangGraph (Guardian → Router → Specialists → Formatter) escolhe entre 9 ferramentas SQL e consulta o PostgreSQL; um agente de produtividade reconhece magistrados mesmo pelo nome escrito de forma aproximada. Os modelos passam pelo LiteLLM, com memória das conversas no Redis, login via Keycloak e tracing no LangSmith.",
-                "en": "Natural-language questions become CNJ indicators, answered in streaming. A LangGraph multi-agent system (Guardian → Router → Specialists → Formatter) picks among 9 SQL tools and queries PostgreSQL; a productivity agent recognizes judges even when their names are misspelled. Models go through LiteLLM, with conversation memory in Redis, login via Keycloak and tracing in LangSmith.",
-                "es": "Preguntas en lenguaje natural se convierten en indicadores del CNJ, respondidos en streaming. Un sistema multiagente en LangGraph (Guardian → Router → Specialists → Formatter) elige entre 9 herramientas SQL y consulta PostgreSQL; un agente de productividad reconoce a magistrados aun con el nombre escrito de forma aproximada. Los modelos pasan por LiteLLM, con memoria de las conversaciones en Redis, login vía Keycloak y tracing en LangSmith."
-            },
-            "tags": [
-                "LangGraph",
-                "LangChain",
-                "LiteLLM",
-                "LangSmith",
-                "FastAPI",
-                "Python 3.12",
-                "PostgreSQL",
-                "Redis",
-                "Next.js 16",
-                "assistant-ui",
-                "SSE",
-                "Keycloak"
             ],
-            "highlights": {
-                "pt": [
-                    "Pipeline multi-agente: Guardian → Router → Specialists → Formatter",
-                    "9 ferramentas SQL para indicadores do CNJ",
-                    "Agente de produtividade (ReAct) com reconhecimento aproximado de nomes",
-                    "Modelos via LiteLLM, memória no Redis e tracing no LangSmith"
-                ],
-                "en": [
-                    "Multi-agent pipeline: Guardian → Router → Specialists → Formatter",
-                    "9 SQL tools for CNJ indicators",
-                    "Productivity agent (ReAct) with fuzzy name matching",
-                    "Models via LiteLLM, memory in Redis and tracing in LangSmith"
-                ],
-                "es": [
-                    "Pipeline multiagente: Guardian → Router → Specialists → Formatter",
-                    "9 herramientas SQL para indicadores del CNJ",
-                    "Agente de productividad (ReAct) con reconocimiento aproximado de nombres",
-                    "Modelos vía LiteLLM, memoria en Redis y tracing en LangSmith"
-                ]
+            "featured": true,
+            "summary": {
+                "pt": "App de treino com um Coach de IA que conhece a ficha do atleta, monta treinos salvos com um toque e lê fichas de papel por foto.",
+                "en": "Workout app with an AI Coach that knows the athlete's profile, builds workouts saved with one tap and reads paper gym sheets from a photo.",
+                "es": "App de entrenamiento con un Coach de IA que conoce el perfil del atleta, arma rutinas que se guardan con un toque y lee rutinas en papel por foto."
             },
-            "gallery": [
+            "keyPoints": [
                 {
-                    "image": {
-                        "pt": "projects/insights-ai/01-arquitetura-pt.webp",
-                        "en": "projects/insights-ai/01-arquitetura-en.webp",
-                        "es": "projects/insights-ai/01-arquitetura-es.webp"
-                    },
                     "title": {
-                        "pt": "Arquitetura",
-                        "en": "Architecture",
-                        "es": "Arquitectura"
+                        "pt": "Coach IA",
+                        "en": "AI Coach",
+                        "es": "Coach IA"
                     },
-                    "caption": {
-                        "pt": "do chat ao pipeline de agentes, com os modelos via LiteLLM e os dados no PostgreSQL e no Redis.",
-                        "en": "from the chat to the agent pipeline, with models via LiteLLM and data in PostgreSQL and Redis.",
-                        "es": "del chat al pipeline de agentes, con los modelos vía LiteLLM y los datos en PostgreSQL y Redis."
+                    "text": {
+                        "pt": "Streaming com o contexto do atleta",
+                        "en": "Streaming with the athlete's context",
+                        "es": "Streaming con el contexto del atleta"
+                    }
+                },
+                {
+                    "title": {
+                        "pt": "Visão",
+                        "en": "Vision",
+                        "es": "Visión"
+                    },
+                    "text": {
+                        "pt": "Fichas de papel viram treinos",
+                        "en": "Paper sheets become workouts",
+                        "es": "Rutinas en papel se vuelven entrenamientos"
+                    }
+                },
+                {
+                    "title": {
+                        "pt": "Servidor",
+                        "en": "Server",
+                        "es": "Servidor"
+                    },
+                    "text": {
+                        "pt": "Troca de modelo e cotas diárias",
+                        "en": "Model fallback and daily quotas",
+                        "es": "Cambio de modelo y cuotas diarias"
                     }
                 }
             ],
-            "galleryNote": {
-                "pt": "diagrama ilustrativo",
-                "en": "illustrative diagram",
-                "es": "diagrama ilustrativo"
-            }
+            "steps": [
+                {
+                    "title": {
+                        "pt": "Ficha do atleta",
+                        "en": "Athlete profile",
+                        "es": "Perfil del atleta"
+                    },
+                    "text": {
+                        "pt": "o app monta o contexto com perfil, treinos recentes, macros e água.",
+                        "en": "the app builds the context with profile, recent workouts, macros and water.",
+                        "es": "la app arma el contexto con perfil, entrenamientos recientes, macros y agua."
+                    }
+                },
+                {
+                    "title": {
+                        "pt": "Coach IA",
+                        "en": "AI Coach",
+                        "es": "Coach IA"
+                    },
+                    "text": {
+                        "pt": "um servidor próprio na Cloudflare escolhe o modelo e responde em streaming.",
+                        "en": "an own server on Cloudflare picks the model and answers in streaming.",
+                        "es": "un servidor propio en Cloudflare elige el modelo y responde en streaming."
+                    }
+                },
+                {
+                    "title": {
+                        "pt": "Treino em JSON",
+                        "en": "Workout as JSON",
+                        "es": "Rutina en JSON"
+                    },
+                    "text": {
+                        "pt": "a sugestão vira um card com o botão \"Salvar em Meus treinos\".",
+                        "en": "the suggestion becomes a card with a \"Save to My workouts\" button.",
+                        "es": "la sugerencia se convierte en una tarjeta con el botón \"Guardar en Mis rutinas\"."
+                    }
+                },
+                {
+                    "title": {
+                        "pt": "Foto da ficha",
+                        "en": "Sheet photo",
+                        "es": "Foto de la rutina"
+                    },
+                    "text": {
+                        "pt": "um modelo de visão lê a ficha de papel e cria um treino por dia.",
+                        "en": "a vision model reads the paper sheet and creates one workout per day.",
+                        "es": "un modelo de visión lee la rutina en papel y crea un entrenamiento por día."
+                    }
+                },
+                {
+                    "title": {
+                        "pt": "Limites e plano",
+                        "en": "Limits and plan",
+                        "es": "Límites y plan"
+                    },
+                    "text": {
+                        "pt": "cotas diárias por usuário e plano PRO conferido no RevenueCat.",
+                        "en": "daily per-user quotas and PRO plan checked with RevenueCat.",
+                        "es": "cuotas diarias por usuario y plan PRO verificado en RevenueCat."
+                    }
+                }
+            ],
+            "facts": [
+                {
+                    "label": {
+                        "pt": "Status",
+                        "en": "Status",
+                        "es": "Estado"
+                    },
+                    "value": {
+                        "pt": "Em lançamento na Google Play",
+                        "en": "Launching on Google Play",
+                        "es": "En lanzamiento en Google Play"
+                    }
+                },
+                {
+                    "label": {
+                        "pt": "Tipo",
+                        "en": "Type",
+                        "es": "Tipo"
+                    },
+                    "value": {
+                        "pt": "Produto próprio",
+                        "en": "Own product",
+                        "es": "Producto propio"
+                    }
+                },
+                {
+                    "label": {
+                        "pt": "Plataforma",
+                        "en": "Platform",
+                        "es": "Plataforma"
+                    },
+                    "value": {
+                        "pt": "Android",
+                        "en": "Android",
+                        "es": "Android"
+                    }
+                },
+                {
+                    "label": {
+                        "pt": "Código",
+                        "en": "Code",
+                        "es": "Código"
+                    },
+                    "value": {
+                        "pt": "Privado",
+                        "en": "Private",
+                        "es": "Privado"
+                    }
+                }
+            ],
+            "stackGroups": [
+                {
+                    "group": {
+                        "pt": "IA",
+                        "en": "AI",
+                        "es": "IA"
+                    },
+                    "items": [
+                        "OpenRouter",
+                        "Gemini Vision",
+                        "SSE"
+                    ]
+                },
+                {
+                    "group": {
+                        "pt": "App",
+                        "en": "App",
+                        "es": "App"
+                    },
+                    "items": [
+                        "React 19",
+                        "TypeScript",
+                        "Capacitor",
+                        "Recharts"
+                    ]
+                },
+                {
+                    "group": {
+                        "pt": "Servidor",
+                        "en": "Server",
+                        "es": "Servidor"
+                    },
+                    "items": [
+                        "Cloudflare Workers",
+                        "D1",
+                        "Firebase Auth",
+                        "RevenueCat"
+                    ]
+                },
+                {
+                    "group": {
+                        "pt": "Testes",
+                        "en": "Tests",
+                        "es": "Pruebas"
+                    },
+                    "items": [
+                        "Vitest",
+                        "Playwright"
+                    ]
+                }
+            ]
         },
         {
             "id": 2,
@@ -631,27 +740,41 @@
                 "WebSockets",
                 "Docker"
             ],
-            "highlights": {
-                "pt": [
-                    "Agente com ferramentas ligadas ao CRM: imóveis, contratos e segunda via de boleto",
-                    "Áudios do WhatsApp transcritos antes de chegar ao agente",
-                    "Qualificação do lead e memória do que ele já informou",
-                    "Passagem ao corretor de plantão com notificação no celular"
-                ],
-                "en": [
-                    "Agent with CRM-connected tools: properties, contracts and payment slips",
-                    "WhatsApp voice notes transcribed before reaching the agent",
-                    "Lead qualification and memory of what the lead already said",
-                    "Handoff to the on-duty agent with a phone notification"
-                ],
-                "es": [
-                    "Agente con herramientas conectadas al CRM: inmuebles, contratos y boletos",
-                    "Audios de WhatsApp transcritos antes de llegar al agente",
-                    "Calificación del lead y memoria de lo que ya informó",
-                    "Traspaso al corredor de turno con notificación en el celular"
-                ]
-            },
             "gallery": [
+                {
+                    "image": {
+                        "pt": "projects/imobi/00-arquitetura-pt.webp",
+                        "en": "projects/imobi/00-arquitetura-en.webp",
+                        "es": "projects/imobi/00-arquitetura-es.webp"
+                    },
+                    "title": {
+                        "pt": "Arquitetura",
+                        "en": "Architecture",
+                        "es": "Arquitectura"
+                    },
+                    "caption": {
+                        "pt": "do WhatsApp ao agente, às ferramentas do CRM e ao painel do corretor.",
+                        "en": "from WhatsApp to the agent, the CRM tools and the realtor's dashboard.",
+                        "es": "de WhatsApp al agente, a las herramientas del CRM y al panel del corredor."
+                    }
+                },
+                {
+                    "image": {
+                        "pt": "projects/imobi/00-fluxo-pt.webp",
+                        "en": "projects/imobi/00-fluxo-en.webp",
+                        "es": "projects/imobi/00-fluxo-es.webp"
+                    },
+                    "title": {
+                        "pt": "Fluxo",
+                        "en": "Flow",
+                        "es": "Flujo"
+                    },
+                    "caption": {
+                        "pt": "o lead pergunta no WhatsApp, o agente resolve e o corretor assume quando precisa.",
+                        "en": "the lead asks on WhatsApp, the agent handles it and the realtor takes over when needed.",
+                        "es": "el lead pregunta en WhatsApp, el agente resuelve y el corredor asume cuando hace falta."
+                    }
+                },
                 {
                     "image": "projects/imobi/01-atendimento.webp",
                     "title": {
@@ -722,7 +845,483 @@
                 "pt": "dados de demonstração",
                 "en": "demo data",
                 "es": "datos de demostración"
-            }
+            },
+            "featured": true,
+            "summary": {
+                "pt": "Agente de IA que atende os leads da imobiliária no WhatsApp, busca imóveis no CRM e passa a conversa ao corretor certo.",
+                "en": "AI agent that handles the agency's leads on WhatsApp, looks up properties in the CRM and hands the conversation to the right realtor.",
+                "es": "Agente de IA que atiende a los leads de la inmobiliaria en WhatsApp, busca inmuebles en el CRM y pasa la conversación al corredor adecuado."
+            },
+            "keyPoints": [
+                {
+                    "title": {
+                        "pt": "Agente",
+                        "en": "Agent",
+                        "es": "Agente"
+                    },
+                    "text": {
+                        "pt": "LangGraph com ferramentas do CRM",
+                        "en": "LangGraph with CRM tools",
+                        "es": "LangGraph con herramientas del CRM"
+                    }
+                },
+                {
+                    "title": {
+                        "pt": "Áudio",
+                        "en": "Voice",
+                        "es": "Audio"
+                    },
+                    "text": {
+                        "pt": "Mensagens de voz transcritas",
+                        "en": "Voice notes transcribed",
+                        "es": "Mensajes de voz transcritos"
+                    }
+                },
+                {
+                    "title": {
+                        "pt": "Corretor",
+                        "en": "Realtor",
+                        "es": "Corredor"
+                    },
+                    "text": {
+                        "pt": "Avisado por push no celular",
+                        "en": "Notified by push on the phone",
+                        "es": "Avisado por push en el celular"
+                    }
+                }
+            ],
+            "steps": [
+                {
+                    "title": {
+                        "pt": "Gateway",
+                        "en": "Gateway",
+                        "es": "Gateway"
+                    },
+                    "text": {
+                        "pt": "recebe a mensagem do WhatsApp, agrupa mensagens seguidas e descarta repetidas.",
+                        "en": "receives the WhatsApp message, groups consecutive messages and drops duplicates.",
+                        "es": "recibe el mensaje de WhatsApp, agrupa mensajes seguidos y descarta repetidos."
+                    }
+                },
+                {
+                    "title": {
+                        "pt": "Worker",
+                        "en": "Worker",
+                        "es": "Worker"
+                    },
+                    "text": {
+                        "pt": "transcreve áudios e roda o agente LangGraph com as ferramentas do CRM.",
+                        "en": "transcribes voice notes and runs the LangGraph agent with the CRM tools.",
+                        "es": "transcribe audios y ejecuta el agente LangGraph con las herramientas del CRM."
+                    }
+                },
+                {
+                    "title": {
+                        "pt": "Memória do lead",
+                        "en": "Lead memory",
+                        "es": "Memoria del lead"
+                    },
+                    "text": {
+                        "pt": "guarda o que o lead já informou, para o agente não repetir perguntas.",
+                        "en": "keeps what the lead already said, so the agent doesn't ask again.",
+                        "es": "guarda lo que el lead ya informó, para que el agente no repita preguntas."
+                    }
+                },
+                {
+                    "title": {
+                        "pt": "Outbox",
+                        "en": "Outbox",
+                        "es": "Outbox"
+                    },
+                    "text": {
+                        "pt": "envia a resposta com garantia de entrega, com listas de imóveis paginadas.",
+                        "en": "sends the reply with guaranteed delivery and paginated property lists.",
+                        "es": "envía la respuesta con entrega garantizada y listas de inmuebles paginadas."
+                    }
+                },
+                {
+                    "title": {
+                        "pt": "Painel",
+                        "en": "Dashboard",
+                        "es": "Panel"
+                    },
+                    "text": {
+                        "pt": "avisa o corretor de plantão, que assume a conversa em tempo real.",
+                        "en": "notifies the on-duty realtor, who takes over the conversation in real time.",
+                        "es": "avisa al corredor de turno, que asume la conversación en tiempo real."
+                    }
+                }
+            ],
+            "facts": [
+                {
+                    "label": {
+                        "pt": "Status",
+                        "en": "Status",
+                        "es": "Estado"
+                    },
+                    "value": {
+                        "pt": "Em produção",
+                        "en": "In production",
+                        "es": "En producción"
+                    }
+                },
+                {
+                    "label": {
+                        "pt": "Cliente",
+                        "en": "Client",
+                        "es": "Cliente"
+                    },
+                    "value": {
+                        "pt": "Líder Imóveis",
+                        "en": "Líder Imóveis",
+                        "es": "Líder Imóveis"
+                    }
+                },
+                {
+                    "label": {
+                        "pt": "Tipo",
+                        "en": "Type",
+                        "es": "Tipo"
+                    },
+                    "value": {
+                        "pt": "Produto próprio",
+                        "en": "Own product",
+                        "es": "Producto propio"
+                    }
+                },
+                {
+                    "label": {
+                        "pt": "Código",
+                        "en": "Code",
+                        "es": "Código"
+                    },
+                    "value": {
+                        "pt": "Privado",
+                        "en": "Private",
+                        "es": "Privado"
+                    }
+                }
+            ],
+            "stackGroups": [
+                {
+                    "group": {
+                        "pt": "IA",
+                        "en": "AI",
+                        "es": "IA"
+                    },
+                    "items": [
+                        "LangGraph",
+                        "LangChain",
+                        "OpenRouter",
+                        "Gemini"
+                    ]
+                },
+                {
+                    "group": {
+                        "pt": "Backend",
+                        "en": "Backend",
+                        "es": "Backend"
+                    },
+                    "items": [
+                        "FastAPI",
+                        "PostgreSQL",
+                        "Redis",
+                        "WhatsApp API"
+                    ]
+                },
+                {
+                    "group": {
+                        "pt": "Painel",
+                        "en": "Dashboard",
+                        "es": "Panel"
+                    },
+                    "items": [
+                        "Next.js 16",
+                        "PWA",
+                        "Web Push",
+                        "WebSockets"
+                    ]
+                },
+                {
+                    "group": {
+                        "pt": "Infra",
+                        "en": "Infra",
+                        "es": "Infra"
+                    },
+                    "items": [
+                        "Docker",
+                        "OpenTelemetry",
+                        "GitHub Actions"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "title": {
+                "pt": "Insights AI — BI conversacional para tribunais",
+                "en": "Insights AI — Conversational BI for courts",
+                "es": "Insights AI — BI conversacional para tribunales"
+            },
+            "category": "IA",
+            "badgeType": "Enterprise",
+            "badgeText": {
+                "pt": "Corporativo · Softplan",
+                "en": "Enterprise · Softplan",
+                "es": "Corporativo · Softplan"
+            },
+            "description": {
+                "pt": "Perguntas em linguagem natural viram indicadores do CNJ, respondidos em streaming. Um sistema multi-agente em LangGraph (Guardian → Router → Specialists → Formatter) escolhe entre 9 ferramentas SQL e consulta o PostgreSQL; um agente de produtividade reconhece magistrados mesmo pelo nome escrito de forma aproximada. Os modelos passam pelo LiteLLM, com memória das conversas no Redis, login via Keycloak e tracing no LangSmith.",
+                "en": "Natural-language questions become CNJ indicators, answered in streaming. A LangGraph multi-agent system (Guardian → Router → Specialists → Formatter) picks among 9 SQL tools and queries PostgreSQL; a productivity agent recognizes judges even when their names are misspelled. Models go through LiteLLM, with conversation memory in Redis, login via Keycloak and tracing in LangSmith.",
+                "es": "Preguntas en lenguaje natural se convierten en indicadores del CNJ, respondidos en streaming. Un sistema multiagente en LangGraph (Guardian → Router → Specialists → Formatter) elige entre 9 herramientas SQL y consulta PostgreSQL; un agente de productividad reconoce a magistrados aun con el nombre escrito de forma aproximada. Los modelos pasan por LiteLLM, con memoria de las conversaciones en Redis, login vía Keycloak y tracing en LangSmith."
+            },
+            "tags": [
+                "LangGraph",
+                "LangChain",
+                "LiteLLM",
+                "LangSmith",
+                "FastAPI",
+                "Python 3.12",
+                "PostgreSQL",
+                "Redis",
+                "Next.js 16",
+                "assistant-ui",
+                "SSE",
+                "Keycloak"
+            ],
+            "gallery": [
+                {
+                    "image": {
+                        "pt": "projects/insights-ai/01-arquitetura-pt.webp",
+                        "en": "projects/insights-ai/01-arquitetura-en.webp",
+                        "es": "projects/insights-ai/01-arquitetura-es.webp"
+                    },
+                    "title": {
+                        "pt": "Arquitetura",
+                        "en": "Architecture",
+                        "es": "Arquitectura"
+                    },
+                    "caption": {
+                        "pt": "do chat ao pipeline de agentes, com os modelos via LiteLLM e os dados no PostgreSQL e no Redis.",
+                        "en": "from the chat to the agent pipeline, with models via LiteLLM and data in PostgreSQL and Redis.",
+                        "es": "del chat al pipeline de agentes, con los modelos vía LiteLLM y los datos en PostgreSQL y Redis."
+                    }
+                }
+            ],
+            "galleryNote": {
+                "pt": "diagrama ilustrativo",
+                "en": "illustrative diagram",
+                "es": "diagrama ilustrativo"
+            },
+            "featured": true,
+            "summary": {
+                "pt": "BI conversacional: tribunais perguntam em linguagem natural e recebem indicadores do CNJ em tempo real.",
+                "en": "Conversational BI: courts ask in natural language and get CNJ indicators in real time.",
+                "es": "BI conversacional: los tribunales preguntan en lenguaje natural y reciben indicadores del CNJ en tiempo real."
+            },
+            "keyPoints": [
+                {
+                    "title": {
+                        "pt": "Multi-agente",
+                        "en": "Multi-agent",
+                        "es": "Multiagente"
+                    },
+                    "text": {
+                        "pt": "Guardian → Router → Specialists",
+                        "en": "Guardian → Router → Specialists",
+                        "es": "Guardian → Router → Specialists"
+                    }
+                },
+                {
+                    "title": {
+                        "pt": "Dados",
+                        "en": "Data",
+                        "es": "Datos"
+                    },
+                    "text": {
+                        "pt": "9 ferramentas SQL do CNJ",
+                        "en": "9 CNJ SQL tools",
+                        "es": "9 herramientas SQL del CNJ"
+                    }
+                },
+                {
+                    "title": {
+                        "pt": "Modelos",
+                        "en": "Models",
+                        "es": "Modelos"
+                    },
+                    "text": {
+                        "pt": "LiteLLM e tracing no LangSmith",
+                        "en": "LiteLLM and tracing in LangSmith",
+                        "es": "LiteLLM y tracing en LangSmith"
+                    }
+                }
+            ],
+            "steps": [
+                {
+                    "title": {
+                        "pt": "Guardian",
+                        "en": "Guardian",
+                        "es": "Guardian"
+                    },
+                    "text": {
+                        "pt": "confere se a pergunta está no escopo.",
+                        "en": "checks that the question is in scope.",
+                        "es": "verifica que la pregunta esté en el alcance."
+                    }
+                },
+                {
+                    "title": {
+                        "pt": "Router",
+                        "en": "Router",
+                        "es": "Router"
+                    },
+                    "text": {
+                        "pt": "escolhe o especialista certo para a pergunta.",
+                        "en": "picks the right specialist for the question.",
+                        "es": "elige el especialista adecuado para la pregunta."
+                    }
+                },
+                {
+                    "title": {
+                        "pt": "Specialists",
+                        "en": "Specialists",
+                        "es": "Specialists"
+                    },
+                    "text": {
+                        "pt": "consultam os indicadores com 9 ferramentas SQL.",
+                        "en": "query the indicators with 9 SQL tools.",
+                        "es": "consultan los indicadores con 9 herramientas SQL."
+                    }
+                },
+                {
+                    "title": {
+                        "pt": "Formatter",
+                        "en": "Formatter",
+                        "es": "Formatter"
+                    },
+                    "text": {
+                        "pt": "monta a resposta final, enviada em streaming ao chat.",
+                        "en": "builds the final answer, streamed to the chat.",
+                        "es": "arma la respuesta final, enviada en streaming al chat."
+                    }
+                },
+                {
+                    "title": {
+                        "pt": "Produtividade",
+                        "en": "Productivity",
+                        "es": "Productividad"
+                    },
+                    "text": {
+                        "pt": "um agente ReAct reconhece magistrados mesmo com o nome escrito de forma aproximada.",
+                        "en": "a ReAct agent recognizes judges even when their names are misspelled.",
+                        "es": "un agente ReAct reconoce a magistrados aun con el nombre escrito de forma aproximada."
+                    }
+                }
+            ],
+            "facts": [
+                {
+                    "label": {
+                        "pt": "Empresa",
+                        "en": "Company",
+                        "es": "Empresa"
+                    },
+                    "value": {
+                        "pt": "Softplan",
+                        "en": "Softplan",
+                        "es": "Softplan"
+                    }
+                },
+                {
+                    "label": {
+                        "pt": "Tipo",
+                        "en": "Type",
+                        "es": "Tipo"
+                    },
+                    "value": {
+                        "pt": "Projeto corporativo",
+                        "en": "Enterprise project",
+                        "es": "Proyecto corporativo"
+                    }
+                },
+                {
+                    "label": {
+                        "pt": "Área",
+                        "en": "Domain",
+                        "es": "Área"
+                    },
+                    "value": {
+                        "pt": "Judiciário brasileiro",
+                        "en": "Brazilian judiciary",
+                        "es": "Poder Judicial brasileño"
+                    }
+                },
+                {
+                    "label": {
+                        "pt": "Código",
+                        "en": "Code",
+                        "es": "Código"
+                    },
+                    "value": {
+                        "pt": "Repositório corporativo",
+                        "en": "Enterprise repository",
+                        "es": "Repositorio corporativo"
+                    }
+                }
+            ],
+            "stackGroups": [
+                {
+                    "group": {
+                        "pt": "IA",
+                        "en": "AI",
+                        "es": "IA"
+                    },
+                    "items": [
+                        "LangGraph",
+                        "LangChain",
+                        "LiteLLM",
+                        "LangSmith"
+                    ]
+                },
+                {
+                    "group": {
+                        "pt": "Backend",
+                        "en": "Backend",
+                        "es": "Backend"
+                    },
+                    "items": [
+                        "FastAPI",
+                        "Python 3.12",
+                        "PostgreSQL",
+                        "Redis"
+                    ]
+                },
+                {
+                    "group": {
+                        "pt": "Frontend",
+                        "en": "Frontend",
+                        "es": "Frontend"
+                    },
+                    "items": [
+                        "Next.js 16",
+                        "React 19",
+                        "assistant-ui",
+                        "SSE"
+                    ]
+                },
+                {
+                    "group": {
+                        "pt": "Segurança e operação",
+                        "en": "Security & operations",
+                        "es": "Seguridad y operación"
+                    },
+                    "items": [
+                        "Keycloak",
+                        "Sentry",
+                        "Docker"
+                    ]
+                }
+            ]
         },
         {
             "id": 3,
@@ -757,26 +1356,6 @@
                 "Next.js 16",
                 "Kubernetes"
             ],
-            "highlights": {
-                "pt": [
-                    "Captura de mudanças com triggers PL/pgSQL e leitura por polling",
-                    "Garantia exactly-once entre duas bases com tabela de controle",
-                    "Fechamentos mensais e anuais automáticos, com reaberturas auditadas",
-                    "Spring JDBC puro em 5 pools e testes com Testcontainers"
-                ],
-                "en": [
-                    "Change data capture with PL/pgSQL triggers and polling",
-                    "Exactly-once guarantee across two databases with a control table",
-                    "Automatic monthly and annual closes, with audited reopenings",
-                    "Plain Spring JDBC in 5 pools and tests with Testcontainers"
-                ],
-                "es": [
-                    "Captura de cambios con triggers PL/pgSQL y lectura por polling",
-                    "Garantía exactly-once entre dos bases con tabla de control",
-                    "Cierres mensuales y anuales automáticos, con reaperturas auditadas",
-                    "Spring JDBC puro en 5 pools y pruebas con Testcontainers"
-                ]
-            },
             "gallery": [
                 {
                     "image": {
@@ -800,7 +1379,215 @@
                 "pt": "diagrama ilustrativo",
                 "en": "illustrative diagram",
                 "es": "diagrama ilustrativo"
-            }
+            },
+            "featured": true,
+            "summary": {
+                "pt": "Leva os atos processuais do Judiciário peruano ao sistema estatístico oficial, em 7 especialidades.",
+                "en": "Brings the procedural acts of Peru's Judiciary into the official statistics system, across 7 specialties.",
+                "es": "Lleva los actos procesales del Poder Judicial peruano al sistema estadístico oficial, en 7 especialidades."
+            },
+            "keyPoints": [
+                {
+                    "title": {
+                        "pt": "CDC",
+                        "en": "CDC",
+                        "es": "CDC"
+                    },
+                    "text": {
+                        "pt": "Triggers PL/pgSQL e polling",
+                        "en": "PL/pgSQL triggers and polling",
+                        "es": "Triggers PL/pgSQL y polling"
+                    }
+                },
+                {
+                    "title": {
+                        "pt": "Consistência",
+                        "en": "Consistency",
+                        "es": "Consistencia"
+                    },
+                    "text": {
+                        "pt": "Exactly-once entre duas bases",
+                        "en": "Exactly-once across two databases",
+                        "es": "Exactly-once entre dos bases"
+                    }
+                },
+                {
+                    "title": {
+                        "pt": "Ciclo",
+                        "en": "Cycle",
+                        "es": "Ciclo"
+                    },
+                    "text": {
+                        "pt": "Fechamentos mensais e anuais",
+                        "en": "Monthly and annual closes",
+                        "es": "Cierres mensuales y anuales"
+                    }
+                }
+            ],
+            "steps": [
+                {
+                    "title": {
+                        "pt": "Captura",
+                        "en": "Capture",
+                        "es": "Captura"
+                    },
+                    "text": {
+                        "pt": "triggers PL/pgSQL gravam cada movimento numa fila de CDC.",
+                        "en": "PL/pgSQL triggers write every case event to a CDC queue.",
+                        "es": "triggers PL/pgSQL registran cada movimiento en una cola de CDC."
+                    }
+                },
+                {
+                    "title": {
+                        "pt": "Polling",
+                        "en": "Polling",
+                        "es": "Polling"
+                    },
+                    "text": {
+                        "pt": "o serviço lê a fila em lotes, com marca por linha.",
+                        "en": "the service reads the queue in batches, marking each row.",
+                        "es": "el servicio lee la cola por lotes, con marca por fila."
+                    }
+                },
+                {
+                    "title": {
+                        "pt": "Mapeamento e regras",
+                        "en": "Mapping and rules",
+                        "es": "Mapeo y reglas"
+                    },
+                    "text": {
+                        "pt": "cada movimento vira ato processual e variável estatística, pelas regras oficiais.",
+                        "en": "each event becomes a procedural act and a statistical variable, following the official rules.",
+                        "es": "cada movimiento se convierte en acto procesal y variable estadística, según las reglas oficiales."
+                    }
+                },
+                {
+                    "title": {
+                        "pt": "Escrita",
+                        "en": "Write",
+                        "es": "Escritura"
+                    },
+                    "text": {
+                        "pt": "gravação com garantia exactly-once, usando uma tabela de controle.",
+                        "en": "writes with an exactly-once guarantee, using a control table.",
+                        "es": "escritura con garantía exactly-once, usando una tabla de control."
+                    }
+                },
+                {
+                    "title": {
+                        "pt": "Fechamentos",
+                        "en": "Closes",
+                        "es": "Cierres"
+                    },
+                    "text": {
+                        "pt": "jobs fecham o mês e o ano; reaberturas são auditadas.",
+                        "en": "jobs close the month and the year; reopenings are audited.",
+                        "es": "jobs cierran el mes y el año; las reaperturas son auditadas."
+                    }
+                }
+            ],
+            "facts": [
+                {
+                    "label": {
+                        "pt": "Empresa",
+                        "en": "Company",
+                        "es": "Empresa"
+                    },
+                    "value": {
+                        "pt": "Softplan",
+                        "en": "Softplan",
+                        "es": "Softplan"
+                    }
+                },
+                {
+                    "label": {
+                        "pt": "Cliente",
+                        "en": "Client",
+                        "es": "Cliente"
+                    },
+                    "value": {
+                        "pt": "Poder Judicial del Perú",
+                        "en": "Poder Judicial del Perú",
+                        "es": "Poder Judicial del Perú"
+                    }
+                },
+                {
+                    "label": {
+                        "pt": "Cobertura",
+                        "en": "Coverage",
+                        "es": "Cobertura"
+                    },
+                    "value": {
+                        "pt": "7 especialidades",
+                        "en": "7 specialties",
+                        "es": "7 especialidades"
+                    }
+                },
+                {
+                    "label": {
+                        "pt": "Código",
+                        "en": "Code",
+                        "es": "Código"
+                    },
+                    "value": {
+                        "pt": "Repositório corporativo",
+                        "en": "Enterprise repository",
+                        "es": "Repositorio corporativo"
+                    }
+                }
+            ],
+            "stackGroups": [
+                {
+                    "group": {
+                        "pt": "Backend",
+                        "en": "Backend",
+                        "es": "Backend"
+                    },
+                    "items": [
+                        "Java 21",
+                        "Spring Boot 3.5",
+                        "Spring JDBC",
+                        "Caffeine"
+                    ]
+                },
+                {
+                    "group": {
+                        "pt": "Dados",
+                        "en": "Data",
+                        "es": "Datos"
+                    },
+                    "items": [
+                        "PostgreSQL",
+                        "PL/pgSQL",
+                        "Liquibase"
+                    ]
+                },
+                {
+                    "group": {
+                        "pt": "Painel",
+                        "en": "Dashboard",
+                        "es": "Panel"
+                    },
+                    "items": [
+                        "Next.js 16",
+                        "Keycloak"
+                    ]
+                },
+                {
+                    "group": {
+                        "pt": "Qualidade e infra",
+                        "en": "Quality & infra",
+                        "es": "Calidad e infra"
+                    },
+                    "items": [
+                        "Testcontainers",
+                        "JaCoCo",
+                        "SonarQube",
+                        "Elastic APM",
+                        "Kubernetes"
+                    ]
+                }
+            ]
         },
         {
             "id": 4,
@@ -826,6 +1613,37 @@
                 "Tailwind",
                 "Shadcn",
                 "Zod"
+            ],
+            "summary": {
+                "pt": "Fullstack com JWT · Spring Boot e React",
+                "en": "Fullstack with JWT · Spring Boot and React",
+                "es": "Fullstack con JWT · Spring Boot y React"
+            },
+            "facts": [
+                {
+                    "label": {
+                        "pt": "Tipo",
+                        "en": "Type",
+                        "es": "Tipo"
+                    },
+                    "value": {
+                        "pt": "Projeto de estudo",
+                        "en": "Study project",
+                        "es": "Proyecto de estudio"
+                    }
+                },
+                {
+                    "label": {
+                        "pt": "Código",
+                        "en": "Code",
+                        "es": "Código"
+                    },
+                    "value": {
+                        "pt": "Open source",
+                        "en": "Open source",
+                        "es": "Open source"
+                    }
+                }
             ]
         },
         {
@@ -851,6 +1669,49 @@
                 "Zod",
                 "JavaScript",
                 "CSS"
+            ],
+            "summary": {
+                "pt": "Gestão de farmácias com mapas · demo online",
+                "en": "Pharmacy management with maps · live demo",
+                "es": "Gestión de farmacias con mapas · demo en línea"
+            },
+            "facts": [
+                {
+                    "label": {
+                        "pt": "Tipo",
+                        "en": "Type",
+                        "es": "Tipo"
+                    },
+                    "value": {
+                        "pt": "Projeto do DEVinHouse",
+                        "en": "DEVinHouse project",
+                        "es": "Proyecto de DEVinHouse"
+                    }
+                },
+                {
+                    "label": {
+                        "pt": "Demo",
+                        "en": "Demo",
+                        "es": "Demo"
+                    },
+                    "value": {
+                        "pt": "Online",
+                        "en": "Online",
+                        "es": "En línea"
+                    }
+                },
+                {
+                    "label": {
+                        "pt": "Código",
+                        "en": "Code",
+                        "es": "Código"
+                    },
+                    "value": {
+                        "pt": "Open source",
+                        "en": "Open source",
+                        "es": "Open source"
+                    }
+                }
             ]
         },
         {
@@ -874,6 +1735,37 @@
                 "Bean-Validation",
                 "PostgreSQL",
                 "Swagger"
+            ],
+            "summary": {
+                "pt": "API REST de estoque · Spring Boot",
+                "en": "Stock REST API · Spring Boot",
+                "es": "API REST de inventario · Spring Boot"
+            },
+            "facts": [
+                {
+                    "label": {
+                        "pt": "Tipo",
+                        "en": "Type",
+                        "es": "Tipo"
+                    },
+                    "value": {
+                        "pt": "Projeto do DEVinHouse",
+                        "en": "DEVinHouse project",
+                        "es": "Proyecto de DEVinHouse"
+                    }
+                },
+                {
+                    "label": {
+                        "pt": "Código",
+                        "en": "Code",
+                        "es": "Código"
+                    },
+                    "value": {
+                        "pt": "Open source",
+                        "en": "Open source",
+                        "es": "Open source"
+                    }
+                }
             ]
         },
         {
@@ -901,6 +1793,37 @@
                 "PostgreSQL",
                 "Swagger",
                 "Maven"
+            ],
+            "summary": {
+                "pt": "Design patterns · Spring Boot",
+                "en": "Design patterns · Spring Boot",
+                "es": "Patrones de diseño · Spring Boot"
+            },
+            "facts": [
+                {
+                    "label": {
+                        "pt": "Tipo",
+                        "en": "Type",
+                        "es": "Tipo"
+                    },
+                    "value": {
+                        "pt": "Projeto de estudo",
+                        "en": "Study project",
+                        "es": "Proyecto de estudio"
+                    }
+                },
+                {
+                    "label": {
+                        "pt": "Código",
+                        "en": "Code",
+                        "es": "Código"
+                    },
+                    "value": {
+                        "pt": "Open source",
+                        "en": "Open source",
+                        "es": "Open source"
+                    }
+                }
             ]
         }
     ]
